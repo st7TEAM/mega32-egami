@@ -235,16 +235,12 @@
 	</screen>
 
 	<!-- S0023 VirtualKeyBoard -->
-	<screen name="VirtualKeyBoard" position="center,center" size="720,350" zPosition="99" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="black" >
-		<ePixmap position="0,0" zPosition="-1" size="720,350" pixmap="mega32/menu/vkeyb.png" backgroundColor="black" />
-		<widget source="country" render="Pixmap" position="650,47" size="57,42" alphatest="on" borderWidth="0" borderColor="white">
-			<convert type="ValueToPixmap">LanguageCode</convert>
-		</widget>
-		<ePixmap pixmap="mega32/buttons/button_yellow.png" position="605,110" size="26,24" alphatest="blend" transparent="1" />
-		<eLabel text="Change Lang" zPosition="4" position="605,135" size="250,24" halign="left" font="Regular;16" transparent="1" backgroundColor="black" />
-		<widget name="text" position="35,43" size="590,46" font="Regular;38" transparent="1" noWrap="1" halign="right" foregroundColor="#538eff" backgroundColor="black" />
-		<widget name="header" position="35,92" size="600,26" font="Regular;18" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black" />
-		<widget name="list" position="35,115" size="560,223" selectionDisabled="1"  backgroundColor="black" alphatest="blend" transparent="1" />
+	<screen name="VirtualKeyBoard" position="center,center" size="620,380" zPosition="99" title="Virtual KeyBoard" >
+		<widget name="text" position="10,5" size="600,40" font="Regular;38" noWrap="1" halign="right" foregroundColor="#538eff" backgroundColor="#0e1016" />
+		<widget name="list" position="10,50" size="600,223" selectionDisabled="1"  backgroundColor="#0e1016" />
+		<widget name="header" position="35,450" size="550,26" font="Regular;18" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black" />
+		<ePixmap pixmap="mega32/buttons/button_yellow.png" position="10,335" size="26,24" alphatest="blend" transparent="1" />		
+		<widget name="country" position="40,335" zPosition="2" size="580,40" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1" />
 	</screen>
 
 	<!-- Volumebar -->
@@ -717,7 +713,7 @@
 		<!-- Lista Canali -->  
 		<widget name="list" position="55,90" size="520,510" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="30"
 		                    serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;19" colorServiceDescription="#a1daff" colorServiceDescriptionSelected="white" 
-		                    picServiceEventProgressbar="lust/bars/pl.png" selectionPixmap="mega32/bars/slider30.png" transparent="1" />
+		                    picServiceEventProgressbar="lust/bars/pl.png" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
 		<eLabel text="Rec" position="1030,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
 		<!-- ePixmap pixmap="mega32/icons/icon_norec_light.png" position="1050,667" size="44,26" zPosition="2" alphatest="blend" -->
 		<widget source="session.RecordState" 	render="Pixmap" pixmap="mega32/icons/icon_rec_light.png" position="1050,667" size="44,26" zPosition="5" alphatest="blend">
@@ -729,7 +725,7 @@
 	<screen name="ChannelContextMenu" position="0,0"  size="1280,720"  title="Channel List Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
-		<widget name="menu" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" transparent="1" />
+		<widget name="menu" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
 		<eLabel text="Rec" position="1030,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
 		<eLabel text="Info" position="1020,48" size="200,22" font="Regular;20"  halign="right" foregroundColor="#404040" backgroundColor="black" zPosition="0" transparent="1" />
 	</screen>
@@ -740,7 +736,7 @@
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- Lista -->
-		<widget name="list" position="60,90" size="770,550" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" transparent="1" />
+		<widget name="list" position="60,90" size="770,550" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
 		<eLabel text="Rec" position="1030,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
 		<!-- ePixmap pixmap="mega32/icons/icon_norec_light.png" position="1050,667" size="44,26" zPosition="2" alphatest="blend" -->
 		<widget source="session.RecordState" 	render="Pixmap" pixmap="mega32/icons/icon_rec_light.png" position="1050,667" size="44,26" zPosition="5" alphatest="blend">
@@ -1054,7 +1050,7 @@
 	<screen name="TimerEntry" position="0,0" size="1280,720" title="Timer entry" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
-		<widget name="config" position="60,90" size="515,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" itemHeight="30" transparent="1" />
+		<widget name="config" position="60,90" size="515,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" itemHeight="30" transparent="1" />
 		<ePixmap position="50,659" size="1200,50" pixmap="mega32/buttons/2colors.png" zPosition="2" alphatest="blend" />
 		<widget name="canceltext" position="95,665" size="210,20" font="Regular;20" halign="left" foregroundColor="white" zPosition="2" transparent="1" />
 		<widget name="oktext"  position="335,665" size="210,20" font="Regular;20" halign="left" foregroundColor="white" zPosition="2" transparent="1" />
@@ -1569,7 +1565,7 @@
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="2ButtonsW" />
 		<panel name="SmallPigTemplate" />
-		<widget source="config" render="Listbox" position="60,100" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" transparent="1">
+		<widget source="config" render="Listbox" position="60,100" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (5, 7), size = (510, 30), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -2007,7 +2003,7 @@
 		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="subtitle" position="60,120" size="520,25" font="Regular;20" transparent="1" />
-		<widget name="entries" position="60,150" size="520,210" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" transparent="1" />
+		<widget name="entries" position="60,150" size="520,210" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
 		<widget name="bottom" position="60,350" size="520,25" halign="center" font="Regular;20" transparent="1" />
 	</screen>
  
@@ -3406,7 +3402,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget source="list" render="Listbox" position="60,90" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" >
+		<widget source="list" render="Listbox" position="60,90" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (0, 0), png = 0),
@@ -3433,7 +3429,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="list" position="60,90" size="515,520" font="Regular;20" transparent="1" selectionPixmap="mega32/bars/slider30.png" />
+		<widget name="list" position="60,90" size="515,520" font="Regular;20" transparent="1" selectionPixmap="mega32/bars/slider30b.png" />
 	</screen>
 
 	<!-- (OK) AutoBouquet Maker About -->
@@ -4043,7 +4039,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="60,100" size="520,430" scrollbarMode="showOnDemand" transparent="1" />
 		<widget source="help" render="Label" position="60,580"  size="520,80" zPosition="10" font="Regular;20" halign="left" valign="center" foregroundColor="yellow" transparent="1"/>
 	</screen>
 	<screen name="AutoTimerSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -4059,7 +4055,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="list" position="80,100" size="705,514" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="60,100" size="520,514" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
@@ -4547,7 +4543,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="entrylist" position="60,140" size="770,550" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30.png" transparent="1" />
+		<widget name="entrylist" position="60,140" size="770,550" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
 	      </screen>
 	
 </skin>
