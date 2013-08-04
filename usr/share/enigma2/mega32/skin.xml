@@ -4336,7 +4336,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
 		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
 		<widget name="label3" position="50,150" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="list" position="60,150" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<widget name="list" position="60,180" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 	</screen>
 	<screen name="EGAMIBackupPanel_Step2" position="0,0" size="1280,720" title="EGAMI Image Backup Panel - STEP 2" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
