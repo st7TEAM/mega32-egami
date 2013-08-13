@@ -4,11 +4,7 @@
 	#
 	mmark Version 1.1 released
 	#
-	EGAMI MOD and additions v1.2
-	
-	02.07.2013
-	- added EGAMI Screens
-	- added Tweaked and Fixed orginal screens
+	EGAMI MOD and additions v1.4 14.08.2013
 	#
 	#######################################################################
 	-->
@@ -743,7 +739,46 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
-
+	<screen name="GraphicalEPG" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutWideTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<widget source="Event" render="Label" position="1113,70" size="65,30" halign="right" backgroundColor="transpBlack" transparent="1" font="Regular;24" noWrap="1" foregroundColor="#538eff">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1180,70" size="100,30" halign="left" backgroundColor="transpBlack" font="Regular;24" noWrap="1" transparent="1" foregroundColor="#538eff">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="80,100" zPosition="1" size="1130,120" font="Regular;22" backgroundColor="transpBlack" transparent="1" valign="top">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget name="lab1" position="80,250" size="130,390" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="background" transparent="0" />
+		<widget name="timeline_text" position="80,250" size="1130,30" foregroundColor="white" backgroundColor="grey" transparent="1" zPosition="0" />
+		<widget name="list" position="80,277" size="1130,360" backgroundColor="transpBlack" scrollbarMode="showNever" zPosition="1" transparent="1" />
+		<widget name="timeline_now" position="80,277" zPosition="3" size="19,360" pixmap="skin_default/epg/timeline-now-pig.png" alphatest="on" />
+	</screen>
+	<screen name="GraphicalEPGPIG" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutWideTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<widget source="Event" render="Label" position="1033,70" size="65,30" halign="right" backgroundColor="transpBlack" transparent="1" font="Regular;24" noWrap="1" foregroundColor="#538eff">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="1100,70" size="100,30" halign="left" backgroundColor="transpBlack" font="Regular;24" noWrap="1" transparent="1" foregroundColor="#538eff">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="80,100" zPosition="1" size="1130,120" font="Regular;22" backgroundColor="transpBlack" transparent="1" valign="top">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget name="lab1" position="80,250" size="130,390" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="background" transparent="0" />
+		<widget name="timeline_text" position="80,250" size="1130,30" foregroundColor="white" backgroundColor="grey" transparent="1" zPosition="0" />
+		<widget name="list" position="80,277" size="1130,360" backgroundColor="transpBlack" scrollbarMode="showNever" zPosition="1" transparent="1" />
+		<widget name="timeline_now" position="80,277" zPosition="3" size="19,360" pixmap="skin_default/epg/timeline-now-pig.png" alphatest="on" />
+	</screen>
 	<!-- (OK) Event View -->
 	<screen name="EventView" position="0,0"	size="1280,720" title=" EPG Channel Event View" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
@@ -1113,26 +1148,30 @@
 	<screen name="About" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
-		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<!--  18 System Memory Info -->
 	<screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/menu/ico_storage.png" alphatest="blend" transparent="1" />
-		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemDevicesInfo" position="0,0" size="1280,720" title="Devices Informations" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/screens/gigablueb.png" position="845,585" size="586,202" zPosition="-1" alphatest="blend" />
-		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemNetworkInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="900,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 		<widget source="LabelBSSID" render="Label" position="78,340" size="200,25" valign="center" font="Regular;20" transparent="0" />
 		<widget source="LabelESSID" render="Label" position="78,380" size="200,25" valign="center" font="Regular;20" transparent="0" />
