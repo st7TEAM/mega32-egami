@@ -664,7 +664,7 @@
 		<!-- Lista Canali  --> 
 		<widget name="list" position="55,90" size="525,510" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="80"
 		                    serviceNumberFont="Regular;24" serviceNameFont="Regular;20" serviceInfoFont="Regular;17" colorServiceDescription="#a1daff" colorServiceDescriptionSelected="white" 
-		                    picServiceEventProgressbar="mega32/bars/pl.png" selectionPixmap="mega32/bars/slider50.png" transparent="1" />
+		                    picServiceEventProgressbar="mega32/bars/pl2.png" selectionPixmap="mega32/bars/slider50.png" transparent="1" />
 		<!-- Event Time -->
 		<widget source="ServiceEvent" render="Label" position="770,415" size="100,26" zPosition="2" halign="left" font="Regular;19" foregroundColor="white" backgroundColor="black"  transparent="1" >
 			<convert type="EventTime">StartTime</convert>
