@@ -1143,35 +1143,30 @@
 		<panel name="4Buttons" />
 		<widget name="infolist" position="60,90" size="1100,400" font="Regular;19" selectionDisabled="1" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
-
 	<!-- (OK) About screen -->
 	<screen name="About" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
-		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<!--  18 System Memory Info -->
 	<screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/menu/ico_storage.png" alphatest="blend" transparent="1" />
-		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemDevicesInfo" position="0,0" size="1280,720" title="Devices Informations" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/screens/gigablueb.png" position="845,585" size="586,202" zPosition="-1" alphatest="blend" />
-		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemNetworkInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="900,455" size="256,256" zPosition="2" alphatest="blend" />
-		<eLabel text="EGAMI v4.1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<eLabel text="EGAMI Image" position="60,130" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="EGAMIVersion" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 		<widget source="LabelBSSID" render="Label" position="78,340" size="200,25" valign="center" font="Regular;20" transparent="0" />
 		<widget source="LabelESSID" render="Label" position="78,380" size="200,25" valign="center" font="Regular;20" transparent="0" />
