@@ -698,7 +698,10 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
-
+	<screen name="SlimChannelSelection" position="60,80" size="1160,610" title="Channel Selection"  >
+		<widget name="list" serviceItemHeight="32" position="20,20" size="1120,548" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" colorServiceDescription="grey" picServiceEventProgressbar="skin_default/pl.png"  transparent="1" />
+		<panel name="4Buttons" />
+	</screen>
 	<!-- (OK) Channel selection - Radio --> 
 	<screen name="ChannelSelectionRadio" position="0,0" size="1280,720" title="Channel Selection"  backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
