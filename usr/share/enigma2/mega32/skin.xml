@@ -1864,7 +1864,7 @@
 		<widget name="pass" position="60,260" size="560,25" font="Regular;24" foregroundColor="#538eff" backgroundColor="background" transparent="1" />
 		<ePixmap position="60,290" zPosition="2" size="570,21" pixmap="mega32/bars/br_scanbw.png" alphatest="blend" transparent="1" />
 		<widget name="scan_progress" position="60,290"  zPosition="3" size="570,21" pixmap="mega32/bars/br_scancl.png" transparent="1" />
-		<widget name="servicelist" position="60,320" size="720,450" selectionDisabled="1" transparent="1" alphatest="on" /> 
+		<widget name="servicelist" position="60,320" size="720,300" selectionDisabled="1" transparent="1" alphatest="on" /> 
 		<eLabel text="Press OK to continue - Exit to terminate Scan" position="60,623" size="720,30" zPosition="3" halign="left" font="Regular;20" foregroundColor="white" backgroundColor="black" transparent="1" />
 	</screen>
 
