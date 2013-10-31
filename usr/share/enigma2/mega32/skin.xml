@@ -700,8 +700,20 @@
 	</screen>
 	<screen name="SlimChannelSelection" position="60,80" size="1160,610" title="Channel Selection"  >
 		<widget name="list" serviceItemHeight="32" position="20,20" size="1120,548" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" colorServiceDescription="grey" picServiceEventProgressbar="skin_default/pl.png"  transparent="1" />
-		<panel name="4Buttons" />
+		<ePixmap position="0,569" size="1220,50" pixmap="mega32/buttons/4colors.png" zPosition="2" alphatest="blend" />
+		<widget position="50,577" size="210,21" name="key_red"    font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="290,577" size="210,21" name="key_green"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="530,577" size="210,21" name="key_yellow" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="770,577" size="210,21" name="key_blue"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 	</screen>
+	<screen name="SimpleChannelSelection" position="60,80" size="1160,610" title="Channel Selection"  >
+		<widget name="list" serviceItemHeight="32" position="20,20" size="1120,548" zPosition="3" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" colorServiceDescription="grey" picServiceEventProgressbar="skin_default/pl.png"  transparent="1" />
+		<ePixmap position="0,569" size="1220,50" pixmap="mega32/buttons/4colors.png" zPosition="2" alphatest="blend" />
+		<widget position="50,577" size="210,21" name="key_red"    font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="290,577" size="210,21" name="key_green"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="530,577" size="210,21" name="key_yellow" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="770,577" size="210,21" name="key_blue"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>	
 	<!-- (OK) Channel selection - Radio --> 
 	<screen name="ChannelSelectionRadio" position="0,0" size="1280,720" title="Channel Selection"  backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -1360,7 +1372,13 @@
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
 	</screen>
-
+	<screen name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental Control Setup" flags="wfNoBorder" >
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="2ButtonsW" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
+	</screen>
 	<!-- (OK) Parental Control Editor -->
 	<screen name="ParentalControlEditor" position="0,0" size="1280,720" title="Parental Control Services Editor" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
@@ -4571,12 +4589,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="barrapix_abj" position="100,20" zPosition="9" size="20,20" alphatest="blend" transparent="1" />
 	</screen>
 	<screen name="WeatherPluginEntriesListConfigScreenfore" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" backgroundColor="transparent" flags="wfNoBorder" >
-	      <widget name="city" position="60,90" size="150,50" font="Regular;20" halign="left"/>
-	      <widget name="language" position="210,90" size="150,50" font="Regular;20" halign="left"/>
+		<widget name="city" position="60,90" size="150,50" font="Regular;20" halign="left"/>
+		<widget name="language" position="210,90" size="150,50" font="Regular;20" halign="left"/>
 		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="entrylist" position="60,140" size="770,550" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
-	      </screen>
+	</screen>
+	<screen name="IMDB" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="GenericLayoutLiteTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />		
+		<widget name="titellabel" position="80,100" size="330,45" valign="center" font="Regular;22" transparent="1" />
+		<widget name="detailslabel" position="185,150" size="383,140" font="Regular;18" transparent="1" />
+		<widget name="castlabel" position="80,297" size="503,272" font="Regular;18" transparent="1" />
+		<widget name="extralabel" position="80,150" size="705,405" font="Regular;18" transparent="1" />
+		<widget name="ratinglabel" position="320,122" size="210,20" halign="center" font="Regular;18" foregroundColor="#00f0b400" transparent="1"/>
+		<widget name="statusbar" position="80,597" size="503,16" font="Regular;16" foregroundColor="window-fg" transparent="1" />
+		<widget name="poster" position="80,150" size="96,140" alphatest="on" transparent="1" />
+		<widget name="menu" position="80,175" size="705,405" zPosition="3" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="320,100" zPosition="0" size="210,21" transparent="1" alphatest="on" />
+		<widget name="stars" position="320,100" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" transparent="1" />
+		<panel name="4Buttons" />
+	</screen>	
 	
 </skin>
