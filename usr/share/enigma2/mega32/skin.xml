@@ -2049,7 +2049,7 @@
 	</screen>
 
 	<!-- (OK) Common interface -->
-	<screen name="MMIDialog" position="center,195" size="600,370" title="Common interface">
+	<screen name="MMIDialog" position="0,0" size="1280,720" title="Common interface">
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
@@ -2378,6 +2378,7 @@
 		<widget name="config" position="60,415" size="750,200" scrollbarMode="showOnDemand" backgroundColor="black" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="590,650" size="30,30" />
 		<widget font="Regular;22" name="languagetext" position="640,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
+		<widget name="HelpWindow" position="60,200" zPosition="5" size="1,1" transparent="1" alphatest="on" />
 	</screen>
 
 	<!-- (OK) Video Wizard -->
@@ -4146,7 +4147,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="sactive" position="60,334" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on" />
 		<widget name="system" position="120,334" size="100,30" font="Regular;20" valign="center" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="labsys" position="250,334" size="310,30" font="Regular;20" valign="center" backgroundColor="#274D5375"/>
-		<ePixmap position="1126,20" zPosition="4" size="74,36" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on" /> 		
+		<ePixmap position="1126,20" zPosition="4" size="74,36" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="NetworkInadynSetup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
@@ -4154,7 +4155,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="HelpWindow" position="620,500" zPosition="5" size="1,1" transparent="1" alphatest="on" />	
+		<widget name="HelpWindow" position="620,500" zPosition="5" size="1,1" transparent="1" alphatest="on" />
 		<widget name="VKeyIcon" pixmap="mega32/buttons/key_text.png" position="630,400" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 	</screen>
 	
