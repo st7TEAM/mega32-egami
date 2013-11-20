@@ -3494,12 +3494,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 
 	<!-- (OK) LCNScanner -->
-	<screen name="LCNScannerPlugin" position="0,0" size="1280,720" title="SIFTeam LCN" flags="wfNoBorder" >
+	<screen name="LCNScannerPlugin" position="0,0" size="1280,720" title="LCN" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
-		<panel name="4Buttons" />
+		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="515,500" scrollbarMode="showOnDemand" zPosition="1" transparent="1" selectionPixmap="mega32/bars/slider25b.png" />
+		<widget name="progress" position="63,622" size="520,25" borderWidth="1" />
+		<widget name="log" position="60,100" size="515,500" scrollbarMode="showOnDemand" zPosition="1" transparent="1" selectionPixmap="mega32/bars/slider25b.png" />
 	</screen>
 
 	<!-- (OK) LCNScanner About -->
