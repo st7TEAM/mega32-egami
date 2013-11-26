@@ -1874,7 +1874,7 @@
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" /> 
 		</widget>
-		<widget name="network" position="60,100" size="720,25" font="Regular;26" foregroundColor="yelow" backgroundColor="background" transparent="1" />
+		<widget name="network" position="60,100" size="720,25" font="Regular;26" foregroundColor="yellow" backgroundColor="background" transparent="1" />
 		<widget name="transponder" position="60,170" size="720,25" font="Regular;22" zPosition="0" foregroundColor="#538eff" backgroundColor="background" transparent="1" />
 		<widget name="scan_state" position="60,200" size="560,25" zPosition="2" font="Regular;22" backgroundColor="background" transparent="1" />
 		<eLabel text="-" position="60,230" size="570,1" font="Regular;26" zPosition="0" foregroundColor="#505050" backgroundColor="grey"/>
@@ -3494,13 +3494,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 
 	<!-- (OK) LCNScanner -->
-	<screen name="LCNScannerPlugin" position="0,0" size="1280,720" title="LCN" flags="wfNoBorder" >
+	<screen name="LCNScannerPlugin" position="0,0" size="1280,720" title="LCN Scanner" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
-		<panel name="2Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="progress" position="63,622" size="520,25" borderWidth="1" />
-		<widget name="log" position="60,100" size="515,500" scrollbarMode="showOnDemand" zPosition="1" transparent="1" selectionPixmap="mega32/bars/slider25b.png" />
+		<panel name="2ButtonsW" />
+		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
 	</screen>
 
 	<!-- (OK) LCNScanner About -->
