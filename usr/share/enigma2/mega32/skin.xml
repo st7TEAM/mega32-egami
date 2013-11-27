@@ -668,6 +668,8 @@
 		<widget name="list" position="55,90" size="650,510" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="80"
 		                    serviceNumberFont="Regular;24" serviceNameFont="Regular;20" serviceInfoFont="Regular;17" colorServiceDescription="#a1daff" colorServiceDescriptionSelected="white" 
 		                    picServiceEventProgressbar="mega32/bars/pl2.png" selectionPixmap="mega32/bars/slider50.png" transparent="1" />
+		<ePixmap position="692,90" zPosition="4" size="29,520" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="692,610" zPosition="4" size="29,40" pixmap="mega32/bars/endbar.png" alphatest="blend" transparent="1" />
 		<!-- Event Time -->
 		<widget source="ServiceEvent" render="Label" position="735,361" size="100,26" zPosition="2" halign="left" font="Regular;19" foregroundColor="white" backgroundColor="black"  transparent="1" >
 			<convert type="EventTime">StartTime</convert>
