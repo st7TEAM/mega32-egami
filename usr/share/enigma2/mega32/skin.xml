@@ -903,8 +903,6 @@
 	<!-- (OK) PLUGIN DVD Player Player -->
 	<screen name="DVDPlayer" position="0,550" size="1280,150" title="DVD Player" backgroundColor="#ff000000" flags="wfNoBorder" >
 		<ePixmap position="0,0" zPosition="-1" size="1280,150" pixmap="mega32/menu/moviebar.png"/>
-		<!-- Picon Position -->
-		<ePixmap pixmap="mega32/picon_default.png" position="57,42" size="140,86" zPosition="3" transparent="1" alphatest="on" />
 		<!-- DateTime -->
 		<widget source="global.CurrentTime" render="Label" position="67,18" size="125,22" font="Regular;19" halign="left" backgroundColor="black" foregroundColor="white" transparent="1" >
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
