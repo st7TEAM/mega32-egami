@@ -4141,6 +4141,22 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
+	<!-- CronTimers Screen -->
+	<screen name="CronTimers" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="lab1" position="60,116" size="150,30" font="Regular;20" valign="center" transparent="1" />
+		<widget name="labdisabled" position="180,116" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labactive" position="240,116" size="250,30" font="Regular;20" valign="center" transparent="1" />
+		<widget name="lab2" position="60,160" size="150,30" font="Regular;20" valign="center" transparent="1" />
+		<widget name="labstop" position="240,160" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="red" />
+		<widget name="labrun" position="240,160" size="100,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green" />
+		<widget source="list" render="Listbox" position="60,230" size="520,414" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="StringList" />
+		</widget>
+	</screen>
 	<!-- Network Menu -->
 	<screen name="NetworkInadyn" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
