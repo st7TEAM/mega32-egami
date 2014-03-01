@@ -43,7 +43,7 @@
 		<color name="ListboxBackground"                  color="#14101010"/>
 		<color name="ListboxForeground"                  color="#ffffff"/>
 		<color name="ListboxSelectedBackground"          color="#14101010"/> 
-		<color name="ListboxSelectedForeground"          color="#97e0ff"/> 
+		<color name="ListboxSelectedForeground"          color="#538eff"/> 
 		<color name="ListboxMarkedBackground"            color="#000000"/>
 		<color name="ListboxMarkedForeground"            color="#83d1ff"/>
 		<color name="ListboxMarkedAndSelectedBackground" color="#14101010"/>
