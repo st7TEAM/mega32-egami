@@ -106,6 +106,7 @@
 		<font filename="ae_AlMateen.ttf" name="Replacement" scale="90" replacement="1"/>
 		<font filename="tuxtxt.ttf" name="Console" scale="90"/>
 		<font filename="mega32/fonts/verdana_r.ttf" name="Regular" scale="93" />
+		<font filename="venus.ttf" name="RegularAA" scale="100" />
 	</fonts>
 
 	<!-- S008 Subtitle effects -->
