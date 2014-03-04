@@ -1,0 +1,315 @@
+<skin>
+	<!--  EGAMI SCREENS  -->
+	<screen name="EgamiMainPanel" position="0,0" size="1280,720"  title="EGAMI Panel - Main Menu" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="2Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<widget name="description" position="60,622" size="820,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="EGNetBrowser" position="0,0" size="1280,720" title="Select Network Interface" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="2Buttons" />   
+		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
+		      <convert type="StringList" />
+		</widget>
+	</screen>
+	<screen name="EGGreenPanel" position="0,0" size="1280,720"  title="EGAMI Green Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
+			  <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (125, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (125, 24), size = (650, 24), font=1, text = 1),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (100, 40), png = 2),
+			      ],
+			      "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+			      "itemHeight": 50
+			      }
+			  </convert>
+		</widget>
+	</screen>
+	<screen name="EmuManager" position="0,0" size="1280,720"  title="EGAMI Blue Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap position="79,124" zPosition="-1" size="353,25" pixmap="skin_default/buttons_cam.png" alphatest="blend" transparent="1" />
+		<ePixmap position="470,114" zPosition="3" size="60,40" pixmap="skin_default/button_ok.png" alphatest="blend" transparent="1" />
+		<widget name="choose_cam" position="99,90" size="230,25" font="Regular;24" zPosition="2"  backgroundColor="transpBlack" transparent="1"/>
+		<widget name="config" position="105,123" size="290,25" font="Regular;22" zPosition="2" transparent="1"/>
+		<widget name="lb_channel" position="79,201" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="lb_provider" position="79,227" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="lb_aspectratio" position="79,260" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="lb_videosize" position="79,285" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="ecminfo" position="79,314" size="440,300" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+	</screen>
+	<screen name="EGEmuManagerStarting" position="30,630" size="620,70" title="EGAMI" flags="wfNoBorder">
+	      <widget name="starting" position="0,0" size="620,70" zPosition="-1" pixmaps="mega32/egami/startcam_1.png,mega32/egami/startcam_2.png,mega32/egami/startcam_3.png,mega32/egami/startcam_4.png,mega32/egami/startcam_5.png,mega32/egami/startcam_6.png,mega32/egami/startcam_7.png,mega32/egami/startcam_8.png,mega32/egami/startcam_9.png,mega32/egami/startcam_10.png,mega32/egami/startcam_11.png" transparent="1" />
+	      <widget name="text" position="60,10" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+	</screen>
+	<screen name="EGSoftCamInfo" position="0,0" size="1280,720" title="EGAMI Softcam Info" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+      		<widget name="menu" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="EGEmuInfoScript" position="0,0" size="1280,720" title="EGAMI Emu Info Scripts" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="list" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" zPosition="1" transparent="1" />
+		<widget name="statuslab" position="60,622" size="820,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="EGAddonMenu" position="0,0" size="1280,720"  title="EGAMI Addons Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
+			  <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (70, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (70, 24), size = (650, 24), font=1, text = 3),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (40, 40), png = 1),
+			      ],
+			      "fonts": [gFont("Regular", 23),gFont("Regular", 17)],
+			      "itemHeight": 50
+			      }
+			  </convert>
+		</widget>
+	</screen>
+	<screen name="EGDeviceManager_Setup" position="0,0" size="1280,720"  title="EGAMI Devices Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="3Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="EGDeviceManager" position="0,0" size="1280,720"  title="EGAMI Devices Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90.png" transparent="1">
+				      <convert type="TemplatedMultiContent">
+				      {"template": [
+				      MultiContentEntryText(pos = (90, 0), size = (690, 30), font=0, text = 0),
+				      MultiContentEntryText(pos = (110, 30), size = (670, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				      MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (80, 80), png = 2),
+				      ],
+				      "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+				      "itemHeight": 85
+				      }
+				      </convert>
+		</widget>
+		<widget name="lab1" zPosition="2" position="60,90" size="700,40" font="Regular;24" halign="center" transparent="1"/>
+	</screen>
+	<screen name="EGExtrasMenu" position="0,0" size="1280,720"  title="EGAMI Extras Panel" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
+			  <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (70, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (70, 24), size = (650, 24), font=1, text = 3),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (40, 40), png = 1),
+			      ],
+			      "fonts": [gFont("Regular", 23),gFont("Regular", 17)],
+			      "itemHeight": 50
+			      }
+			  </convert>
+		</widget>
+	</screen>
+	<screen name="EGAMIBackupPanel" position="0,0" size="1280,720" title="EGAMI Image Backup Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<panel name="3Buttons" />
+		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label3" position="50,150" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="list" position="60,180" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>
+	<screen name="EGAMIBackupPanel_Step2" position="0,0" size="1280,720" title="EGAMI Image Backup Panel - STEP 2" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<panel name="2Buttons" />
+		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="config" position="60,190" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>
+	<screen name="EGAMIBackupPanel_Step3" position="center,center" size="484,250" title="EGAMI Backup in progress..." flags="wfNoBorder">
+	      <widget name="status" position="0,0" size="484,250" zPosition="-1" pixmaps="skin_default/egami_icons/backup_1.png,skin_default/egami_icons/backup_2.png,skin_default/egami_icons/backup_3.png,skin_default/egami_icons/backup_4.png,skin_default/egami_icons/backup_5.png,skin_default/egami_icons/backup_6.png"  />
+	      <widget name="label" position="0,200" halign="center" size="484,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+	</screen>
+	<screen name="EGAMIRestorePanel_Step1" position="0,0" size="1280,720" title="EGAMI Image Restore Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<panel name="4Buttons" />
+		<widget name="config" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>
+	<screen name="EGAMIRestorePanel_Step2" position="center,center" size="484,250" title="EGAMI Restore in progress..." flags="wfNoBorder">
+		    <widget name="status" position="0,0" size="484,250" zPosition="-1" pixmaps="skin_default/egami_icons/restore_1.png,skin_default/egami_icons/restore_2.png,skin_default/egami_icons/restore_3.png,skin_default/egami_icons/restore_4.png,skin_default/egami_icons/restore_5.png,skin_default/egami_icons/restore_6.png"  />
+		    <widget name="label" position="0,200" halign="center" size="484,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+	</screen>
+	<screen name="EGScript" position="0,0" size="1280,720" title="EGAMI Smart Script" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_script.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="statuslab" position="60,600" size="515,30" font="Regular;24" foregroundColor="#ffad31" backgroundColor="#9f1313" transparent="1" />
+		<panel name="1Buttons" />
+		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>   
+	<screen name="EG_PrzegladaczAddonow" position="0,0" size="1280,720" title="EGAMI Internet Addons" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="#ffad31" backgroundColor="#9f1313" transparent="1" />      
+		<widget name="menu" position="60,130" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<panel name="4Buttons" />
+	</screen>	
+	<screen name="EG_InternetAddons" position="0,0" size="1280,720" title="EGAMI Internet Addons" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="#ffad31" backgroundColor="#9f1313" transparent="1" />      
+		<widget name="menu" position="60,130" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<panel name="4Buttons" />
+	</screen>
+	<screen name="EGAddonRemove" position="0,0" size="1280,720" title="EGAMI Remove Addons" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="#ffad31" backgroundColor="#9f1313" transparent="1" />      
+		<widget name="remove" position="60,130" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<panel name="1Buttons" />
+	</screen>
+	<screen name="EG_Manual_installation" position="0,0" size="1280,720" title="EGAMI Manual Addons Installation" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="#ffad31" backgroundColor="#9f1313" transparent="1" />      
+		<widget name="listaaddonow" position="60,130" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<panel name="1Buttons" />
+	</screen>
+	<screen name="EGFileManager" position="0,0" size="1280,720" title="EGAMI File Manager" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutWideTemplate" />
+		<widget name="list_left_text" font="Regular;28" position="90,80" size="150,35" zPosition="1" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="list_right_text" font="Regular;28" position="655,80" size="150,35" zPosition="1" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="list_left" position="40,120" size="590,490" zPosition="1" transparent="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background"/>
+		<widget name="list_right" position="645,120" size="580,490" zPosition="1" transparent="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background" />
+		<panel name="4Buttons" />
+		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<widget position="1120,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="EGFullBackup" position="0,0" size="1280,720" title="EGAMI Full Image Backup Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<panel name="2Buttons" />
+		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="config" position="60,190" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>
+    	<screen name="EGPermanentClock" position="610,40" size="110,52" flags="wfNoBorder" title="Egami Permanent Clock" backgroundColor="#55000000" >
+        	<widget source="global.CurrentTime" render="Label" position="10,10" size="90,34" font="LCD;32" foregroundColor="#d0d0d0" valign="center" halign="center" transparent="1" >
+            		<convert type="ClockToText">Default</convert>
+        	</widget>
+   	</screen>
+	<screen name="EGAMIBootInstallation" position="0,0" size="1280,720" title="EGAMI Multiboot Installation" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<panel name="2Buttons" />
+		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="config" position="60,230" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>
+	<screen name="EGAMIBootImageChoose" position="0,0" size="1280,720" title="EGAMI Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<panel name="4Buttons" />
+		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="config" position="60,230" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+	</screen>
+	<screen name="EGAMIFaq_YTChannel" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<widget name="genreList" position="60,80" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<panel name="1Buttons" />
+	</screen>
+	<screen name="EGAMIFaq_ListChannel_ListScreen" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutMidTemplate" />
+		<widget name="ContentTitle" position="60,80" size="515,25" backgroundColor="#00aaaaaa" zPosition="0" foregroundColor="#00000000" font="Regular;22" halign="center" />
+		<widget name="liste" position="60,120" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="720,90" size="410,300" transparent="1" alphatest="blend" borderWidth="2" borderColor="#00555556" />
+		<widget name="name" position="640,420" size="580,30" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="1" font="Regular;26" valign="top" zPosition="0" />
+		<widget name="handlung" position="640,460" size="580,170" backgroundColor="#00101214" transparent="1" font="Regular;19" valign="top" zPosition="0" />
+		<widget name="VideoPrio" position="1070,665" size="105,24" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="Regular; 20" valign="center" halign="right" zPosition="1" />
+		<widget name="vPrio" position="1200,665" size="25,25" backgroundColor="#00101214" transparent="1" font="Regular;20" valign="center" halign="center" zPosition="1" foregroundColor="#00bab329" />
+		<widget name="Page" position="1065,665" size="56,25" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="Regular;20" valign="center" halign="right" zPosition="0" />
+		<widget name="page" position="1100,665" size="95,25" backgroundColor="#00101214" transparent="1" font="Regular;20" valign="center" halign="right" zPosition="0" />
+		<panel name="4Buttons" />
+	</screen>
+	<screen name="ForecaWeatherPlugin" position="0,0" size="1280,720" title="AccuWeather - foreca.com" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutWideTemplate" />
+		<panel name="4Buttons" />
+		<widget name="lugar" position="136,43" zPosition="2" size="512,28" font="Regular;23" transparent="1" valign="center" backgroundColor="#000000" />
+		<widget name="info_entradas" position="843,43" zPosition="3" size="176,23" font="Regular; 23" transparent="1" halign="right" backgroundColor="#000000" />
+		
+		<widget name="ico_temp" position="159,106" zPosition="2" size="74,74" alphatest="blend" />
+		<widget name="current_icon" position="107,106" zPosition="1" size="74,74" alphatest="blend" />
+		<widget name="temperatura" position="198,139" zPosition="3" size="98,30" font="Regular; 26" transparent="1" noWrap="1" halign="left" backgroundColor="#000000" />
+		<widget name="condicion" position="301,108" zPosition="1" size="270,225" font="Regular; 18" transparent="1" backgroundColor="#000000" valign="top" />
+		<widget name="viento" position="107,207" zPosition="1" size="191,65" font="Regular;17" transparent="1" backgroundColor="#000000" valign="top" />
+		
+		<eLabel name="lin0" position="826,85" size="1,250" zPosition="1" backgroundColor="#05303030" />
+		<widget name="dia1" position="931,89" zPosition="1" size="400,25" halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" />
+		<widget name="icono_dia1" position="849,89" zPosition="1" size="79,79" alphatest="blend" />
+		<widget name="info_dia1" position="931,113" zPosition="1" size="412,55" halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" />
+		<widget name="dia2" position="931,172" zPosition="1" size="400,25" halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" />
+		<widget name="icono_dia2" position="849,172" zPosition="1" size="79,79" alphatest="blend" />
+		<widget name="info_dia2" position="931,196" zPosition="1" size="412,55" halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" />
+		<widget name="dia3" position="931,254" zPosition="1" size="400,25" halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" />
+		<widget name="icono_dia3" position="849,254" zPosition="1" size="79,79" alphatest="blend" />
+		<widget name="info_dia3" position="931,288" zPosition="1" size="412,55" halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" />
+
+		<widget name="statustext" position="100,43" zPosition="2" size="970,605" font="Regular;20" halign="center" valign="center" transparent="1" backgroundColor="#10bfbfbf" />
+		
+		<widget name="ico_left" position="115,43" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="1" />
+		<widget name="ico_right" position="1030,43" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="1" />
+		
+		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<widget position="1120,667" size="210,21" name="key_menu"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+
+		<eLabel name="lin1" position="110,298" size="716,1" zPosition="1" backgroundColor="#05303030" />
+		<eLabel name="lin2" position="826,308" size="1,330" zPosition="1" backgroundColor="#05303030" />
+
+		<widget name="satelite" position="232,79" size="720,480" alphatest="blend" zPosition="10" transparent="1" />
+		<widget name="statustext2" position="100,23" zPosition="8" size="970,627" font="Regular;20" halign="center" valign="center" transparent="0" />
+		<widget name="barra" position="111,308" zPosition="2" size="702,330" alphatest="blend" />
+		<widget name="info_barra" position="162,328" zPosition="1" size="600,290" font="Regular;20" halign="center" valign="center" transparent="0" />
+		<widget name="le_barra" position="232,562" zPosition="10" size="600,35" alphatest="blend" />
+
+		<widget name="fondo_detalle" position="100,51" size="948,594" alphatest="blend" zPosition="10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/fondolista-fs8.png"/>
+		<widget name="detallado" position="100,51" zPosition="8" size="970,594" scrollbarMode="showOnDemand" />
+
+		<widget name="ico_vie" position="105,152" zPosition="2" size="29,40" alphatest="blend" />
+		<widget name="barrapix_arr" position="100,51" zPosition="9" size="970,594" alphatest="blend" transparent="1" />
+		<widget name="barrapix_abj" position="100,20" zPosition="9" size="20,20" alphatest="blend" transparent="1" />
+	</screen>
+	<screen name="WeatherPluginEntriesListConfigScreenfore" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" backgroundColor="transparent" flags="wfNoBorder" >
+		<widget name="city" position="60,90" size="150,50" font="Regular;20" halign="left"/>
+		<widget name="language" position="210,90" size="150,50" font="Regular;20" halign="left"/>
+		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="4Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="entrylist" position="60,140" size="770,550" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
+	</screen>	
+</skin>
