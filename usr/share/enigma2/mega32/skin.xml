@@ -43,7 +43,7 @@
 		<color name="ListboxBackground"                  color="#14101010"/>
 		<color name="ListboxForeground"                  color="#ffffff"/>
 		<color name="ListboxSelectedBackground"          color="#14101010"/> 
-		<color name="ListboxSelectedForeground"          color="#538eff"/> 
+		<color name="ListboxSelectedForeground"          color="#bab329"/> 
 		<color name="ListboxMarkedBackground"            color="#000000"/>
 		<color name="ListboxMarkedForeground"            color="#83d1ff"/>
 		<color name="ListboxMarkedAndSelectedBackground" color="#14101010"/>
@@ -1380,7 +1380,7 @@
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
-		<widget name="description" position="60,622" size="520,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+		<widget name="description" position="60,622" size="820,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 	</screen>
 	<screen name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental Control Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
@@ -2118,17 +2118,6 @@
 		<widget name="list" position="60,100" size="515,500" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
 	</screen>
 
- 	<!-- (OK) EmuManager --> 
-       	<screen name="Emumanager" position="0,0" size="1280,720" title="EmuManager" flags="wfNoBorder"  >
-		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
-		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="820,435" size="256,256" zPosition="-1" alphatest="blend" />
-	        <widget name="list" position="60,90" size="520,200" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" backgroundColor="black" transparent="1" />
-                <widget name="info" position="60,400" zPosition="4" size="520,200" font="Regular;20" transparent="1" halign="left" />
-         </screen>
-
- 	<!-- (OK) EmuManager -->
 	<screen name="Getipklist" position="0,0" size="1280,720" title="Available for install" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="SmallPigTemplate" />
@@ -2136,8 +2125,7 @@
                 <widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" backgroundColor="black" transparent="1" />
 		<widget name="info" position="60,620" zPosition="4" size="520,25" font="Regular;20" foregroundColor="yellow" transparent="1" />
 	</screen>
- 
- 	<!-- (OK) EmuManager -->
+
 	<screen name="Getipk" position="0,0" size="1280,720" title="Install status" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
@@ -2146,7 +2134,6 @@
 		<widget name="info" position="60,620" zPosition="4" size="520,25" font="Regular;20" foregroundColor="yellow" transparent="1" />
 	</screen>
 
- 	<!-- (OK) EmuManager -->
 	<screen name="Ipkremove" position="0,0" size="1280,720" title="Ipkremove" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
@@ -2162,7 +2149,23 @@
 		<panel name="4Buttons" />
 		<widget name="list" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" backgroundColor="black" transparent="1" />
 	</screen>
-
+	<screen name="HistoryZapSelector" position="center,center" size="620,300" >
+		<widget source="menu" render="Listbox" position="0,0" size="620,300" selectionPixmap="mega32/bars/slider80.png" scrollbarMode="showOnDemand" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (95, 0), size = (10, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (115, 0), size = (260, 21), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0xbab329),
+						MultiContentEntryText(pos = (115, 20), size = (270, 22), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x00ffc000, color_sel = 0xbab329),
+						MultiContentEntryText(pos = (115, 40), size = (180, 17), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999, color_sel = 0xbab329),
+						MultiContentEntryText(pos = (285, 5), size = (335, 50), font = 3, flags = RT_HALIGN_LEFT|RT_WRAP, text = 4, color = 0x00999999, color_sel = 0xbab329),
+						MultiContentEntryPixmapAlphaBlend(pos=(0, 5), size=(83, 50), png=6, flags = BT_SCALE)
+					],
+				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
+				 "itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
 	<!-- (OK) EPG Selection Multi -->
 	<screen name="EPGSelectionMulti" position="0,0"	size="1280,720" title="EPG Selection Multi"  flags="wfNoBorder">
 		<panel name="4Buttons" />

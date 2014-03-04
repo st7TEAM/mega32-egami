@@ -39,8 +39,8 @@
 		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<ePixmap position="79,124" zPosition="-1" size="353,25" pixmap="skin_default/buttons_cam.png" alphatest="blend" transparent="1" />
-		<ePixmap position="470,114" zPosition="3" size="60,40" pixmap="skin_default/button_ok.png" alphatest="blend" transparent="1" />
+		<ePixmap position="79,124" zPosition="-1" size="353,25" pixmap="mega32/egami/buttons_cam.png" alphatest="blend" transparent="1" />
+		<ePixmap position="470,114" zPosition="3" size="60,40" pixmap="mega32/egami/button_ok.png" alphatest="blend" transparent="1" />
 		<widget name="choose_cam" position="99,90" size="230,25" font="Regular;24" zPosition="2"  backgroundColor="transpBlack" transparent="1"/>
 		<widget name="config" position="105,123" size="290,25" font="Regular;22" zPosition="2" transparent="1"/>
 		<widget name="lb_channel" position="79,201" size="350,28" font="Regular;24" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
