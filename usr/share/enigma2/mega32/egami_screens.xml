@@ -69,19 +69,9 @@
 	<screen name="EGAddonMenu" position="0,0" size="1280,720"  title="EGAMI Addons Panel" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
+		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
-			  <convert type="TemplatedMultiContent">
-			      {"template": [
-			      MultiContentEntryText(pos = (70, 0), size = (650, 24), font=0, text = 0),
-			      MultiContentEntryText(pos = (70, 24), size = (650, 24), font=1, text = 3),
-			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (40, 40), png = 1),
-			      ],
-			      "fonts": [gFont("Regular", 23),gFont("Regular", 17)],
-			      "itemHeight": 50
-			      }
-			  </convert>
-		</widget>
+		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 	</screen>
 	<screen name="EGDeviceManager_Setup" position="0,0" size="1280,720"  title="EGAMI Devices Panel" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
