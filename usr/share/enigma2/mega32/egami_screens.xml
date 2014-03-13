@@ -196,6 +196,24 @@
 		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
 		<widget position="1120,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 	</screen>
+	<screen name="FileCommanderConfigScreen" position="0,0" size="1280,720" title="File Commander - Settings" flags="wfNoBorder" >
+		<panel name="GenericLayoutMidTemplate" />
+		<panel name="SmallPigTemplate" />
+		<panel name="2ButtonsW" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="config" position="60,80" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
+		<widget name="help" position="60,370" size="515,330" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="FileCommanderScreen" position="0,0" size="1280,720" title=" " flags="wfNoBorder" >
+		<panel name="GenericLayoutWideTemplate" />
+		<widget name="list_left_head" font="Regular;18" position="40,80" size="590,35" zPosition="1" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="list_right_head" font="Regular;18" position="645,80" size="590,35" zPosition="1" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="list_left" position="40,120" size="590,490" zPosition="1" transparent="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background"/>
+		<widget name="list_right" position="645,120" size="580,490" zPosition="1" transparent="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background" />
+		<panel name="4Buttons" />
+		<ePixmap position="1040,668" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="on"/>
+		<widget position="1120,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
 	<screen name="EGFullBackup" position="0,0" size="1280,720" title="EGAMI Full Image Backup Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="SmallPigTemplate" />
