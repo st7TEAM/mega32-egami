@@ -476,13 +476,13 @@
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="mega32/icons/icon_txt_off.png" position="630,652" size="44,30" zPosition="3" alphatest="on" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="mega32/icons/icon_txt.png" position="630,652" zPosition="4" size="44,30" alphatest="on" >
+		<ePixmap pixmap="mega32/icons/icon_txt_off.png" position="630,657" size="44,30" zPosition="3" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="mega32/icons/icon_txt.png" position="630,657" zPosition="4" size="44,30" alphatest="blend" >
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="mega32/icons/ico_hbbtv_off.png" position="550,655" size="200,22" zPosition="3" alphatest="on" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="mega32/icons/ico_hbbtv_on.png" position="550,655" size="200,22" zPosition="4" alphatest="on">
+		<ePixmap pixmap="mega32/icons/ico_hbbtv_off.png" position="550,655" size="200,22" zPosition="3" alphatest="blend" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="mega32/icons/ico_hbbtv_on.png" position="550,655" size="200,22" zPosition="4" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
