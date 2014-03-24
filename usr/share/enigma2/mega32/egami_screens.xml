@@ -53,6 +53,10 @@
 	      <widget name="starting" position="0,0" size="620,70" zPosition="-1" pixmaps="mega32/egami/startcam_1.png,mega32/egami/startcam_2.png,mega32/egami/startcam_3.png,mega32/egami/startcam_4.png,mega32/egami/startcam_5.png,mega32/egami/startcam_6.png,mega32/egami/startcam_7.png,mega32/egami/startcam_8.png,mega32/egami/startcam_9.png,mega32/egami/startcam_10.png,mega32/egami/startcam_11.png" transparent="1" />
 	      <widget name="text" position="60,10" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 	</screen>
+	<screen name="EGConnectionAnimation" position="390,100" size="484,220" title="EGAMI" flags="wfNoBorder">
+		<widget name="connect" position="0,0" size="484,250" zPosition="-1" pixmaps="mega32/egami/connection_1.png,mega32/egami/connection_2.png,mega32/egami/connection_3.png,mega32/egami/connection_4.png,mega32/egami/connection_5.png" transparent="1" />
+		<widget name="lab1" position="10,180" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+	</screen>
 	<screen name="EGSoftCamInfo" position="0,0" size="1280,720" title="EGAMI Softcam Info" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="SmallPigTemplate" />
