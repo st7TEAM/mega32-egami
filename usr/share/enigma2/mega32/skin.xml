@@ -984,7 +984,7 @@
 			<convert type="ClockToText">Format %H:%M:%S</convert>
 		</widget>
 		<!-- Time/Movie -->
-		<widget source="session.CurrentService" render="Label" position="208,48" size="100,26" font="Regular;22" halign="left" foregroundColor="#538eff"  backgroundColor="black" transparent="1" >
+		<widget source="session.CurrentService" render="Label" position="88,48" size="100,26" font="Regular;22" halign="left" foregroundColor="#538eff"  backgroundColor="black" transparent="1" >
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
 		<widget name="chapterLabel"  position="310,48" size="720,25" font="Regular;22" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" />
@@ -3244,7 +3244,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 
 	<!-- (OK) Mytube Player -->
-	<screen name="MyTubePlayer" position="0,500" size="1280,720" title="MyTube Player" backgroundColor="transparent2" flags="wfNoBorder">
+	<screen name="MyTubePlayer" position="0,560" size="1280,720" title="MyTube Player" backgroundColor="transparent2" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,150" pixmap="mega32/menu/moviebar.png"/>
 		<!-- DateTime -->
 		<widget source="global.CurrentTime" render="Label" position="67,18" size="125,22" font="Regular;19" halign="left" backgroundColor="black" foregroundColor="white" transparent="1" >
@@ -3281,7 +3281,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Time/Movie -->
-		<widget source="session.CurrentService" render="Label" position="208,48" size="100,26" font="Regular;22" halign="left" foregroundColor="#538eff"  backgroundColor="black" transparent="1" >
+		<widget source="session.CurrentService" render="Label" position="88,48" size="100,26" font="Regular;22" halign="left" foregroundColor="#538eff"  backgroundColor="black" transparent="1" >
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1150,48" size="120,26" font="Regular;22" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" >
