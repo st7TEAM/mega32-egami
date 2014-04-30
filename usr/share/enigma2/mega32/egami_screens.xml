@@ -244,11 +244,21 @@
 	<screen name="EGAMIBootImageChoose" position="0,0" size="1280,720" title="EGAMI Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="SmallPigTemplate" />
-		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<panel name="4Buttons" />
 		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label2" position="50,120" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="110,120" size="315,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label6" position="260,120" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="device_icon" position="40,120" size="80,80" alphatest="on" />
 		<widget name="config" position="60,230" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
+		<widget name="label3" position="645,435" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label4" position="645,460" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label5" position="645,485" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label7" position="920,435" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="label8" position="920,460" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="label9" position="920,485" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="label10" position="645,510" size="440,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label11" position="920,510" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="free_space_progressbar" position="765,442" size="300,13" borderWidth="1" zPosition="3" />
 	</screen>
 	<screen name="EGAMIFaq_YTChannel" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
