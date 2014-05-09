@@ -1195,11 +1195,11 @@
 		<ePixmap pixmap="mega32/screens/gigablueb.png" position="845,585" size="586,202" zPosition="-1" alphatest="blend" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget source="TunerHeader" render="Label" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="nims" render="Label" position="60,195" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="HDDHeader" render="Label" position="60,325" size="520,438" font="Regular;21" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="hdd" render="Label" position="60,350" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="MountsHeader" render="Label" position="60,500" size="520,438" font="Regular;21" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="mounts" render="Label" position="60,525" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget source="nims" render="Label" position="60,195" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget source="HDDHeader" render="Label" position="60,325" size="620,438" font="Regular;21" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/> 
+		<widget source="hdd" render="Label" position="60,350" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget source="MountsHeader" render="Label" position="60,500" size="620,438" font="Regular;21" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/> 
+		<widget source="mounts" render="Label" position="60,525" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemNetworkInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutLiteTemplate" />
