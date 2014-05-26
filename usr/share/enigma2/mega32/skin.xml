@@ -574,11 +574,11 @@
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1130,460" size="200,22" font="Regular;18" halign="left" foregroundColor="yellow" backgroundColor="secondBG" transparent="1" zPosition="1">
 		      <convert type="EventName">SmallRating</convert>
-		</widget>		
+		</widget>
 	</screen>
 
-	<!-- (OK) SECOND INFOBAR -->
-	<screen name="SecondInfoBar" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent" >
+	<!-- (OK) Third INFOBAR -->
+	<screen name="ThirdInfoBar" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent" >
 		<ePixmap position="0,493" zPosition="0" size="1280,248" pixmap="mega32/menu/eib.png" />
 		<!-- Weather -->
 		<widget source="session.CurrentService" render="Pixmap" position="803,20" size="462,75" zPosition="-1" alphatest="blend" pixmap="mega32/weather_panel.png">
@@ -694,7 +694,115 @@
 		<panel name="SecondInfoBarNow"/>
 		<panel name="SecondInfoBarNext"/>
 	</screen>
-	
+	<!-- (OK) Second INFOBAR -->
+	<screen name="SecondInfoBar" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent" >
+		<ePixmap position="0,493" zPosition="0" size="1280,248" pixmap="mega32/menu/eib.png" />
+		<!-- Weather -->
+		<widget source="session.CurrentService" render="Pixmap" position="803,20" size="462,75" zPosition="-1" alphatest="blend" pixmap="mega32/weather_panel.png">
+			<convert type="EGWeather">Enable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>    
+		<widget source="session.CurrentService" render="Label" position="912,65" size="159,28" font="Regular; 16" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" shadowColor="#10000000" shadowOffset="-2,-2">
+			<convert type="EGWeather">TextToday</convert>
+		</widget>    
+		<widget source="session.CurrentService" render="Label" position="912,37" size="189,59" font="Regular; 27" halign="left" foregroundColor="white" backgroundColor="background" transparent="1" noWrap="1" zPosition="1" shadowColor="#10000000" shadowOffset="-2,-2">
+			<convert type="EGWeather">Temperatura</convert>
+		</widget>
+		<widget source="session.CurrentService" render="EGWf" position="828,23" size="74,74" transparent="1" alphatest="blend">
+			<convert type="EGWeather">IconToday</convert>
+		</widget>
+		<widget source="session.CurrentService" render="EGWf" position="1070,20" size="74,74" transparent="1" alphatest="blend">
+			<convert type="EGWeather">IconTomorrow</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1144,23" size="109,69" font="Regular; 16" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" shadowColor="#10000000" shadowOffset="-2,-2" noWrap="1">
+			<convert type="EGWeather">TextTomorrow</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="912,20" size="158,24" font="Regular; 18" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" shadowColor="#10000000" shadowOffset="-2,-2">
+			<convert type="EGWeather">City</convert>
+		</widget>
+		<!-- DigitalClock -->
+		<ePixmap position="1110,531" zPosition="2" size="22,22" pixmap="mega32/icons/clock.png" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" position="1135,527" size="90,26" zPosition="4" font="Regular;20" halign="left" backgroundColor="transpBlack" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+		<!-- Service Name -->
+		<eLabel text="CH - " position="66,522" size="100,32" zPosition="2" font="Regular;25" halign="left" noWrap="1" transparent="1" foregroundColor="#808080" backgroundColor="black" />
+		<widget source="session.CurrentService" render="ChannelNumber" borderWidth="2" position="126,522" size="100,32" zPosition="2" font="Regular;25" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
+		<widget source="session.CurrentService" render="Label" position="420,520" size="530,32" zPosition="2" font="Regular;25" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="EGServiceName">Name</convert>
+		</widget>
+		<!-- Picon Position -->
+		<widget source="session.CurrentService" render="Picon" position="57,550" size="130,80" zPosition="2" transparent="1" alphatest="on" >
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<!-- Progress Bar -->
+		<widget source="session.Event_Now" render="Progress" pixmap="mega32/bars/p_bar2.png" position="209,590" size="987,2" zPosition="2" transparent="1" > 
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- Event Now -->
+		<widget source="session.Event_Now" render="Label" position="146,553" size="120,30" zPosition="1" halign="right"  font="Regular;22" foregroundColor="white" backgroundColor="background" transparent="1" >
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="290,553" size="730,32" zPosition="1" halign="left" font="Regular;24"  foregroundColor="white" backgroundColor="background" transparent="1" noWrap="1">
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Label" position="1078,553" size="120,24" zPosition="1" halign="right"  font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" >
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Event Next -->
+		<widget source="session.Event_Next" render="Label" position="146,597" size="120,30" zPosition="1" halign="right"  font="Regular;22" foregroundColor="#808080" backgroundColor="background" transparent="1" >
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="290,597" size="730,30" zPosition="1" halign="left" font="Regular;24" foregroundColor="#808080" backgroundColor="background" transparent="1" noWrap="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1078,597" size="120,24" zPosition="1" halign="right"  font="Regular;22" foregroundColor="#808080" backgroundColor="black" transparent="1" >
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>	
+		<!-- Panel SNR orientation="orBottomToTop" -->
+		<eLabel text="Snr" zPosition="4" position="60,639" size="40,24" halign="left" font="Regular;20" foregroundColor="#808080" transparent="1" backgroundColor="transpBlack" />
+		<ePixmap position="105,644" zPosition="2" size="61,13" pixmap="mega32/icons/snroff.png" alphatest="blend" />
+		<widget source="session.FrontendStatus" render="Progress" position="105,644" size="61,13" zPosition="3" pixmap="mega32/icons/snron.png" transparent="1" >
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="180,639" zPosition="4" size="70,22" halign="left" font="Regular;20" foregroundColor="#ffffff" transparent="1" backgroundColor="transpBlack">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<!-- Panel AGC -->
+		<eLabel text="Agc" zPosition="4" position="250,639" size="35,24" halign="left" font="Regular;20" foregroundColor="#808080" transparent="1" backgroundColor="transpBlack" />
+		<ePixmap position="295,644" zPosition="2" size="61,13" pixmap="mega32/icons/snroff.png" alphatest="blend" />
+		<widget source="session.FrontendStatus" render="Progress" position="295,644" size="61,13" zPosition="4" pixmap="mega32/icons/agcon.png" transparent="1" >
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+	        <widget source="session.FrontendStatus" render="Label" position="366,639" zPosition="4" size="61,22" font="Regular;20" halign="left" foregroundColor="#ffffff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="520,639"  size="580,22" font="Regular;20" halign="left" backgroundColor="black" foregroundColor="white" zPosition="4" transparent="1">
+			<convert type="ServiceInfo">Freq_Info</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="440,639" size="90,80" transparent="1" zPosition="3" foregroundColor="white" backgroundColor="transpBlack" font="Regular;20" valign="top" halign="left">
+			<convert type="PliExtraInfo">TunerSystem</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="60,670" size="150,30" halign="left" font="Regular;19" zPosition="4" foregroundColor="red" transparent="1" backgroundColor="black">
+			<convert type="EGExtraInfo">E-C-N</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" zPosition="6" position="170,670" size="200,24" halign="left" font="Regular;19" foregroundColor="yellow" transparent="1" backgroundColor="black">
+			<convert type="EGExtraInfo">CamName</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="330,670" size="630,22" backgroundColor="black" foregroundColor="grey" font="Regular;19" halign="left" noWrap="1" zPosition="3" transparent="1">
+			<convert type="EGExtraInfo">NetInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="600,670"  size="610,22" font="Regular;19" halign="right" backgroundColor="black" foregroundColor="grey" zPosition="4" transparent="1">
+			<convert type="EGExtraInfo">EcmInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label"  position="990,639" size="400,21" halign="left" font="Regular;19" zPosition="4" foregroundColor="grey" transparent="1" backgroundColor="black">
+			<convert type="EGExtraInfo">CryptoBar</convert>
+		</widget>
+	</screen>	
 	<!-- (OK) Channel selection - TV --> 
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-2" size="1280,620" pixmap="mega32/screens/panelbk.png" />
