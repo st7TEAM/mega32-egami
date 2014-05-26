@@ -140,7 +140,7 @@
 		<widget name="config" position="60,190" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 	</screen>
 	<screen name="EGAMIBackupPanel_Step3" position="center,center" size="484,250" title="EGAMI Backup in progress..." flags="wfNoBorder">
-	      <widget name="status" position="0,0" size="484,250" zPosition="-1" pixmaps="skin_default/egami_icons/backup_1.png,skin_default/egami_icons/backup_2.png,skin_default/egami_icons/backup_3.png,skin_default/egami_icons/backup_4.png,skin_default/egami_icons/backup_5.png,skin_default/egami_icons/backup_6.png"  />
+	      <widget name="status" position="0,0" size="484,250" zPosition="-1" pixmaps="mega32/egami/backup_1.png,mega32/egami/backup_2.png,mega32/egami/backup_3.png,mega32/egami/backup_4.png,mega32/egami/backup_5.png,mega32/egami/backup_6.png"  />
 	      <widget name="label" position="0,200" halign="center" size="484,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 	</screen>
 	<screen name="EGAMIRestorePanel_Step1" position="0,0" size="1280,720" title="EGAMI Image Restore Panel - STEP 1" backgroundColor="transparent" flags="wfNoBorder">
@@ -151,7 +151,7 @@
 		<widget name="config" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 	</screen>
 	<screen name="EGAMIRestorePanel_Step2" position="center,center" size="484,250" title="EGAMI Restore in progress..." flags="wfNoBorder">
-		    <widget name="status" position="0,0" size="484,250" zPosition="-1" pixmaps="skin_default/egami_icons/restore_1.png,skin_default/egami_icons/restore_2.png,skin_default/egami_icons/restore_3.png,skin_default/egami_icons/restore_4.png,skin_default/egami_icons/restore_5.png,skin_default/egami_icons/restore_6.png"  />
+		    <widget name="status" position="0,0" size="484,250" zPosition="-1" pixmaps="mega32/egami/restore_1.png,mega32/egami/restore_2.png,mega32/egami/restore_3.png,mega32/egami/restore_4.png,mega32/egami/restore_5.png,mega32/egami/restore_6.png"  />
 		    <widget name="label" position="0,200" halign="center" size="484,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 	</screen>
 	<screen name="EGScript" position="0,0" size="1280,720" title="EGAMI Smart Script" backgroundColor="transparent" flags="wfNoBorder">
