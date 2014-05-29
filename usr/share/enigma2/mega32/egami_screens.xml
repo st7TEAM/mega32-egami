@@ -280,7 +280,7 @@
 		<panel name="4Buttons" />
 	</screen>
 	<screen name="ForecaWeatherPlugin" position="0,0" size="1280,720" title="AccuWeather - foreca.com" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutWideTemplate" />
+		<panel name="GenericLayoutWideTemplateNoClock" />
 		<panel name="4Buttons" />
 		<widget name="lugar" position="136,43" zPosition="2" size="512,28" font="Regular;23" transparent="1" valign="center" backgroundColor="#000000" />
 		<widget name="info_entradas" position="843,43" zPosition="3" size="176,23" font="Regular; 23" transparent="1" halign="right" backgroundColor="#000000" />
@@ -307,7 +307,7 @@
 		<widget name="ico_left" position="115,43" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="1" />
 		<widget name="ico_right" position="1030,43" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="1" />
 		
-		<ePixmap position="1030,663" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<ePixmap position="1042,668" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="on"/>
 		<widget position="1120,667" size="210,21" name="key_menu"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 
 		<eLabel name="lin1" position="110,298" size="716,1" zPosition="1" backgroundColor="#05303030" />

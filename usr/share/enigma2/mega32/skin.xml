@@ -3012,7 +3012,10 @@
 		</widget>
 		<widget source="Title" render="Label" zPosition="2" position="60,45" size="1140,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 	</screen>
-
+	<screen name="GenericLayoutWideTemplateNoClock">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelw.png" alphatest="on" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="60,45" size="1140,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+	</screen>
 	<!-- Wizard Template -->
 	<screen name="GenericLayoutWizardTemplate">
 		<ePixmap pixmap="mega32/menu/panelwiz.png" position="0,0" size="1280,720" zPosition="-3" />
