@@ -472,14 +472,14 @@
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<!-- OnLine updates -->
+		<!-- OnLine updates 
 		<ePixmap pixmap="mega32/icons/ico_line_off.png" position="1110,656" size="20,20" zPosition="3" alphatest="blend" />
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="mega32/icons/ico_line_on.png" position="1110,656" size="20,20" zPosition="4" alphatest="blend" >
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="mega32/icons/ico_line_on.png" position="1110,656" size="20,20" zPosition="4" alphatest="blend" >
 			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>	
+		</widget>-->
 		<!-- Internet connection Status -->
 		<widget source="session.CurrentService" render="Pixmap" position="1050,650" size="34,25" zPosition="26" pixmap="mega32/icons/ico_inet.png" alphatest="blend">
 			<convert type="EGOnLineTest">InetConection</convert>
