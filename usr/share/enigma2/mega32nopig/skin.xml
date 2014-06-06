@@ -119,7 +119,7 @@
 	</subtitles>
 	
 	<!-- Load EGAMI Screens -->
-	<include filename="mega32/egami_screens.xml"/>
+	<include filename="mega32nopig/egami_screens.xml"/>
 	
 	<!-- S009 Input Box -->
 	<screen name="InputBox" position="365,250" size="550,90" title="Input">
@@ -805,56 +805,56 @@
 	</screen>	
 	<!-- (OK) Channel selection - TV --> 
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder">
-		<ePixmap position="0,0" zPosition="-2" size="1280,620" pixmap="mega32/screens/panelbk.png" />
-		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelw.png" alphatest="blend" transparent="1" />
-		<widget source="Title" render="Label" zPosition="1" position="60,45" size="500,24" halign="center" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="transpBlack" />
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelw.png" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="50,45" size="540,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 		<panel name="4Buttons" />
-		<panel name="Small2PigTemplate" />
-		<ePixmap  position="1114,32" zPosition="-1" size="1280,619" pixmap="mega32/buttons/colors.png" />
+		<ePixmap  position="1114,32" zPosition="-1" size="1280,619" pixmap="mega32/buttons/colors.png" alphatest="blend"/>
 		<eLabel text="Menu - Info" position="1020,48" size="200,22" font="Regular;20"  halign="right" foregroundColor="#404040" backgroundColor="black" zPosition="0" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>
+		<!-- Oribital Position -->
+		<widget source="ServiceEvent" render="Label" position="1118,80" size="100,22" font="Regular;20" halign="right" foregroundColor="yellow" backgroundColor="black" transparent="1">
+			<convert type="ServiceOrbitalPosition"/>
+		</widget>
+		<widget alphatest="blend" position="907,100" render="Picon" size="220,132" source="ServiceEvent" transparent="0" zPosition="1">
+			<convert type="MetrixRefString">ServicelistRef</convert>
+		</widget>
 		<!-- Lista Canali  --> 
-		<widget name="list" position="55,90" size="650,510" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="80"
+		<widget name="list" position="55,90" size="730,510" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="80"
 		                    serviceNumberFont="Regular;24" serviceNameFont="Regular;20" serviceInfoFont="Regular;17" colorServiceDescription="#a1daff" colorServiceDescriptionSelected="white" 
 		                    picServiceEventProgressbar="mega32/bars/pl2.png" selectionPixmap="mega32/bars/slider50.png" transparent="1" />
-		<ePixmap position="692,90" zPosition="4" size="29,520" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<ePixmap position="692,610" zPosition="4" size="29,40" pixmap="mega32/bars/endbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="772,90" zPosition="4" size="29,520" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<ePixmap position="772,610" zPosition="4" size="29,40" pixmap="mega32/bars/endbar.png" alphatest="blend" transparent="1" />
 		<!-- Event Time -->
-		<widget source="ServiceEvent" render="Label" position="735,361" size="100,26" zPosition="2" halign="left" font="Regular;19" foregroundColor="white" backgroundColor="black"  transparent="1" >
+		<widget source="ServiceEvent" render="Label" position="843,271" size="100,26" zPosition="2" halign="left" font="Regular;19" foregroundColor="white" backgroundColor="black"  transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="925,361" zPosition="1" size="70,26" font="Regular;19" foregroundColor="bluette" backgroundColor="black"  halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1128,271" zPosition="1" size="70,26" font="Regular;19" foregroundColor="bluette" backgroundColor="black"  halign="right" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<!-- Oribital Position -->
-		<widget source="ServiceEvent" render="Label" position="1110,361" size="100,22" font="Regular;20" halign="right" foregroundColor="yellow" backgroundColor="black" transparent="1">
-			<convert type="ServiceOrbitalPosition"/>
+                <!-- ProgressBar -->
+		<ePixmap position="914,275" size="206,15" pixmap="mega32/bars/ch_progressbw_206.png" alphatest="blend" transparent="1"  zPosition="3" />
+		<widget source="ServiceEvent" render="Progress" pixmap="mega32/bars/ch_progresscl_205.png" position="914,275" size="205,13" zPosition="4"  backgroundColor="black" transparent="1">
+			<convert type="EventTime">Progress</convert>
 		</widget>
-		<!-- Service Name 
-		<widget source="ServiceEvent" render="Label" position="1110,361" zPosition="1" size="330,26" font="Regular;19" halign="left" foregroundColor="#606060" backgroundColor="black" transparent="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>-->
 		<!-- Event Name -->
-		<widget source="ServiceEvent" render="Label" position="735,389" size="500,26" zPosition="2" halign="center" font="Regular;20" foregroundColor="white" backgroundColor="transpBlack" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="770,242" size="500,26" zPosition="2" halign="center" font="Regular;20" foregroundColor="white" backgroundColor="transpBlack" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<!-- Event Description -->
-		<widget source="ServiceEvent" render="Label" position="725,416" zPosition="2" halign="center" size="505,196" font="Regular;20" transparent="1" foregroundColor="#a1daff" backgroundColor="transpBlack" >
-			<convert type="EventName">ExtendedDescription</convert>
+		<widget source="ServiceEvent" render="Label" position="820,310" size="395,270" zPosition="2" halign="center" font="Regular;20" transparent="1" foregroundColor="#a1daff" backgroundColor="transpBlack" >
+			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- Next Event Name -->
-		<widget source="ServiceEvent" render="Label" position="725,621" size="505,25" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="820,593" size="395,53" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
 			<convert type="EventName">NextName</convert>
 		</widget>
-                <!-- ProgressBar -->
-		<ePixmap position="810,364" size="120,15" pixmap="mega32/bars/ch_progressbw.png" alphatest="blend" transparent="1"  zPosition="3" />
-		<widget source="ServiceEvent" render="Progress" pixmap="mega32/bars/ch_progresscl.png" position="811,364" size="119,13" zPosition="4"  backgroundColor="black" transparent="1">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<eLabel text="Rec" position="1030,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
-		<!-- ePixmap pixmap="mega32/icons/icon_norec_light.png" position="1050,667" size="44,26" zPosition="2" alphatest="blend" -->
-		<widget source="session.RecordState" 	render="Pixmap" pixmap="mega32/icons/icon_rec_light.png" position="1050,667" size="44,26" zPosition="5" alphatest="blend">
+
+		<eLabel text="Rec" position="1130,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
+		<widget source="session.RecordState" render="Pixmap" pixmap="mega32/icons/icon_rec_light.png" position="1050,667" size="44,26" zPosition="5" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
@@ -895,7 +895,6 @@
 	<!-- (OK) Channel context menu -->
 	<screen name="ChannelContextMenu" position="0,0"  size="1280,720"  title="Channel List Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<widget name="menu" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
 		<eLabel text="Rec" position="1030,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
 		<eLabel text="Info" position="1020,48" size="200,22" font="Regular;20"  halign="right" foregroundColor="#404040" backgroundColor="black" zPosition="0" transparent="1" />
@@ -958,7 +957,7 @@
 	</screen>
 	<!-- (OK) Event View -->
 	<screen name="EventView" position="0,0"	size="1280,720" title=" EPG Channel Event View" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="4Buttons" />
 		<!-- Channel/Provider Name -->
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
@@ -1047,8 +1046,7 @@
 
 	<!-- (OK) PLUGIN DVD Player FileBrowser -->
 	<screen name="FileBrowser" position="0,0" size="1280,720" title="DVD File Browser" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap  position="750,460" zPosition="2" size="400,295" pixmap="mega32/screens/dvdpanelico.png" alphatest="blend" />
 		<widget name="filelist" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
@@ -1171,7 +1169,6 @@
 	<!-- (OK) Audio Track Selection -->
 	<screen name="AudioSelection" position="0,0" size="1280,720" title="Audio Track Selection">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_mediaplayer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="key_red" render="Pixmap" pixmap="mega32/buttons/key_red.png" position="60,100" size="35,25" alphatest="on">
 			<convert type="ConditionalShowHide" />
@@ -1216,7 +1213,6 @@
 	<!-- (OK) Movie Selection -->	
 	<screen name="MovieSelection" position="0,0" size="1280,720" title="Movie Selection Recorded Files" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<!-- Lista Registrazioni -->
 		<widget name="list" position="60,90" size="520,500" zPosition="4" foregroundColor="white" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
@@ -1241,14 +1237,12 @@
 	<!-- (OK) PLUGIN Movielist Context Menu -->
 	<screen name="MovieContextMenu" position="0,0" size="1280,720"  title="Movielist Menu" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<widget name="menu" position="60,90" size="520,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1" />
 	</screen>
 	
 	<!-- (OK) Timer edit list -->
 	<screen name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor List" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<widget name="timerlist" position="60,100" size="520,500" scrollbarMode="showOnDemand" itemHeight="50" selectionPixmap="mega32/bars/slider50.png" zPosition="2" transparent="1" />
 		<eLabel text="Info" position="920,667" size="200,22" font="Regular;20"  halign="right" foregroundColor="yellow" backgroundColor="black" zPosition="1" transparent="1" />
@@ -1257,7 +1251,6 @@
 	<!-- (OK) Timer Entry -->
 	<screen name="TimerEntry" position="0,0" size="1280,720" title="Timer entry" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<widget name="config" position="60,90" size="515,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" itemHeight="30" transparent="1" />
 		<ePixmap position="50,659" size="1200,50" pixmap="mega32/buttons/2colors.png" zPosition="2" alphatest="blend" />
 		<widget name="canceltext" position="95,665" size="210,20" font="Regular;20" halign="left" foregroundColor="white" zPosition="2" transparent="1" />
@@ -1288,7 +1281,6 @@
 	<!-- (OK) Timer Selection -->
 	<screen name="TimerSelection" position="0,0" size="1280,720" title="Timer Selection" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<widget name="timerlist" position="60,90" size="520,420" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" itemHeight="50" transparent="1" />
 	</screen>
 	
@@ -1318,13 +1310,13 @@
 	</screen>
 	<!-- (OK) About screen -->
 	<screen name="About" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="AboutOE" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="2Buttons" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
@@ -1332,13 +1324,13 @@
 	</screen>
 	<!--  18 System Memory Info -->
 	<screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutLiteTemplate" />
-		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/menu/ico_storage.png" alphatest="blend" transparent="1" />
+		<panel name="GenericLayoutLite2Template" />
+		<ePixmap position="920,490" zPosition="3" size="256,356" pixmap="mega32/menu/ico_storage.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemDevicesInfo" position="0,0" size="1280,720" title="Devices Informations" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<ePixmap pixmap="mega32/boxpictures/defaultbox.png" position="845,385" size="400,400" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget source="TunerHeader" render="Label" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="yellow" backgroundColor="transpBlack" transparent="1"/> 
@@ -1349,7 +1341,7 @@
 		<widget source="mounts" render="Label" position="60,525" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemNetworkInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="900,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
@@ -1373,8 +1365,7 @@
 	</screen>
 	<!-- (OK) Plugin Browser -->
 	<screen name="PluginBrowser" position="0,0" size="1280,720"  title="Plugin browser" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
@@ -1382,8 +1373,7 @@
 
 	<!-- (OK) Plugin downloads -->
 	<screen name="PluginDownloadBrowser" position="0,0" size="1280,720" title="Downloadable plugins" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="list" position="60,90" zPosition="2" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" itemHeight="50" transparent="1" />
 		<widget name="text" position="60,622" size="520,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
@@ -1394,7 +1384,6 @@
 	<!-- (OK) Hdd Setup -->
 	<screen name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="menu" render="Listbox" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider40.png" transparent="1">
@@ -1414,7 +1403,6 @@
 	<!-- (OK) Hdd Partitions -->
 	<screen name="HddPartitions" position="0,0" title="Hard Partitions" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="menu" render="Listbox" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
@@ -1434,8 +1422,7 @@
 
 	<!-- (OK) Hdd Mount -->
 	<screen name="HddMount" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<widget name="menu" position="60,90" size="520,400"  scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider40.png" transparent="1" itemHeight="30" />
 		<eLabel text="Hard Drive Mount" zPosition="2" position="60,622" size="520,40" halign="left" font="Regular;20" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
@@ -1444,7 +1431,6 @@
 	<!-- (OK) Hdd Screens -->
 	<screen name="HddInfo" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget font="Regular;22" halign="left" name="model"     position="60,110" size="520,26" transparent="1" />
@@ -1462,8 +1448,7 @@
 
 	<!-- (OK) Hdd UnMount -->
 	<screen name="HddFastRemove" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="menu" render="Listbox" position="60,90" size="515,260" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
@@ -1489,7 +1474,6 @@
 	<!-- (OK) Swap -->
 	<screen name="Swap" position="0,0" size="1280,720" title="Swap" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<widget name="config" position="60,90" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" size="520,330" transparent="1" />
 		<widget name="status" position="60,622" font="Regular; 20" halign="left" size="520,25" foregroundColor="yellow" backgroundColor="black" transparent="1" />
@@ -1498,7 +1482,6 @@
 	<!-- (OK) Harddisk setup -->
 	<screen name="HarddiskSetup" position="0,0" size="1280,720" title="Harddisk Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="model" position="60,90" size="520,25" font="Regular;22" transparent="1" />
@@ -1510,7 +1493,6 @@
 	<!-- (OK) Harddisk selection -->
 	<screen name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD"  >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="hddlist" position="60,90" size="520,275" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen> 
@@ -1518,7 +1500,6 @@
 	<!-- (OK) Harddisk Partitioner -->
 	<screen name="ExtraMessageBox" position="0,0" size="1280,720" title="HDD Partitioner " flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="menu" render="Listbox" position="60,90" size="520,440" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
@@ -1537,26 +1518,23 @@
 	<!-- (OK) AutoRes-Pers-Fuso-Tast-Disp-Parental -->
 	<screen name="Setup" position="0,0" size="1280,720" title="Customize Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
-		<widget name="description" position="60,622" size="1020,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+		<widget name="config" position="50,90" itemHeight="30" size="540,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
+		<widget name="description" position="60,572" size="540,200" zPosition="10" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="HelpWindow" position="620,450" zPosition="5" size="1,1" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental Control Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
+		<widget name="config" position="50,90" itemHeight="30" size="540,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
 	</screen>
 	<!-- (OK) Parental Control Editor -->
 	<screen name="ParentalControlEditor" position="0,0" size="1280,720" title="Parental Control Services Editor" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="servicelist" position="60,90" size="520,480" selectionPixmap="mega32/bars/slider90.png" itemHeight="28" transparent="1" />
+		<widget name="servicelist" position="60,90" size="520,480" selectionPixmap="mega32/bars/slider90b.png" itemHeight="28" transparent="1" />
 	</screen> 
 
 	<!-- (OK) Video Finetune -->
@@ -1570,32 +1548,29 @@
 	<!-- (OK) VideoEnhancement Setup -->
 	<screen name="VideoEnhancementSetup" position="0,0" size="1280,720" title="VideoEnhancement Setup" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_videosetup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" size="520,350" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,90" size="520,350" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="introduction" render="Label" position="63,622" font="Regular;20" size="520,25" halign="left" zPosition="10"  foregroundColor="yellow" backgroundColor="black" transparent="1" />
 	</screen>
 	
 	<!-- (OK) VideoEnhancementPreview -->	
 	<screen name="VideoEnhancementPreview" position="0,0" size="1280,720" title="VideoEnhancement Preview" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_videosetup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" size="520,350" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,90" size="520,350" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="introduction" render="Label" position="60,622" font="Regular;20" size="520,25" halign="left" zPosition="10"  foregroundColor="yellow" backgroundColor="black" transparent="1" />
 	</screen>
 
 	<!-- (OK) LCD Skin Selector -->	
 	<screen name="LCDSkinSelector" position="0,0" size="1280,720" title="LCD Skin-Selector" flags="wfNoBorder" >
-		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutMid2Template" />
 		<ePixmap position="565,130" zPosition="2" size="15,450" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<ePixmap position="565,580" zPosition="2" size="15,40" pixmap="mega32/bars/endbar.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" size="250,26" zPosition="1"  font="Regular;22" halign="left" foregroundColor="bluette" transparent="1" />
 		<widget name="lab2" position="-60,370" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="1" />
-		<widget name="SkinList" position="60,130" size="515,480" enableWrapAround="1" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="SkinList" position="60,130" size="515,480" enableWrapAround="1" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="Preview" position="780,430" size="280,210" zPosition="2" backgroundColor="background" transparent="0" alphatest="on" />
 		<widget name="lab3" position="60,622" size="520,26" zPosition="1" foregroundColor="#FFE500" font="Regular;20" transparent="1" />
 	</screen>
@@ -1603,7 +1578,6 @@
  	<!-- (OK) Network Config -->
 	<screen name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="IFtext" render="Label" position="60,90" size="140,24" zPosition="10" font="Regular;24" transparent="1" />
@@ -1611,28 +1585,26 @@
 		<widget source="Statustext" render="Label" position="105,130"  size="300,40" zPosition="2" font="Regular;24" transparent="1"/>
 		<ePixmap  pixmap="mega32/buttons/key_red.png" position="60,131" size="35,25" zPosition="5" alphatest="blend" transparent="1" />
 		<widget name="statuspic" position="60,131" size="35,25" pixmaps="mega32/buttons/key_green.png,mega32/buttons/key_red.png" zPosition="10" transparent="1" alphatest="on"/>
-		<widget name="menulist" position="60,180" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="menulist" position="60,180" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="description" render="Label" position="60,580"  size="520,80" zPosition="10" font="Regular;20" halign="left" valign="center" foregroundColor="yellow" transparent="1"/>
 	</screen>
 	<screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Network Mounts" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="menulist" position="60,90" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="menulist" position="60,90" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="introduction" render="Label" position="60,580"  size="520,80" zPosition="10" font="Regular;20" halign="left" valign="center" foregroundColor="yellow" transparent="1"/>
 	</screen>
 	<!-- (OK) Network Adapter Setup -->
 	<screen name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<!--<ePixmap pixmap="mega32/buttons/button_blue.png" position="311,669" size="30,30" alphatest="blend" zPosition="10" />
 		<eLabel text="Change DNS" position="345,668" size="210,21" font="Regular;19" zPosition="2" backgroundColor="black" transparent="1" />-->
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="Adaptertext" render="Label" position="60,90" size="140,28" zPosition="10" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget source="Adapter" render="Label" position="180,90" size="340,28" zPosition="10" font="Regular;24" foregroundColor="#538eff" backgroundColor="black" transparent="1" />
-		<widget name="config" position="60,140" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,140" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="IPtext" render="Label" position="60,420"  size="300,26" zPosition="10" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="black"  transparent="1" />
 		<widget source="IP" render="Label" position="345,420"  size="230,26" zPosition="10" font="Regular;22" halign="right" foregroundColor="#538eff" backgroundColor="black" transparent="1" />
 		<widget source="Netmasktext" render="Label" position="60,460" size="300,26" zPosition="10" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" />
@@ -1654,13 +1626,13 @@
 		<panel name="3ButtonsW" />
 		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" size="520,280" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,90" size="520,280" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="introduction" render="Label" position="60,620" size="520,26" zPosition="10" font="Regular;22" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 	</screen>
 
 	<!-- (OK) Network Test -->
 	<screen name="NetworkAdapterTest" position="0,0" size="1280,720" title="Network Test" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="920,455" size="256,256" zPosition="2" alphatest="blend" />
 		<ePixmap position="70,110" zPosition="1" size="40,40" pixmap="mega32/buttons/greypanel.png" alphatest="blend" transparent="1" />
@@ -1701,7 +1673,7 @@
 
 	<!-- (OK) AutoMount Manager -->
 	<screen name="AutoMountManager" position="0,0" size="1280,720" title="Mount Manager" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="1ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="920,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="config" render="Listbox" position="60,100" size="760,490" transparent="1">
@@ -1749,7 +1721,7 @@
 		<panel name="1ButtonsW" />
 		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" zPosition="1" size="515,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" zPosition="1" size="515,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="VKeyIcon" pixmap="mega32/skin_default/vkey_icon.png" position="620,430" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
 		<widget name="HelpWindow" position="620,490" zPosition="1" size="1,1" transparent="1" alphatest="on" />
 		<widget source="introduction" render="Label" position="60,620" size="520,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="#25062748" transparent="1" />
@@ -1757,7 +1729,7 @@
 
 	<!-- (OK) AutoMountView -->
 	<screen name="AutoMountView" position="0,0" size="1280,720" title="MountView" flags="wfNoBorder" >
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="1ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="920,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="legend1" render="Label" position="60,90"  zPosition="1" size="130,60" font="Regular;20" halign="center" valign="center"  backgroundColor="black" foregroundColor="white" transparent="1"/>
@@ -1807,7 +1779,7 @@
 		<panel name="GenericLayoutMidTemplate" />
 		<panel name="1ButtonsW" />
 		<panel name="SmallPigTemplate" />
-		<widget name="config" position="60,100" zPosition="1" size="520,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
+		<widget name="config" position="60,100" zPosition="1" size="520,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
 		<widget name="VKeyIcon" pixmap="mega32/skin_default/vkey_icon.png" position="620,430" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
 		<widget name="HelpWindow" position="620,490" zPosition="1" size="1,1" transparent="1" alphatest="on" />
 		<widget source="introduction" render="Label" position="60,620" size="520,40" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
@@ -1818,7 +1790,8 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4ButtonsW" />
 		<panel name="SmallPigTemplate" />
-		<widget source="list" render="Listbox" position="60,100" size="515,490" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90.png" transparent="1">
+		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="60,100" size="515,490" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90b.png" transparent="1">
 			<convert type="TemplatedMultiContent"> <!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->
 				{"template": [
 					MultiContentEntryText(pos = (88, -2), size = (420, 26), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
@@ -1840,7 +1813,7 @@
 		<panel name="3ButtonsW" />
 		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="520,50" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" size="520,50" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) WlanScan -->	
@@ -1850,7 +1823,7 @@
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<ePixmap position="805,100" zPosition="14" size="15,490" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<ePixmap position="805,590" zPosition="14" size="15,40"  pixmap="mega32/bars/endbar.png" alphatest="blend" transparent="1" />
-		<widget source="list" render="Listbox" position="60,100" size="740,490" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90.png" transparent="1">
+		<widget source="list" render="Listbox" position="60,100" size="740,490" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90b.png" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (2, -3), size = (500, 30), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the essid
@@ -1870,7 +1843,6 @@
 	<!-- (OK) WlanStatus -->	
 	<screen name="WlanStatus" position="0,0" size="1280,720" title="Wireless Network State" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<eLabel text="WI-FI Network Data" position="60,100" size="610,32" font="Regular;26" zPosition="0" foregroundColor="bluette" backgroundColor="black" transparent="1" />
@@ -1897,7 +1869,6 @@
 	<!-- (OK) Input Device Selection -->
 	<screen name="InputDeviceSelection" position="0,0" size="1280,720" title="Select Input Device" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 
@@ -1919,27 +1890,24 @@
 	<!-- (OK) Input Device Setup -->	
 	<screen name="InputDeviceSetup" position="0,0" size="1280,720" title="Input Device Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="introduction" render="Label" position="60,620" size="520,80" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 	</screen>
 
 	<!-- (OK) Recording Paths -->
 	<screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget source="introduction" render="Label" position="60,620" size="520,80" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 	</screen>
 
 	<!-- (OK) Language Selection -->
 	<screen name="LanguageSelection" position="0,0" size="1280,720" title="Language Selection" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="languages" render="Listbox" position="60,100" size="515,500" zPosition="3" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="mega32/bars/slider50.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
@@ -1956,18 +1924,17 @@
 
 	<!-- (OK) Skin Select -->
 	<screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Select" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
+		<panel name="GenericLayoutMid2Template" />
 		<panel name="1ButtonsW" />
 		<widget name="SkinList" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" zPosition="1" transparent="1" />
 		<widget source="introduction" render="Label" position="60,620" size="720,80" zPosition="10" font="Regular;22" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
-		<ePixmap position="635,90" size="600,325" pixmap="mega32/menu/tv.png" zPosition="4" alphatest="blend" />
+		<ePixmap position="645,90" size="600,325" pixmap="mega32/menu/tv.png" zPosition="4" alphatest="blend" />
 		<widget name="Preview" position="750,130" size="372,275"  zPosition="3" alphatest="blend" transparent="1"/>	
 	</screen>
 
 	<!-- (OK) Sleeptimer edit -->
 	<screen name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap position="790,455" zPosition="0" size="380,256" pixmap="mega32/menu/ico_timer.png" alphatest="blend" transparent="1" />
 		<widget name="red"    pixmap="mega32/buttons/key_red.png"    position="60,110" size="35,25" alphatest="on" />
 		<widget name="green"  pixmap="mega32/buttons/key_green.png"  position="60,150" size="35,25" alphatest="on" />
@@ -1988,9 +1955,8 @@
 	<!-- (OK) TUNER Selection -->
 	<screen name="NimSelection" position="0,0" size="1280,720" title="Tuner Selection" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget source="nimlist" render="Listbox" position="60,100" size="520,450" transparent="1" selectionPixmap="mega32/bars/slider90.png" >
+		<widget source="nimlist" render="Listbox" position="60,100" size="520,450" transparent="1" selectionPixmap="mega32/bars/slider90b.png" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (3, 10), size = (510, 40), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
@@ -2009,16 +1975,15 @@
 		<widget source="Title" render="Label" zPosition="2" position="60,45" size="800,40" halign="left" font="Regular; 22" foregroundColor="#538eff" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="920,455" size="256,256" zPosition="2" alphatest="blend" />
 		<panel name="2ButtonsW" />
-		<widget name="config" position="60,100" size="760,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" size="760,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) TUNER Scan Simple -->
 	<screen name="ScanSimple" position="0,0" size="1280,720"  title="Scan Simple" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="header" position="60,100" size="650,30" font="Regular;28" foregroundColor="bluette" backgroundColor="black" transparent="1"/>
-		<widget name="config" position="60,160" size="510,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
+		<widget name="config" position="60,160" size="510,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
 		<widget name="footer" position="60,620" size="510,25" font="Regular;22" halign="left" zPosition="2" foregroundColor="bluette" backgroundColor="black" transparent="1"/>
 		<panel name="2Buttons" />
 		<eLabel text="Exit" position="100,667" size="200,22" font="Regular;20" halign="left" backgroundColor="black" transparent="1"/>
@@ -2061,9 +2026,8 @@
 	<!-- (OK) TUNER Scan Setup -->
 	<screen name="ScanSetup" position="0,0" size="1280,720" title="Scan Setup" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,90" size="520,375" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="introduction" position="60,620" size="500,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 		<panel name="2Buttons" />
 		<eLabel text="Exit" position="100,667" size="200,22" font="Regular;20" halign="left" backgroundColor="black" transparent="1"/>
@@ -2095,31 +2059,28 @@
 		<widget name="fec_value" position="180,250" size="120,22" font="Regular;21" backgroundColor="black" transparent="1" />
 		<eLabel text="-" position="60,290" size="520,1" zPosition="0" backgroundColor="#404040"/>
 		<eLabel text="-" position="60,292" size="520,1" zPosition="0" backgroundColor="#303030"/>
-		<widget name="list" position="60,340" size="520,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"  />
+		<widget name="list" position="60,340" size="520,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"  />
 	</screen>
 
 	<!-- (OK) TUNER SatNimSelection -->
 	<screen name="SatNimSelection" position="0,0" size="1280,720" title="select Slot" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="nimlist" position="60,100" size="520,400" transparent="1" selectionPixmap="mega32/bars/slider25.png" />
+		<widget name="nimlist" position="60,100" size="520,400" transparent="1" selectionPixmap="mega32/bars/slider25b.png" />
 	</screen>
 
 	<!-- (OK) TUNER Sat Parameter -->
 	<screen name="SecParameterSetup" position="0,0" size="1280,720" title="Satellite equipment setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) FastScan Screen-->
 	<screen name="FastScanScreen" position="0,0" size="1280,720" title="Fast Scan" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" size="520,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="config" position="60,100" size="520,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="introduction" position="60,620" size="520,25" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<panel name="2Buttons" />
 		<eLabel text="Exit" position="100,667" size="200,22" font="Regular;20" halign="left" backgroundColor="black" transparent="1"/>
@@ -2129,7 +2090,6 @@
 	<!-- (OK) FastScan Status-->
 	<screen name="FastScanStatus" position="0,0" size="1280,720" title="Fast Scan" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="scan_state" position="60,100" zPosition="2" size="520,30" font="Regular;18" />
 		<widget name="scan_progress" position="60,155" size="520,15" pixmap="skin_default/progress_big.png" borderWidth="2" borderColor="#cccccc" />
@@ -2145,7 +2105,6 @@
 	<!-- (OK) TUNER Satfinder -->
 	<screen name="Satfinder" position="0,0" size="1280,720"  title="Satfinder" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<ePixmap position="140,100" zPosition="1" size="280,21" pixmap="mega32/bars/bar_snr_lcn.png" />
 		<ePixmap position="140,140" zPosition="1" size="280,21" pixmap="mega32/bars/bar_snr_lcn.png" />
@@ -2183,7 +2142,7 @@
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-		<widget name="config" position="60,250" size="515,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" backgroundColor="black" transparent="1" />
+		<widget name="config" position="60,250" size="515,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
 		<widget name="introduction" position="60,620" size="520,25" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<ePixmap position="50,659" size="300,50" pixmap="mega32/buttons/1colors.png" zPosition="2" alphatest="blend" />
 		<eLabel text="Return" position="100,664" size="200,22" font="Regular;20" halign="left" backgroundColor="black" transparent="1"/>
@@ -2203,27 +2162,24 @@
  	<!-- (OK) Common Interface -->
   	<screen name="CiSelection"  position="0,0" size="1280,720" title="Common Interface" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
   		<widget name="text" position="60,90" size="520,32" font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />  
  		<eLabel text="-" position="60,130" size="517,1" zPosition="0" backgroundColor="#404040"/>
  		<eLabel text="-" position="60,132" size="517,1" zPosition="0" backgroundColor="#303030"/>
-  		<widget name="entries"  position="60,160" size="515,350" zPosition="3" scrollbarMode="showOnDemand"  selectionPixmap="mega32/bars/slider25.png" transparent="1"  />
+  		<widget name="entries"  position="60,160" size="515,350" zPosition="3" scrollbarMode="showOnDemand"  selectionPixmap="mega32/bars/slider25b.png" transparent="1"  />
   	</screen>
 
 	<!-- (OK) Common Interface  Assignment -->
 	<screen name="CIselectMainMenu" position="0,0" size="1280,720" title="CI Assignment" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="CiList" position="60,100" size="520,200" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"  />
+		<widget name="CiList" position="60,100" size="520,200" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"  />
 	</screen>
 
 	<!-- (OK) Common interface -->
 	<screen name="MMIDialog" position="0,0" size="1280,720" title="Common interface">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="subtitle" position="60,120" size="520,25" font="Regular;20" transparent="1" />
 		<widget name="entries" position="60,150" size="520,210" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
@@ -2232,82 +2188,73 @@
  
 	<!-- (OK) Common Interface CAidSelect -->
 	<screen name="CAidSelect" position="0,0" size="1280,720" title="CI CAId Select" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="list" position="60,90" size="515,520" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
+		<widget name="list" position="60,90" size="515,520" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
 	</screen>
 
 
 	<!-- (OK) Common Interface Assign -->
 	<screen name="easyCIconfigMenu" position="0,0" size="1280,720" title="CI Easy Config Menu" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="ServiceList_desc" position="60,100" size="520,32" font="Regular;20" transparent="1" />
-		<widget name="ServiceList" position="60,140" size="520,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="ServiceList" position="60,140" size="520,375" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) CI Modify -->
 	<screen name="CIconfigMenu" position="0,0" size="1280,720" title="CI Config Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
  		<widget source="CAidList_desc" render="Label" position="60,100" size="520,30" font="Regular;24"  backgroundColor="black" transparent="1" />
  		<widget source="CAidList" render="Label" position="60,140" size="520,75" font="Regular;22"  backgroundColor="black" transparent="1" />
  		<widget source="ServiceList_desc" render="Label" position="60,180" size="520,30" font="Regular;22" backgroundColor="black" transparent="1"  />
- 		<widget name="ServiceList" position="60,220" size="520,250" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"  />
+ 		<widget name="ServiceList" position="60,220" size="520,250" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"  />
  		<widget source="ServiceList_info" render="Label" position="60,260" size="520,250" zPosition="2" font="Regular;22" backgroundColor="black" transparent="1"  />
  	</screen>
 
 	<!-- (OK) Common Interface ChannelSelection -->
 	<screen name="myChannelSelection" position="0,0" size="1280,720" title="CI Select Service" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="list" position="60,90" size="515,500" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
+		<widget name="list" position="60,90" size="515,500" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
 	</screen>
 
 	<!-- (OK) Common Interface Provider Selection -->
 	<screen name="myProviderSelection" position="0,0" size="1280,720" title="CI Select Provider" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4ButtonsW" />
-		<widget name="list" position="60,100" size="515,500" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
+		<widget name="list" position="60,100" size="515,500" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
 	</screen>
 
 	<screen name="Getipklist" position="0,0" size="1280,720" title="Available for install" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="820,435" size="256,256" zPosition="-1" alphatest="blend" />
-                <widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" backgroundColor="black" transparent="1" />
+                <widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
 		<widget name="info" position="60,620" zPosition="4" size="520,25" font="Regular;20" foregroundColor="yellow" transparent="1" />
 	</screen>
 
 	<screen name="Getipk" position="0,0" size="1280,720" title="Install status" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="820,435" size="256,256" zPosition="-1" alphatest="blend" />
-		<widget name="list" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" backgroundColor="black" transparent="1" />
+		<widget name="list" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
 		<widget name="info" position="60,620" zPosition="4" size="520,25" font="Regular;20" foregroundColor="yellow" transparent="1" />
 	</screen>
 
 	<screen name="Ipkremove" position="0,0" size="1280,720" title="Ipkremove" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="820,435" size="256,256" zPosition="-1" alphatest="blend" />
-		<widget name="list" position="60,100" size="260,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" backgroundColor="black" transparent="1" />
+		<widget name="list" position="60,100" size="260,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
 		<widget name="pixmap" position="330,100" size="190,250" />
 	</screen>
 
 	<!-- (OK) Zap History Browser -->
 	<screen name="ZapHistoryBrowser" position="0,0" size="1280,720" title="Zap-History Browser" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<widget name="list" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" backgroundColor="black" transparent="1" />
 	</screen>
@@ -2396,7 +2343,6 @@
 	<!-- (OK) Web Browser Launcher-->
 	<screen name="BrowserLauncher" position="0,0" size="1280,720" title="Web Browser"  flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<widget name="config" position="60,90" size="520,100" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" backgroundColor="black" transparent="1" />
 		<ePixmap pixmap="mega32/screens/rc_wb_desc_gb.png" position="160,230" size="309,435" alphatest="on" />
@@ -2405,41 +2351,36 @@
 
 	<!-- (OK) Bouquet selector -->
 	<screen name="BouquetSelector" position="0,0" size="1280,720" title="Bouquet Selection"  flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
-		<widget name="menu" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<panel name="GenericLayoutLiteTemplate" />
+		<widget name="menu" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) Console - Backup/Restore System Setting -->
 	<screen name="Console" position="0,0" size="1280,720" title="Command Execution" flags="wfNoBorder" >	
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="text" position="60,90" size="515,500" font="Console;16" transparent="1" foregroundColor="white" backgroundColor="black" />
 	</screen>
 
 	<!-- (OK) Backup Selection -->
 	<screen name="BackupSelection" position="0,0" size="1280,720" title="Select files/folders to backup" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
-		<widget name="checkList" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="checkList" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) Restore Menu -->
 	<screen name="RestoreMenu" position="0,0" size="1280,720" title="Restore Backups" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
-		<widget name="filelist" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" transparent="1" />
+		<widget name="filelist" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
 
 	<!-- (OK) Packet Manager -->
 	<screen name="PacketManager" position="0,0" size="1280,720" title="Packet Manager" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget source="list" render="Listbox" position="60,90" size="515,500" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1">
@@ -2459,26 +2400,23 @@
 	<!-- (OK) IPKGMenu Source Update -->
 	<screen name="IPKGMenu" position="center,center" size="1280,720" title="IPKG Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
-		<widget name="filelist" position="60,90" size="515,300" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="mega32/bars/slider25.png" />
+		<widget name="filelist" position="60,90" size="515,300" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="mega32/bars/slider25b.png" />
 	</screen>
 
 	<!-- (OK) IpkgInstaller -->
 	<screen name="IpkgInstaller" position="0,0" size="1280,720" title="Install Extensions" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
-		<widget name="list" position="60,90" size="520,360" selectionPixmap="mega32/bars/slider25.png" transparent="1"/>
+		<widget name="list" position="60,90" size="520,360" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
 		<widget source="introduction" render="Label" position="60,620" font="Regular;22" size="700,25" halign="left" foregroundColor="yellow" zPosition="10"  transparent="1" />
 	</screen>   
 
         <!-- (OK) IPKGSource -->
 	<screen name="IPKGSource" position="0,0" size="1280,720" title="Edit IPKG Source" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="text" position="60,90" size="515,25" font="Regular;22" backgroundColor="background" foregroundColor="#cccccc" />
@@ -2513,8 +2451,7 @@
 
 	<!-- (OK) scripts -->
 	<screen name="Scripts" position="0,0" size="1280,720" title="Scripts" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_script.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" scrollbarMode="showOnDemand" size="520,330" transparent="1" />
@@ -2638,7 +2575,6 @@
 	<!-- (OK) Swapp Manager -->
 	<screen name="SwapManager" position="0,0" size="1280,720" title="Swap File Manager" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="3Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="autostart_off" position="60,90" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
@@ -2655,8 +2591,7 @@
 
 	<!-- (OK) Plugins Estension Manager -->
 	<screen name="PluginManager" position="0,0" size="1280,720" title="Extensions Manager" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_plugin.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="mega32/bars/slider50.png" transparent="1">
@@ -2694,8 +2629,7 @@
 	
 	<!-- (OK) Update Plugin Menu -->
 	<screen name="UpdatePluginMenu" position="0,0" size="1280,720" title="Software Management" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="1ButtonsW" />
 		<widget source="menu" render="Listbox" position="30,90" zPosition="1" size="545,520" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
 			<convert type="TemplatedMultiContent">
@@ -2731,7 +2665,6 @@
 	<!-- (OK) Plugin Manager Info -->
 	<screen name="PluginManagerInfo" position="0,0" size="1280,720" title="Plugin manager activity information" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<widget source="list" render="Listbox" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
@@ -2752,7 +2685,6 @@
 	<!-- (OK) Plugin Manager Help -->
 	<screen name="PluginManagerHelp" position="0,0" size="1280,720" title="Plugin manager help" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1ButtonsW" />
 		<widget source="list" render="Listbox" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" >
 			<convert type="TemplatedMultiContent">
@@ -2773,7 +2705,6 @@
 	<!-- (OK) Software Manager Setup -->
 	<screen name="SoftwareManagerSetup" position="0,0" size="1280,720" title="SoftwareManager setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<widget name="config" position="60,90" size="520,500" scrollbarMode="showOnDemand" transparent="1" />
 		<widget source="introduction" render="Label" position="60,622" size="520,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
@@ -2861,9 +2792,8 @@
 	<!-- ########### MENU SECTION ############ -->
 
 	<!-- (OK) Menu Template -->
-	<screen name="ScreenMenuTemplate">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+	<screen name="ScreenMenuTemplate" alphatest="blend">
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<!-- menu list -->
  		<widget source="menu" render="Listbox" position="30,90" zPosition="2" size="545,520" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
@@ -2980,30 +2910,47 @@
 	<!-- ########### TEMPLATE SECTION ############ -->
 
 	<!-- Full Template -->
-	<screen name="GenericLayoutFullTemplate">
+	<screen name="GenericLayoutOldFullTemplate">
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panel.png" />
-		<widget source="Title" render="Label" zPosition="1" position="60,45" size="500,24" halign="center" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="transpBlack" />
+		<widget source="Title" render="Label" zPosition="2" position="50,45" size="540,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 		<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
 		</widget>
 		<panel name="ScrollBarTemplate520" /> 
 	</screen>
-
+	<screen name="GenericLayoutFullTemplate">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32nopig/menu/panel_1.png" transparent="1" />
+		<!--<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>-->
+		<widget source="Title" render="Label" zPosition="2" position="50,45" size="540,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+		<panel name="ScrollBarTemplate520" /> 
+	</screen>
 	<!-- Mid Template -->
-	<screen name="GenericLayoutMidTemplate">
-		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panel.png" />
+	<screen name="GenericLayoutMidTemplate" >
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32nopig/menu/panel_1.png" transparent="1" />
+		<!--<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>-->
+		<widget source="Title" render="Label" zPosition="2" position="50,45" size="540,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+	</screen>
+	<screen name="GenericLayoutMid2Template" >
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32nopig/menu/panel_2_buttons.png" transparent="1" />
 		<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
 		</widget>
-		<widget source="Title" render="Label" zPosition="1" position="60,45" size="500,24" halign="center" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="transpBlack" />
+		<widget source="Title" render="Label" zPosition="2" position="50,45" size="540,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 	</screen>
-
 	<!-- Lite Template -->
-	<screen name="GenericLayoutLiteTemplate">
+	<screen name="GenericLayoutLiteTemplate" alphatest="blend">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32nopig/menu/panel_1.png" transparent="1" />
+		<widget source="Title" render="Label" zPosition="2" position="50,45" size="540,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+	</screen>
+	<!-- Lite 2 Template -->
+	<screen name="GenericLayoutLite2Template" alphatest="blend">
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panel1.png" alphatest="on" transparent="1" />
 		<widget source="Title" render="Label" zPosition="2" position="60,45" size="750,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
 	</screen>
-
 	<!-- Wide Template -->
 	<screen name="GenericLayoutWideTemplate">
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelw.png" alphatest="on" transparent="1" />
@@ -3024,14 +2971,13 @@
 
 	<!-- Pig Template -->
 	<screen name="SmallPigTemplate">
-		<ePixmap position="635,90" size="600,325" pixmap="mega32/menu/tv.png" zPosition="4" alphatest="blend" />
+		<!--<ePixmap position="635,90" size="600,325" pixmap="mega32/menu/tv.png" zPosition="4" alphatest="blend" />
 		<widget source="session.VideoPicture" render="Pig" position="640,95" size="570,310" zPosition="2" backgroundColor="#df0b1300"/>
 		<eLabel position="640,95" size="570,26" zPosition="4" backgroundColor="background" />
 		<widget source="session.CurrentService" render="Label" position="640,95" size="570,26" zPosition="5" font="Regular;20" halign="center" foregroundColor="white" backgroundColor="black" transparent="1" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<eLabel position="640,380" size="570,26" zPosition="4" backgroundColor="background" />
-		<!-- Event Now -->
 		<widget source="session.Event_Now" render="Label" position="645,382" size="90,26" zPosition="5" halign="left"  font="Regular;20" foregroundColor="white" backgroundColor="black" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
@@ -3043,10 +2989,9 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<!-- Progress Bar -->
 		<widget source="session.Event_Now" render="Progress" pixmap="mega32/bars/p_bar.png" position="640,406" size="570,2" zPosition="5" transparent="1" > 
 			<convert type="EventTime">Progress</convert>
-		</widget>
+		</widget> -->
 	</screen>
 	<!-- Small Pig Template -->
 	<screen name="Small2PigTemplate">
@@ -3462,7 +3407,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   	<!-- (OK) CrossEPG Configuration -->
 	<screen name="CrossEPG_Setup" position="0,0" size="1280,720" title="CrossEPG Configuration" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1Buttons" />
 		<widget name="config" position="60,90" size="515,250"  zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/ls_750x24.png" backgroundColor="black" transparent="1" />
 		<widget name="information" position="620,400" size="600,200" halign="center" valign="center" font="Regular;22" backgroundColor="black" transparent="1" />
@@ -3470,8 +3414,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<!-- (OK) CrossEPG Menu -->
 	<screen name="CrossEPG_Menu" position="0,0" size="1280,720" title="CrossEPG Menu" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="1ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_crossepg.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="545,500" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
@@ -3490,8 +3433,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<!-- (OK) CrossEPG Providers -->
 	<screen name="CrossEPG_Providers" position="0,0" size="1280,720" title="CrossEPG Provider XMLTV-OpenTV-XEPGDB-MHW2-M7-RAI" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="3Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_crossepg.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="545,520" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
@@ -3509,8 +3451,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<!-- (OK) CrossEPG Order List -->
 	<screen name="CrossEPG_Ordering" position="0,0" size="1280,720" title="CrossEPG Order Download List" backgroundColor="transparent" flags="wfNoBorder" > 
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_crossepg.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="545,520" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1"  >
@@ -3528,8 +3469,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<!-- (OK) CrossEPG Information -->
 	<screen name="CrossEPG_Info" position="0,0" size="1280,720" title="CrossEPG - DB Info" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_crossepg.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="version"            position="60,120" size="720,25" font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />
@@ -3551,8 +3491,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) CrossEPG About -->
 	<screen name="CrossEPG_About" position="0,0" size="1280,720" title="CrossEPG About" backgroundColor="transparent" flags="wfNoBorder" > 
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_crossepg.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="about" position="60,100" size="520,560" font="Regular;20" backgroundColor="black" transparent="1" zPosition="4" />
@@ -3563,18 +3502,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) AutoBouquet Maker ProviderSetup -->
 	<screen name="AutoBouquetsMaker_ProvidersSetup" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" size="510,500" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="mega32/bars/slider25b.png" />
-		<widget name="description" position="60,420" size="520,200" font="Regular;20" halign="center" foregroundColor="#538eff" transparent="1" zPosition="2" />
+		<widget name="config" position="50,90" itemHeight="30" size="540,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
+		<widget name="description" position="60,572" size="540,200" zPosition="10" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="pleasewait" position="640,520" size="560,230" font="Regular;22" halign="center" foregroundColor="yellow" transparent="1" zPosition="3" />
 	</screen>
 
 	<!-- (OK) AutoBouquet Maker Menu -->
 	<screen name="AutoBouquetsMaker_Menu" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="520,360" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
 			<convert type="TemplatedMultiContent">
@@ -3592,18 +3529,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) AutoBouquet Maker Setup -->
 	<screen name="AutoBouquetsMaker_Setup" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" size="510,230" scrollbarMode="showOnDemand" transparent="1"  selectionPixmap="mega32/bars/slider25b.png" />
-		<widget name="description" position="60,420" size="520,200" font="Regular;20" halign="center" foregroundColor="#538eff" transparent="1" zPosition="2" />
+		<widget name="config" position="50,90" itemHeight="30" size="540,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
+		<widget name="description" position="60,572" size="540,200" zPosition="10" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="pleasewait" position="60,620" size="560,230" font="Regular;22" halign="center" foregroundColor="yellow" transparent="1" zPosition="3" />
 	</screen>
 
 	<!-- (OK) AutoBouquet Maker Ordering -->
 	<screen name="AutoBouquetsMaker_Ordering" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="520,360" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
@@ -3621,8 +3556,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) AutoBouquet Maker HideSection -->
 	<screen name="AutoBouquetsMaker_HideSections" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="540,480" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
@@ -3641,8 +3575,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) AutoBouquet Maker PanelConfig -->
 	<screen name="PanelConfigAdd" position="0,0" size="1280,720" title="Panel configuration Add" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="menu" render="Listbox" position="30,90" size="545,500" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
@@ -3659,8 +3592,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) AutoBouquet Maker KeepsBouquets -->
 	<screen name="AutoBouquetsMaker_KeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="60,90" size="520,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" >
@@ -3687,8 +3619,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) AutoBouquet Maker Log -->
 	<screen name="AutoBouquetsMaker_Log" position="0,0" size="1280,720" title="Backup Log" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,520" font="Regular;20" transparent="1" selectionPixmap="mega32/bars/slider30b.png" />
 	</screen>
@@ -3696,7 +3627,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) AutoBouquet Maker About -->
 	<screen name="AutoBouquetsMaker_About" position="0,0" size="1280,720" title="CrossEPG - About" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1Buttons" />
 		<widget name="about" position="60,90" size="520,500" font="Regular;20" transparent="1" />
 		<widget name="oealogo" position="850,460" size="200,135" zPosition="4" transparent="1" alphatest="blend" />
@@ -3705,16 +3635,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) LCNScanner -->
 	<screen name="LCNScannerPlugin" position="0,0" size="1280,720" title="LCN Scanner" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_sat.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,90" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25.png" zPosition="1" transparent="1" />
+		<widget name="config" position="50,90" itemHeight="30" size="540,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
 	</screen>
 
 	<!-- (OK) LCNScanner About -->
 	<screen name="LCNScannerAbout" position="0,0" size="1280,720" title="SIFTeam - LCN Scanner"  flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_flag.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="about" position="60,100" size="515,500" font="Regular;20"  transparent="1" />
@@ -3725,7 +3653,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) VPS Plugin -->
 	<screen name="VPS_Setup" title="VPS-Plugin" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,200" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"  />
@@ -3735,15 +3662,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) VPS Plugin -->
 	<screen name="VPS_check_PDC_Screen" position="0,0" size="1280,720" title="VPS-Plugin" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="infotext" render="Label" position="60,100" size="520,90" font="Regular;21" valign="center" halign="center" transparent="1" backgroundColor="black" />
 	</screen>
 
 	<!-- (OK) VPS Plugin -->
 	<screen name="VPS_Screen_Info" position="0,0" size="1280,720" title="VPS-Plugin Information" flags="wfNoBorder"  >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="text" position="60,100" size="515,520" font="Regular;22" backgroundColor="black" transparent="1" />
 	</screen>
@@ -3753,7 +3678,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) CCcam Main Menu -->
 	<screen name="CCcamInfoMain" position="0,0" size="1280,720" title="Info Main" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="menu" position="60,90" size="520,420" scrollbarMode="showOnDemand" zPosition="5" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="transpBlack" transparent="1" />
 	</screen>
@@ -3761,15 +3685,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) CCcam General Info -->
 	<screen name="CCcamInfoInfoScreen" position="0,0" size="1280,720" title="CCcam General Info" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="text" position="60,90" size="520,420" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	
 	<!--  (OK) CCcam Client Info -->
 	<screen name="CCcamInfoSubMenu" position="0,0" size="1280,720" title="CCcam Client Info" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="info" position="640,370" size="500,340" font="Regular;20" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" />
@@ -3777,8 +3699,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!--  (OK) CCcam Server Menu -->
  	<screen name="CCcamInfoServerMenu" position="0,0" size="1280,720" title="CCcam Server View" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_cardserver.png" position="870,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="info" position="640,370" size="500,340" font="Regular;20" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" />
@@ -3786,8 +3707,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
  
 	<!--  (OK) CCcam Share View -->
  	<screen name="CCcamShareViewMenu" position="0,0" size="1280,720" title="CCcam Share View" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,420" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider80.png" transparent="1" />
  		<widget name="uphops" position="640,400" size="260,25" font="Regular;24" foregroundColor="bluette" transparent="1" backgroundColor="black" />
@@ -3799,8 +3719,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
  
 	<!--  (OK) CCcam Remote Box Info -->
  	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1280,720" title="CCcam Remote Box Info" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,420" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -3808,8 +3727,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
  
 	<!--  (OK) CCcam Info Shared -->
  	<screen name="CCcamInfoShareInfo" position="0,0" size="1280,720" title="CCcam Info Shared" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,420" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -3817,8 +3735,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!--  (OK) CCcam Ecm Info Selection -->
  	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1280,720" title="CCcam Ecm Info Selection" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
  	</screen>
@@ -3826,7 +3743,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!--  (OK) CCcam Ecm Info Config Menu -->
  	<screen name="CCcamInfoConfigMenu" position="0,0" size="1280,720" title="CCcam Info Config Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="60,90" size="520,160" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
  	</screen>
@@ -3834,7 +3750,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!--  (OK) CCcam Ecm Info SubMenu -->
 	<screen nae="CCcamInfoSubMenu" position="center,center" size="500,420" title="CCcam Info SubMenu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="520,250" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="info" position="640,400" size="645,165" font="Regular;20" transparent="1" />
@@ -3842,8 +3757,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!--  (OK) CCcam Ecm Info Selection -->
 	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1280,720" title="CCcam Ecm Info Selection" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
@@ -3851,8 +3765,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!--  (OK) CCcam Info Config Menu -->
 	<screen name="CCcamInfoMenuConfig" position="0,0" size="1280,720" title="CCcam Info Menu Config" flags="wfNoBorder" >
 		<panel name="3Buttons" />
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1" />
 	</screen>
@@ -3860,8 +3773,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!--  (OK) CCcam Info Config Switcher -->
 	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="1280,720" title="CCcam Info Config Switcher" flags="wfNoBorder" >
 		<panel name="3Buttons" />
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" tselectionPixmap="mega32/bars/slider50.png" transparent="1" />
 	</screen>
@@ -3871,7 +3783,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!--  (OK) osCam Info Menu -->
 	<screen name="CamInfoMenu" position="0,0" size="1280, 720" title="osCam Info Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget enableWrapAround="1" name="mainmenu" position="60,90" size="520,280" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="transpBlack" transparent="1" />
 	</screen>
@@ -3879,7 +3790,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) osCam ECM Info -->
 	<screen name="oscECMInfo" position="0,0" size="1280, 720" title="osCam ECM Info" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget enableWrapAround="1" name="output" position="60,90" size="520,300" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="transpBlack" transparent="1" />
 	</screen>
@@ -3888,7 +3798,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="CamInfoConfigScreen" position="0,0" size="1280,720" title="osCam Info Setup" flags="wfNoBorder">
 		<panel name="2ButtonsW" />
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget enableWrapAround="1" name="config" position="60,90" size="520,360" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="transpBlack" transparent="1" />
 		<widget enableWrapAround="1" name="status" render="Label" position="60,580" zPosition="5" size="520,70" font="Regular;20" halign="center" valign="center" transparent="1" />
@@ -3898,7 +3807,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="ProxyServerConfigScreen" position="0,0" size="1280,720" title="osCam Proxy Server Setup" flags="wfNoBorder">
 		<panel name="2ButtonsW" />
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget enableWrapAround="1" name="config" position="60,90" size="520,360" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="transpBlack" transparent="1" />
 		<widget enableWrapAround="1" name="status" render="Label" position="60,580" zPosition="5" size="520,70" font="Regular;20" halign="center" valign="center" transparent="1" />
@@ -3907,7 +3815,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) OSCam Infos -->
 	<screen name="ShowOSCamInfoScreen" position="0,0" size="1280, 720" title="OSCam Infos" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_emulator.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget enableWrapAround="1" name="oscInfomenu" position="60,90" size="520,380" zPosition="5" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="transpBlack" transparent="1" />
 	</screen>
@@ -3961,8 +3868,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) AutoSky Menu -->
 	<screen name="AutoSkyBouquetsMenu" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="4Buttons" />
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<widget name="config" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<ePixmap position="1150,670" zPosition="4" size="130,25" pixmap="mega32/buttons/key_info.png" transparent="1" alphatest="on" />
 	</screen>
@@ -3993,18 +3899,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) AutoSky Logs -->
 	<screen name="AutoSkyBouquetsLogView" position="0,0" size="1280,720" title="Backup Log" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="1Buttons" />
 		<widget name="list" position="60,90" size="515,500" font="Regular;19" selectionPixmap="mega32/bars/slider25b.png" transparent="1"  />
 	</screen>
 
 	<!-- (OK) AutoSky -->
 	<screen name="HideSections" position="0,0" size="1280,720" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
-		<widget source="list" render="Listbox" position="60,90" size="515,490" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90.png" transparent="1" >
+		<widget source="list" render="Listbox" position="60,90" size="515,490" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90b.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
@@ -4020,10 +3924,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) AutoSky -->
 	<screen name="KeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="SmallPigTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
-		<widget source="list" render="Listbox" position="60,90" size="515,490" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90.png" transparent="1" >
+		<widget source="list" render="Listbox" position="60,90" size="515,490" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider90b.png" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (32, 32), png = 0),
@@ -4042,7 +3945,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) PLUGIN EXT AC3LipSync -->
 	<screen name="AC3LipSyncSetup" position="0,0" size="1280,720" title="AC3 Lip Sync Setup" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_mediaplayer.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="60,90" size="520,320" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -4052,7 +3954,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) PLUGIN EXT GBAspectRatioSwitch -->
 	<screen name="GBAspectRatioSwitchSetup" position="0,0" size="1280,720" title="GBAspectRatioSwitch Setup" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_videosetup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="60,90" size="520,300" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -4064,7 +3965,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) PLUGIN EXT HDMI Cec -->
 	<screen name="HdmiCECSetupScreen" position="0,0" size="1280,720" title="HDMI CEC setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -4075,7 +3975,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) ASD 3D Setup -->
 	<screen name="OSD3DSetupScreen" position="0,0" size="1280,720" title="OSD 3D setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_videosetup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -4084,7 +3983,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="UserInterfacePositioner" position="0,0" size="1280,720" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<widget name="config" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
 		<widget source="status" render="Label" position="60,590" size="520,60" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<panel name="3ButtonsW" />
@@ -4092,7 +3990,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) OpenWebIf Config -->
 	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_videosetup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="60,90" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -4101,12 +3998,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) PLUGIN EXT Picture Player -->
 	<screen name="picshow" position="0,0" size="1280,720" title="PicturePlayer" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
+		<panel name="GenericLayoutMid2Template" />
 		<panel name="4ButtonsW" />
-		<ePixmap position="635,90" size="600,325" pixmap="mega32/menu/tv.png" zPosition="4" alphatest="blend" />
+		<ePixmap position="645,90" size="600,325" pixmap="mega32/menu/tv.png" zPosition="4" alphatest="blend" />
 		<widget name="filelist" position="60,90" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
-		<widget name="thn" position="640,95" size="570,310" alphatest="blend" zPosition="2" />
-		<widget source="label" render="Label" position="640,420" size="450,160" font="Regular;22" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
+		<widget name="thn" position="650,95" size="570,310" alphatest="blend" zPosition="2" />
+		<widget source="label" render="Label" position="650,420" size="450,160" font="Regular;22" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 	</screen>
 
 	<!-- (OK) PLUGIN FileBrowser -->    
@@ -4121,7 +4018,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) FileBrowser Config -->    
 	<screen name="FilebrowserConfigScreen" position="0,0" size="1280,720" title="FileBrowser Config" flags="wfNoBorder" > 
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="-1" alphatest="blend" />
 	        <widget name="config" position="60,90" size="520,360" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" backgroundColor="black" transparent="1" />
@@ -4130,7 +4026,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) OpenAirPlay -->
 	<screen name="OpenAirPlayConfig" position="0,0" size="1280,720" title="SIFTeam OpenAirPlay Configuration" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<widget name="config" position="60,90" size="520,350" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
@@ -4138,7 +4033,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) Crashlogsettings -->
 	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" size="1280,720" title="CrashLog AutoSubmit" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<widget name="config" position="60,90" zPosition="1" size="520,400" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1"  backgroundColor="black" />
 		<widget source="status" render="Label" position="640,400" size="500,300" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
@@ -4227,7 +4121,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) CD-Info -->
 	<screen name="CDInfo" position="0,0" size="1280,720" title="CDInfo" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="3ButtonsW" />
 		<widget source="info" render="Label" position="60,90" size="520,50" font="Regular;22" foregroundColor="#538eff" backgroundColor="#000000" transparent="1" />
 		<widget name="config" position="60,200" size="520,230" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
@@ -4237,7 +4130,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) WebIfConfigScreen -->
 	<screen name="WebIfConfigScreen" position="0,0" size="1280,720" title="WebInterface: Main Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="3ButtonsW" />
 		<widget name="config" position="60,90" size="520,400" scrollbarMode="showOnDemand" zPosition="1" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 	</screen>
@@ -4245,7 +4137,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) Plugin Hider -->
 	<screen name="PluginHiderSetup" position="0,0" size="1280,720" title="PluginHider Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<widget position="80,100" size="320,25" alphatest="on" zPosition="1" name="tabbar" pixmaps="skin_default/epg_now.png,skin_default/epg_next.png,skin_default/epg_more.png" />
 		<widget position="70,101"  valign="center" transparent="1" size="108,22" backgroundColor="black" zPosition="2"  source="plugins"    render="Label" halign="center" font="Regular;18" />
@@ -4267,7 +4158,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) MiniDLNA -->
 	<screen name="MiniDLNASetup" position="center,120" size="820,520" title="Mediaserver (DLNA) Setup">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<widget name="config" position="60,90" size="520,450" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" />
 	</screen>
@@ -4275,21 +4165,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) MiniDLNA Setup -->
 	<screen name="MiniDLNAShareSetup" position="center,120" size="820,520" title="Mediaserver (DLNA) Shares">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<widget name="config" position="60,90" size="520,450" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" />
 	</screen>
 	<!-- AutoTimer Plugin -->
 	<screen name="AutoTimerHelp" position="0,0" size="1280,720" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="detailtext" position="60,580"  size="520,80" zPosition="10" font="Regular;20" halign="left" valign="center" foregroundColor="yellow" transparent="1"/>
 	</screen>
 	<screen name="AutoTimerOverview" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="entries" position="80,100" size="705,514" scrollbarMode="showOnDemand" transparent="1" />
@@ -4297,7 +4184,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="AutoTimerEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,430" scrollbarMode="showOnDemand" transparent="1" />
@@ -4305,7 +4191,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="AutoTimerSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
@@ -4313,21 +4198,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="AutoTimerImporter" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="list" position="60,100" size="520,514" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	<screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	<screen name="AutoTimerServiceEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
@@ -4335,7 +4217,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- CronTimers Screen -->
 	<screen name="CronTimers" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_timer.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,116" size="150,30" font="Regular;20" valign="center" transparent="1" />
@@ -4351,7 +4232,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- Network Menu -->
 	<screen name="NetworkInadyn" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="autostart" position="60,90" size="100,24" font="Regular;20" valign="center" foregroundColor="white" backgroundColor="transpBlack" transparent="1" />
@@ -4376,7 +4256,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NetworkInadynSetup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
@@ -4390,7 +4269,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<screen name="NetworkTelnet" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,90" size="363,80" font="Regular;20" valign="center" transparent="1" />
@@ -4401,7 +4279,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<screen name="NetworkFtp" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,90" size="363,80" font="Regular;20" valign="center" transparent="1" />
@@ -4412,7 +4289,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<screen name="NetworkServiceSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="80,190" size="150,30" font="Regular;20" valign="center" transparent="1" />
@@ -4424,7 +4300,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<screen name="NetworkSamba" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap position="1060,670" zPosition="4" size="130,25" pixmap="mega32/buttons/key_menu.png" transparent="1" alphatest="on" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
@@ -4437,7 +4312,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<screen name="NetworkSambaSetup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="1Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
@@ -4447,7 +4321,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<screen name="NetworkMiniDLNA" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="autostart" position="80,139" size="100,24" font="Regular;20" valign="center" foregroundColor="white" backgroundColor="transpBlack" transparent="1" />
@@ -4479,7 +4352,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NetworkuShare" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="autostart" position="80,139" size="100,24" font="Regular;20" valign="center" foregroundColor="white" backgroundColor="transpBlack" transparent="1" />
@@ -4515,7 +4387,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<screen name="NetworkuShareSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
@@ -4525,7 +4396,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	
 	<screen name="uShareSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" >
 		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
 		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="checkList" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
