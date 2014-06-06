@@ -4256,7 +4256,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) Location Media -->	
 	<screen name="LocationBox" position="0,0" size="1280,720" title="Location Media" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutSlimTemplate" />
+		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="4Buttons" />
 		<widget name="target" position="70,130" size="730,27" valign="center" font="Regular;24" backgroundColor="#404040"/>
 		<widget name="filelist" position="65,170" zPosition="1" size="735,208" scrollbarMode="showOnDemand" selectionDisabled="1" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>

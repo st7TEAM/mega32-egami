@@ -1212,25 +1212,34 @@
 
 	<!-- (OK) Movie Selection -->	
 	<screen name="MovieSelection" position="0,0" size="1280,720" title="Movie Selection Recorded Files" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutMidTemplate" />
+		<panel name="GenericLayoutMid2Template" />
 		<panel name="4Buttons" />
 		<!-- Lista Registrazioni -->
 		<widget name="list" position="60,90" size="520,500" zPosition="4" foregroundColor="white" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<widget name="waitingtext" position="60,450" size="520,100" zPosition="4" font="Regular;22" halign="left" valign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" />
-		<widget source="Service" render="Label" position="635,415" zPosition="4" size="455,26" font="Regular;22" halign="left" foregroundColor="#538eff" transparent="1"  backgroundColor="black"> 
+		<widget source="Service" render="Label" position="645,90" zPosition="4" size="455,26" font="Regular;22" halign="left" foregroundColor="#538eff" transparent="1"  backgroundColor="black"> 
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="1115,415" zPosition="6" size="100,26" font="Regular;22" halign="right" transparent="1"  backgroundColor="black"> 
+		<widget source="Service" render="Label" position="1015,90" zPosition="6" size="100,26" font="Regular;22" halign="right" transparent="1"  backgroundColor="black"> 
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1115,90" zPosition="6" size="100,26" font="Regular;22" halign="right" transparent="1"  backgroundColor="black"> 
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="635,445" zPosition="5" size="550,50" font="Regular;20" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" > 
+		<widget source="Service" render="Label" position="635,135" zPosition="5" size="580,90" font="Regular;20" halign="center" foregroundColor="yellow" backgroundColor="black" transparent="1" > 
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="635,500" zPosition="4" size="550,140" font="Regular;20" halign="center" transparent="1" backgroundColor="black">
+		<widget source="Service" render="Label" position="635,270" zPosition="4" size="580,330" font="Regular;20" halign="center" transparent="1" backgroundColor="black">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget name="freeDiskSpace" position="60,620" zPosition="4" size="400,50" font="Regular;20" halign="left" foregroundColor="yellow" transparent="1"  backgroundColor="black" />
+		<widget name="chosenletter" position="845,620" zPosition="4" size="400,50" font="Regular;20" halign="left" foregroundColor="yellow" transparent="1"  backgroundColor="black" />
+		<widget name="TrashcanSize" position="645,620" zPosition="4" size="400,50" font="Regular;20" halign="left" foregroundColor="yellow" transparent="1"  backgroundColor="black" />
+
+		<widget name="movie_sort" position="1150,620" size="35,20" pixmaps="skin_default/icons/az.png,skin_default/icons/newtop.png,skin_default/icons/shuffle.png,skin_default/icons/za.png,skin_default/icons/oldtop.png,skin_default/icons/faz.png,skin_default/icons/fza.png" zPosition="10" transparent="1" alphatest="on"/>
+		<widget name="movie_off" position="1200,620" size="35,20" pixmaps="skin_default/icons/ask.png,skin_default/icons/movielist.png,skin_default/icons/quit.png,skin_default/icons/pause.png,skin_default/icons/playlist.png,skin_default/icons/playlistquit.png,skin_default/icons/loop.png,skin_default/icons/rep.png" zPosition="10" transparent="1" alphatest="on"/>
+		
 		<eLabel text="Menu - Info" position="990,667" size="200,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
 	</screen>
 
@@ -4148,7 +4157,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 
 	<!-- (OK) Location Media -->	
 	<screen name="LocationBox" position="0,0" size="1280,720" title="Location Media" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutSlimTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="4Buttons" />
 		<widget name="target" position="70,130" size="730,27" valign="center" font="Regular;24" backgroundColor="#404040"/>
 		<widget name="filelist" position="65,170" zPosition="1" size="735,208" scrollbarMode="showOnDemand" selectionDisabled="1" selectionPixmap="mega32/bars/slider25b.png" transparent="1"/>
