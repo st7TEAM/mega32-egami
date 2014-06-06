@@ -3415,7 +3415,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- (OK) CrossEPG Menu -->
 	<screen name="CrossEPG_Menu" position="0,0" size="1280,720" title="CrossEPG Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutLiteTemplate" />
-		<panel name="1ButtonsW" />
+		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_crossepg.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="30,90" size="545,500" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundPixmap="mega32/bars/selectionbw.png" selectionPixmap="mega32/bars/selection3.png" backgroundColor="background" transparent="1" >
 			<convert type="TemplatedMultiContent">
@@ -3429,6 +3429,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			</convert>
 		</widget>	
 		<eLabel text="Exit" zPosition="5" position="100,667" size="210,40" halign="left" font="Regular;20" transparent="1" backgroundColor="black" />
+		<eLabel text="Save" zPosition="5" position="340,667" size="210,40" halign="left" font="Regular;20" transparent="1" backgroundColor="black" />
 	</screen>
 	
 	<!-- (OK) CrossEPG Providers -->
