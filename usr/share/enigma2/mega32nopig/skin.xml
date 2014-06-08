@@ -818,7 +818,7 @@
 			<convert type="ServiceOrbitalPosition"/>
 		</widget>
 		<widget alphatest="blend" position="907,100" render="Picon" size="220,132" source="ServiceEvent" transparent="0" zPosition="1">
-			<convert type="MetrixRefString">ServicelistRef</convert>
+			<convert type="EGRefString">ServicelistRef</convert>
 		</widget>
 		<!-- Lista Canali  --> 
 		<widget name="list" position="55,90" size="730,510" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="80"
