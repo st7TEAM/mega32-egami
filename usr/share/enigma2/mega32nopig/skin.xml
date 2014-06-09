@@ -902,7 +902,7 @@
 
 	<!-- (OK) EPG Selection Single -->
 	<screen name="EPGSelection" position="0,0" size="1280,720" title="E2 EPG Search" backgroundColor="transparent" flags="wfNoBorder" >
-		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- Lista -->
