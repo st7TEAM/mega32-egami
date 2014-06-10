@@ -781,11 +781,8 @@
 	        <widget source="session.FrontendStatus" render="Label" position="366,639" zPosition="4" size="61,22" font="Regular;20" halign="left" foregroundColor="#ffffff" backgroundColor="transpBlack" transparent="1" >
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="520,639"  size="580,22" font="Regular;20" halign="left" backgroundColor="black" foregroundColor="white" zPosition="4" transparent="1">
-			<convert type="PliExtraInfo">ServiceInfoFreq</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="440,639" size="90,80" transparent="1" zPosition="3" foregroundColor="white" backgroundColor="transpBlack" font="Regular;20" valign="top" halign="left">
-			<convert type="PliExtraInfo">TunerSystem</convert>
+		<widget source="session.CurrentService" render="Label" position="440,639" size="590,80" transparent="1" zPosition="3" foregroundColor="white" backgroundColor="transpBlack" font="Regular;20" valign="top" halign="left">
+			<convert type="PliExtraInfo">TransponderInfo</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="60,670" size="150,30" halign="left" font="Regular;19" zPosition="4" foregroundColor="red" transparent="1" backgroundColor="black">
 			<convert type="EGExtraInfo">E-C-N</convert>
