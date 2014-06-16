@@ -259,13 +259,13 @@
 		<widget name="config" position="60,420" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 	</screen>
 	<screen name="EGAMIFaq_YTChannel" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutMidTemplate" />
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="SmallPigTemplate" />
 		<widget name="genreList" position="60,80" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 		<panel name="1Buttons" />
 	</screen>
 	<screen name="EGAMIFaq_ListChannel_ListScreen" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutMidTemplate" />
+		<panel name="GenericLayoutMid2Template" />
 		<widget name="ContentTitle" position="60,80" size="515,25" backgroundColor="#00aaaaaa" zPosition="0" foregroundColor="#00000000" font="Regular;22" halign="center" />
 		<widget name="liste" position="60,120" size="515,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50.png" transparent="1"/>
 		<widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="720,90" size="410,300" transparent="1" alphatest="blend" borderWidth="2" borderColor="#00555556" />
