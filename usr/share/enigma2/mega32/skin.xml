@@ -312,7 +312,7 @@
 	<screen name="TranslationInfo" position="center,145" size="600,470" title="Translation">
 		<eLabel position="10,20" size="580,23" font="Regular;23" text="Translation:" />
 		<widget source="TranslatorName" render="Label" position="10,60" size="580,25" font="Regular;20" />
-		<widget source="TranslationInfo" render="Label" position="10,100" size="580,50" font="Regular;20" />
+		<widget source="TranslationInfo" render="Label" position="10,100" size="580,350" font="Regular;20" />
 	</screen>
 	
 	<!-- S035 unhandled key pressed -->
@@ -1322,21 +1322,21 @@
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="AboutOE" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutLiteTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<!--  18 System Memory Info -->
 	<screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/menu/ico_storage.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
 	</screen>
 	<screen name="SystemDevicesInfo" position="0,0" size="1280,720" title="Devices Informations" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutLiteTemplate" />
@@ -1870,9 +1870,8 @@
 
 	<!-- (OK) WlanStatus -->	
 	<screen name="WlanStatus" position="0,0" size="1280,720" title="Wireless Network State" flags="wfNoBorder" >
-		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
-		<panel name="1Buttons" />
+		<panel name="GenericLayoutLiteTemplate" />
+		<panel name="1ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
 		<eLabel text="WI-FI Network Data" position="60,100" size="610,32" font="Regular;26" zPosition="0" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<eLabel text="-" position="60,140" size="760,1" font="Regular;26" zPosition="0" backgroundColor="#404040"/>
@@ -1891,7 +1890,7 @@
 		<widget source="enc" render="Label" position="420,350" size="280,26" font="Regular;24" transparent="1" foregroundColor="bluette" backgroundColor="black" />
 		<widget source="IFtext" render="Label" position="60,400" size="120,26" zPosition="10" font="Regular;24" halign="left" backgroundColor="#25062748" transparent="1" />
 		<widget source="IF" render="Label" position="420,400" size="400,26" zPosition="10" font="Regular;24" halign="left" foregroundColor="bluette" backgroundColor="#25062748" transparent="1" />
-		<widget name="statuspic" pixmaps="mega32/buttons/key_green.png,mega32/buttons/key_red.png" position="710,100" zPosition="10" size="35,35" transparent="1" alphatest="on"/>
+		<widget name="statuspic" pixmaps="mega32/buttons/key_green.png,mega32/buttons/key_red.png" position="770,100" zPosition="10" size="35,35" transparent="1" alphatest="on"/>
 		<widget source="Statustext" render="Label" position="620,100" size="150,40" zPosition="10" font="Regular;22" halign="left" backgroundColor="#25062748" transparent="1"/>
 	</screen>
 
@@ -2547,11 +2546,11 @@
 	<screen name="NetworkWizard" position="0,0" size="1280,720" title="Network Wizard.." backgroundColor="black" flags="wfNoBorder">
 		<panel name="GenericLayoutWizardTemplate" />
 		<!-- widget name="wizard" pixmap="mega32/skin_default/wizard.png" position="180,100" zPosition="10" size="200,250" alphatest="on" -->
-		<widget name="text" position="60,90" size="750,300" font="Regular;23" transparent="1" />
+		<widget name="text" position="60,90" size="750,450" font="Regular;23" transparent="1" />
 		<widget position="60,415" render="Listbox" scrollbarMode="showOnDemand" size="750,200" source="list" transparent="1" selectionPixmap="mega32/bars/slider25b.png" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="60,415" size="750,200" scrollbarMode="showOnDemand" backgroundColor="black" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
+		<widget name="config" position="60,415" size="750,300" scrollbarMode="showOnDemand" backgroundColor="black" selectionPixmap="mega32/bars/slider25b.png" transparent="1" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="590,650" size="30,30" />
 		<widget font="Regular;22" name="languagetext" position="640,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
 		<widget name="HelpWindow" position="60,200" zPosition="5" size="1,1" transparent="1" alphatest="on" />
