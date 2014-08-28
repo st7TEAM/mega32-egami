@@ -837,13 +837,12 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<!-- Event Description -->
-		<widget source="ServiceEvent" render="Label" position="725,416" zPosition="2" halign="center" size="505,196" font="Regular;20" transparent="1" foregroundColor="#a1daff" backgroundColor="transpBlack" >
+		<widget source="ServiceEvent" render="EGScrollLabel" position="725,416" zPosition="2" halign="center" size="505,196" font="Regular;20" transparent="1" foregroundColor="#a1daff" backgroundColor="transpBlack" >
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<!-- Next Event Name -->
-		<widget source="ServiceEvent" render="Label" position="725,621" size="505,25" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
-			<convert type="EventName">NextName</convert>
-		</widget>
+		<widget source="ServiceEvent" render="EGSingleEpgLine" position="55,621" size="1205,25" font="Regular;19" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
+
                 <!-- ProgressBar -->
 		<ePixmap position="810,364" size="120,15" pixmap="mega32/bars/ch_progressbw.png" alphatest="blend" transparent="1"  zPosition="3" />
 		<widget source="ServiceEvent" render="Progress" pixmap="mega32/bars/ch_progresscl.png" position="811,364" size="119,13" zPosition="4"  backgroundColor="black" transparent="1">

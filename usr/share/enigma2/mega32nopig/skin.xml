@@ -842,7 +842,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- Event Description -->
-		<widget source="ServiceEvent" render="Label" position="820,290" size="400,235" zPosition="2" font="Regular;19" halign="center" transparent="1" foregroundColor="#a1daff" backgroundColor="transpBlack" >
+		<widget source="ServiceEvent" render="EGScrollLabel" position="820,290" size="400,235" zPosition="2" font="Regular;19" halign="center" transparent="1" foregroundColor="#a1daff" backgroundColor="transpBlack" >
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- Next Eventa Name -->
