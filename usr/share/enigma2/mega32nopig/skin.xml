@@ -891,8 +891,6 @@
 	<screen name="ChannelContextMenu" position="0,0"  size="1280,720"  title="Channel List Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutMidTemplate" />
 		<widget name="menu" position="60,90" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider30b.png" transparent="1" />
-		<eLabel text="Rec" position="1030,667" size="80,22" font="Regular;20"  halign="right" foregroundColor="#505050" backgroundColor="black" zPosition="0" transparent="1" />
-		<eLabel text="Info" position="1020,48" size="200,22" font="Regular;20"  halign="right" foregroundColor="#404040" backgroundColor="black" zPosition="0" transparent="1" />
 	</screen>
 
 	<!-- (OK) EPG Selection Single -->
@@ -1528,12 +1526,13 @@
 	</screen>
 
 	<!-- (OK) AutoRes-Pers-Fuso-Tast-Disp-Parental -->
-	<screen name="Setup" position="0,0" size="1280,720" title="Customize Setup" flags="wfNoBorder" >
-		<panel name="GenericLayoutMidTemplate" />
+	<screen name="Setup" position="0,0" size="1280,720" title="Customize Setup" backgroundColor="transparent" flags="wfNoBorder" >
+		<panel name="GenericLayoutLite2Template" />
 		<panel name="2ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="790,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="50,90" itemHeight="30" size="540,450" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
-		<widget name="description" position="60,572" size="540,200" zPosition="10" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+		<widget name="config" position="60,90" size="770,420" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="mega32/bars/slider50b.png" zPosition="1" transparent="1" />
+		<widget name="description" position="60,560" size="770,200" zPosition="10" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+		<eLabel text="* = Restart Required" position="60,622" size="770,200" zPosition="10" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="HelpWindow" position="620,450" zPosition="5" size="1,1" transparent="1" alphatest="on" />
 	</screen>
 	<screen name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental Control Setup" flags="wfNoBorder" >

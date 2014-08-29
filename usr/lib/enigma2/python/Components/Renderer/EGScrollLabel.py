@@ -1,5 +1,6 @@
 import skin
 from Components.VariableText import VariableText
+from Components.config import config
 from Renderer import Renderer
 from enigma import eLabel, eWidget, ePoint, eSize, gFont, fontRenderClass, eTimer
 
@@ -8,8 +9,8 @@ class EGScrollLabel(VariableText, Renderer):
 		Renderer.__init__(self)
 		VariableText.__init__(self)
 		self.step = 1
-		self.steptime = 100
-		self.startdelay = 2000
+		self.steptime = int(config.usage.scroll_label_speed.value)
+		self.startdelay = int(config.usage.scroll_label_delay.value)
 		self.long_text = None
 		self.text_height = 0
 		self.page_height = 0
@@ -85,7 +86,7 @@ class EGScrollLabel(VariableText, Renderer):
 				self.updateTimer.stop()
 
 	def lineScroll(self):
-		if self.long_text is not None:
+		if self.long_text is not None and config.usage.scroll_label_delay.value != 'noscrolling':
 			if self.text_height > self.page_height:
 				curPos = self.long_text.position()
 				if self.text_height - self.step >= abs(curPos.y() - self.step):
