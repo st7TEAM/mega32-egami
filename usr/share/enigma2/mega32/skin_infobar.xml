@@ -154,14 +154,14 @@
 			<convert type="EGOnLineTest">InetConection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<!-- OnLine updates -->
+		<!-- OnLine updates
 		<ePixmap pixmap="mega32/icons/ico_line_off.png" position="928,655" size="20,20" zPosition="3" alphatest="blend" />
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="mega32/icons/ico_line_on.png" position="928,655" size="20,20" zPosition="4" alphatest="blend" >
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="mega32/icons/ico_line_on.png" position="928,655" size="20,20" zPosition="4" alphatest="blend" >
 			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
+		</widget> -->
 		<!-- Data -->
 		<widget source="global.CurrentTime" render="Label" position="960,655" size="120,26" zPosition="2" font="Regular;20"  backgroundColor="transpBlack" foregroundColor="#808080" transparent="1" >
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
