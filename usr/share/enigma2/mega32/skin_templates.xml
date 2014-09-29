@@ -1,0 +1,296 @@
+<skin>
+	<!-- ########### MENU SECTION ############ -->
+	<!-- (OK) Menu Template -->
+	<screen name="ScreenMenuTemplate">
+		<panel name="GenericLayoutFullTemplate" />
+		<!-- panel name="SmallPigTemplate" /-->
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="-1" alphatest="blend" />
+		<!-- menu list -->
+ 		<widget source="menu" render="Listbox" position="50,100" zPosition="2" size="535,520" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" >
+ 			<convert type="TemplatedMultiContent">
+ 			{
+ 				"template": [
+ 					MultiContentEntryText(pos = (10, 5), size = (520, 40), flags = RT_HALIGN_LEFT, text = 0)
+ 				],
+ 				"fonts": [gFont("Regular", 24)],
+ 				"itemHeight": 40
+ 			}
+ 			</convert>
+ 		</widget>
+		<!-- eLabel name="DEBUG"  text="PANEL T001" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen> 
+ 
+ 	<!-- (OK) Menu Icons Template -->
+	<screen name="MenuIconsTemplate">
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_mediaplayer.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">media_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">timer_edit</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_emulator.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">emu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_emulator.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">cs</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_plugin.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">plugin_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_script.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">scripts</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">setup_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_shutdown.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">dmc_mainmenu</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_dvd_player.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">dvd_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+			<convert type="MenuEntryCompare">scart_switch</convert>
+			<convert type="ConditionalShowHide" /> 
+		</widget>
+	</screen>
+	
+	<!-- (OK) Menu -->
+	<screen name="Menu" position="0,0" size="1280,720"  title="Menu" flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL T002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen> 
+
+	<!-- (OK) MainMenu -->
+	<screen name="menu_mainmenu" position="0,0" size="1280,720" title="Main Menu"  flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<panel name="MenuIconsTemplate" />
+		<!-- eLabel name="DEBUG"  text="PANEL T003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- (OK) Menu Setup -->
+	<screen name="menu_setup" position="0,0" size="1280,720" title="Main Menu Setup"  flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL T004" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- (OK) Menu Scan Channel -->
+	<screen name="menu_scan" position="0,0" size="1280,720" title="Main Menu Channel Scan" flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+		<!-- eLabel name="DEBUG"  text="PANEL T005" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- (OK) Menu System -->
+	<screen name="menu_system" position="0,0" size="1280,720" title="Main Menu System"  flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL T006" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- (OK) Menu HDD -->
+	<screen name="menu_harddisk" position="0,0" size="1280,720" title="Main Menu HDD"  flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+		<!-- eLabel name="DEBUG"  text="PANEL T007" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- (OK) Menu Information -->
+	<screen name="menu_information" position="0,0" size="1280,720" title="Menu Information" flags="wfNoBorder" >
+		<panel name="ScreenMenuTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL T008" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!-- (OK) Menu ShutDown -->
+	<screen name="menu_shutdown" position="0,0" size="1280,720" title="Menu ShutDown"  flags="wfNoBorder">
+		<panel name="ScreenMenuTemplate" />
+		<ePixmap pixmap="mega32/menu/ico_shutdown.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<!-- eLabel name="DEBUG"  text="PANEL T009" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!-- ########### TEMPLATE SECTION ############ -->
+
+	<!-- Full Template -->
+	<screen name="GenericLayoutFullTemplate">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panel.png" />
+		<widget source="Title" render="Label" zPosition="1" position="40,46" size="560,30" halign="center" font="Head;24" foregroundColor="bluette" transparent="1" backgroundColor="transpBlack" />
+	</screen>
+
+	<!-- Full Template -->
+	<screen name="GenericLayoutFullTemplateW">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelwd.png" />
+		<widget source="Title" render="Label" zPosition="1" position="40,46" size="770,30" halign="center" font="Head;24" foregroundColor="bluette" transparent="1" backgroundColor="transpBlack" />
+	</screen>
+
+	<!-- Mid Template -->
+	<screen name="GenericLayoutMidTemplate">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panel.png" />
+		<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>
+		<widget source="Title" render="Label" zPosition="1" position="40,45" size="560,24" halign="center" font="Regular;22" foregroundColor="white" transparent="1" backgroundColor="transpBlack" />
+	</screen>
+
+	<!-- Wide Template -->
+	<screen name="GenericLayoutWideTemplate">
+		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelw.png" alphatest="on" transparent="1" />
+		<widget source="global.CurrentTime" render="Label" position="700,45" size="460,26" zPosition="5" font="Regular;22" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>
+		<widget source="Title" render="Label" zPosition="2" position="60,45" size="1140,40" halign="left" font="Head; 24" foregroundColor="bluette" transparent="1" backgroundColor="black" />
+	</screen>
+
+	<!-- Description Template -->
+	<screen name="descTemplate">
+		<eLabel position="610,390" size="630,2" backgroundColor="#20101010" zPosition="2"/>
+		<ePixmap pixmap="mega32/icons/info.png" position="610,410" size="50,50" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+
+	<!-- Description Template Lite -->
+	<screen name="descTemplateLite">
+		<eLabel position="830,390" size="410,2" backgroundColor="#20101010" zPosition="2"/>
+		<ePixmap pixmap="mega32/icons/info.png" position="830,410" size="50,50" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
+	</screen>
+
+	<!-- Wizard Template -->
+	<screen name="GenericLayoutWizardTemplate">
+		<ePixmap pixmap="mega32/menu/panelwd.png" position="0,0" size="1280,720" zPosition="-3" />
+		<widget source="Title" render="Label" zPosition="2" position="60,45" size="750,40" halign="center" font="Regular; 22" foregroundColor="white" transparent="1" shadowColor="black" shadowOffset="-1,-1" backgroundColor="black" />
+	</screen>
+
+	<!-- Buttons Template -->
+	<screen name="4Buttons">
+		<!-- BoxSet ButtonColors -->
+		<ePixmap position="50,659" size="1200,50" pixmap="mega32/buttons/4colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="key_red"    font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="340,668" size="210,21" name="key_green"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="580,668" size="210,21" name="key_yellow" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="820,668" size="210,21" name="key_blue"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="4Buttons2">
+		<!-- BoxSet ButtonColors -->
+		<ePixmap position="50,659" size="1200,50" pixmap="mega32/buttons/4colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="red"    font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="340,668" size="210,21" name="green"  font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,668" size="210,21" name="yellow" font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="820,668" size="210,21" name="blue"   font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="3Buttons">
+		<ePixmap position="50,659" size="900,50" pixmap="mega32/buttons/3colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="key_red"    font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="340,668" size="210,21" name="key_green"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="580,668" size="210,21" name="key_yellow" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="3Buttons2">
+		<ePixmap position="50,659" size="900,50" pixmap="mega32/buttons/3colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="red"    font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="340,668" size="210,21" name="green"  font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,668" size="210,21" name="yellow" font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="2Buttons">
+		<ePixmap position="50,659" size="600,50" pixmap="mega32/buttons/2colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="key_red"    font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget position="340,668" size="210,21" name="key_green"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="2Buttons2">
+		<ePixmap position="50,659" size="600,50" pixmap="mega32/buttons/2colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="red"    font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="340,668" size="210,21" name="green"  font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+	<screen name="1Buttons">
+		<ePixmap position="50,659" size="300,50" pixmap="mega32/buttons/1colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="key_red" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
+	<screen name="1Buttons2">
+		<ePixmap position="50,659" size="300,50" pixmap="mega32/buttons/1colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" name="red"     font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
+	<!-- ButtonsW Templates -->
+	<screen name="4ButtonsW">
+		<ePixmap  pixmap="mega32/buttons/4colors.png" position="50,659" size="1200,50" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="100,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label"  position="340,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="580,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_blue"   render="Label"  position="820,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1"/>
+	</screen>
+	<screen name="3ButtonsW">
+		<ePixmap  pixmap="mega32/buttons/3colors.png" position="50,659" size="900,50" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="100,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label"  position="340,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_yellow" render="Label"  position="580,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="2ButtonsW">
+		<ePixmap  pixmap="mega32/buttons/2colors.png" position="50,659" size="1200,50" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="100,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+		<widget source="key_green"  render="Label"  position="340,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="1ButtonsW">
+		<ePixmap  pixmap="mega32/buttons/1colors.png" position="50,659" size="1200,50" zPosition="4" alphatest="blend" transparent="1" />
+		<widget source="key_red"    render="Label"  position="100,668" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
+	</screen>
+	<screen name="menuHelp">
+		<ePixmap  position="1114,32" zPosition="1" size="108,15" pixmap="mega32/buttons/colors.png" alphatest="blend" />
+		<eLabel text="Menu - Help" position="1113,42" size="110,30" font="Regular;20" halign="center" valign="center" foregroundColor="bluette" backgroundColor="#40000000" shadowColor="black" shadowOffset="-1,-1" zPosition="0" />
+	</screen>
+	<screen name="menuInfo">
+		<ePixmap  position="1114,32" zPosition="1" size="108,15" pixmap="mega32/buttons/colors.png" alphatest="blend" />
+		<eLabel text="Menu - Info" position="1113,42" size="110,30" font="Regular;20" halign="center" valign="center" foregroundColor="bluette" backgroundColor="#40000000" shadowColor="black" shadowOffset="-1,-1" zPosition="0" />
+	</screen>
+	<screen name="tMenu">
+		<ePixmap  position="1114,32" zPosition="1" size="108,15" pixmap="mega32/buttons/colors.png" alphatest="blend" />
+		<eLabel text="Menu" position="1113,42" size="110,30" font="Regular;20" halign="center" valign="center" foregroundColor="bluette" backgroundColor="#40000000" shadowColor="black" shadowOffset="-1,-1" zPosition="0" />
+	</screen>
+	<screen name="tInfo">
+		<ePixmap  position="1114,32" zPosition="1" size="108,15" pixmap="mega32/buttons/colors.png" alphatest="blend" />
+		<eLabel text="Info" position="1113,42" size="110,30" font="Regular;20" halign="center" valign="center" foregroundColor="bluette" backgroundColor="#40000000" shadowColor="black" shadowOffset="-1,-1" zPosition="0" />
+	</screen>	
+
+	<screen name="weatPanel">
+		<!-- Weather -->
+		<eLabel position="0,0" size="1280,65" backgroundColor="#20000000" zPosition="-1"/>
+		<eLabel position="0,65" size="1280,1" foregroundColor="#606060" backgroundColor="#20000000" zPosition="-1"/>
+		<widget source="session.CurrentService" render="Pixmap" position="780,5" size="462,75" pixmap="mega32/weather_panel.png" alphatest="blend" zPosition="-1" >
+			<convert type="EGWeather">Enable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>    
+		<widget source="session.CurrentService" render="EGWf" position="50,0" size="74,74" transparent="1" alphatest="blend">
+			<convert type="EGWeather">IconToday</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="130,10" size="200,30" font="Regular; 26" halign="left" foregroundColor="bluette" backgroundColor="#10101010" transparent="1" noWrap="1" >
+			<convert type="EGWeather">City</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="130,42" size="180,25" font="Regular; 18" halign="left" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" >
+			<convert type="EGWeather">TextToday</convert>
+		</widget>  
+		<widget source="session.CurrentService" render="Label" position="300,13" size="150,50" font="Regular;40" halign="left" foregroundColor="red" backgroundColor="#10101010" transparent="1" noWrap="1" zPosition="1" >
+			<convert type="EGWeather">Temperatura</convert>
+		</widget>
+		<widget source="session.CurrentService" render="EGWf" position="460,0" size="74,74" transparent="1" alphatest="blend">
+			<convert type="EGWeather">IconTomorrow</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="550,17" size="180,50" font="Regular; 18" halign="left" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" noWrap="1">
+			<convert type="EGWeather">TextTomorrow</convert>
+		</widget>
+	</screen>	
+</skin>
