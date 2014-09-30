@@ -305,6 +305,7 @@
 		<widget source="ServiceEvent" render="Label" position="1118,80" size="100,22" font="Regular;20" halign="right" foregroundColor="yellow" backgroundColor="black" transparent="1">
 			<convert type="ServiceOrbitalPosition"/>
 		</widget>
+		<!-- Picon -->
 		<widget position="907,100" render="Picon" size="220,132" source="ServiceEvent" zPosition="2" transparent="1" alphatest="on">
 			<convert type="EGRefString">ServicelistRef</convert>
 		</widget>
@@ -337,7 +338,8 @@
 			<convert type="EventName">FullDescription</convert>
 		</widget> 
 		<!-- Next Event Name -->
-		<widget source="ServiceEvent" render="EGSingleEpgLine" position="55,621" size="1200,25" font="Regular;19" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
+		<eLabel text="Next :" position="60,622" size="60,25" font="Regular;20" foregroundColor="red" backgroundColor="black" borderColor="10000000" borderWidth="1" transparent="1" zPosition="1" />
+		<widget source="ServiceEvent" render="EGSingleEpgLine" position="130,622" size="1100,25" font="Regular;19" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S001" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 	
