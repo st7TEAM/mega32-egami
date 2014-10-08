@@ -2666,6 +2666,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 <include filename="mega32/skin_egami_screens.xml"/>
 <include filename="mega32/skin_ext_plugins.xml"/>
 <include filename="mega32/skin_infobar.xml"/>
-<include filename="mega32/skin_channelselection.xml"/>
+<include filename="mega32/skin_channelselectionpig.xml"/>
 
 </skin>
