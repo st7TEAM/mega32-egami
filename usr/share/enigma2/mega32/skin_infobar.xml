@@ -108,7 +108,7 @@
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="mega32/icons/cable.png" position="1035,564" size="18,18" zPosition="3" alphatest="blend" >
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="mega32/icons/cable.png" position="1135,564" size="105,80" zPosition="3" alphatest="blend" >
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
