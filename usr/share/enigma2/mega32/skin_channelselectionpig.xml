@@ -11,8 +11,8 @@
 			<convert type="ServiceOrbitalPosition"/>
 		</widget>  
 		<!-- Lista Canali - interl 36 --> 
-		<ePixmap position="785,100" zPosition="4" size="29,468" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="list" position="55,100" size="740,468" scrollbarMode="showOnDemand"  transparent="1" zPosition="3"
+		<ePixmap position="785,90" zPosition="4" size="29,520" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="55,90" size="740,520" scrollbarMode="showOnDemand"  transparent="1" zPosition="3"
 			serviceNumberFont="Regular;24" serviceNameFont="Regular;22" serviceInfoFont="Regular;22" serviceItemHeight="80" 
 			foregroundColorServiceNotAvail="#666666" colorServiceDescription="#69a7ff" colorServiceDescriptionSelected="white" 
 			picServiceEventProgressbar="mega32/bars/pl.png" />
