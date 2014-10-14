@@ -4,11 +4,19 @@
 		<panel name="4Buttons" />
 		<panel name="menuInfo" />
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelwd.png" alphatest="blend" transparent="1" />
+		<!--Time -->
+		<widget source="global.CurrentTime" render="Label" position="180,43" size="600,28" zPosition="5" font="Regular;22" halign="right" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>
 		<widget source="Title" render="Label" zPosition="1" position="160,43" size="600,28" font="Regular;24" foregroundColor="bluette" backgroundColor="#101010" transparent="1" />
 		<!-- Oribital Position -->
 		<widget source="ServiceEvent" render="Label" position="60,43" size="90,28" font="Regular;24" halign="left" foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="ServiceOrbitalPosition"/>
 		</widget>  
+		<!-- Channel Name -->
+		<widget source="session.CurrentService" render="Label" position="825,32" size="400,30" zPosition="2" font="Regular;26" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" borderColor="#10000000" borderWidth="1">
+			<convert type="ServiceName">NameOnly</convert>
+		</widget>
 		<!-- Lista Canali  --> 
 		<ePixmap position="785,90" zPosition="4" size="29,520" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<widget name="list" position="55,90" size="740,520" scrollbarMode="showOnDemand"  transparent="1" zPosition="3"
@@ -21,7 +29,7 @@
 			<convert type="EGRefString">ServicelistRef</convert>
 		</widget>
 		<!-- Event Name -->
-		<widget source="ServiceEvent" render="EGScrollLabel" position="815,165" size="425,60" halign="center" valign="center" font="Regular;24" foregroundColor="yellow" backgroundColor="#101010" transparent="1" borderColor="#10000000" borderWidth="1" zPosition="2" >
+		<widget source="ServiceEvent" render="EGScrollLabel" position="815,165" size="425,60" halign="center" valign="center" font="Regular;22" foregroundColor="yellow" backgroundColor="#101010" transparent="1" zPosition="2" >
 			<convert type="EventName">Name</convert>
 		</widget>
 		<!-- Event Time -->
@@ -34,7 +42,7 @@
 		<widget source="ServiceEvent" render="Progress" pixmap="mega32/bars/ch_progresscl_205.png" position="926,225" size="204,13" zPosition="4"  backgroundColor="black" transparent="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1175,220" size="150,28" halign="left" font="Regular;24" foregroundColor="red" backgroundColor="black" borderColor="10000000" borderWidth="1" transparent="1" zPosition="1" >
+		<widget source="ServiceEvent" render="Label" position="1175,220" size="150,28" halign="left" font="Regular;24" foregroundColor="red" backgroundColor="black" borderColor="#10000000" borderWidth="1" transparent="1" zPosition="1" >
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>

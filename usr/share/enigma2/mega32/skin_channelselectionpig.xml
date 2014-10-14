@@ -5,6 +5,10 @@
 		<panel name="menuInfo" />
 		<panel name="SmallPigTemplate" />
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelwd.png" alphatest="blend" transparent="1" />
+		<!--Time -->
+		<widget source="global.CurrentTime" render="Label" position="180,43" size="600,28" zPosition="5" font="Regular;22" halign="right" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<convert type="ClockToText">Format:%a %e-%b-%Y %H:%M</convert>
+		</widget>
 		<widget source="Title" render="Label" zPosition="1" position="160,43" size="600,28" font="Regular;24" foregroundColor="bluette" backgroundColor="#101010" transparent="1" />
 		<!-- Oribital Position -->
 		<widget source="ServiceEvent" render="Label" position="60,43" size="90,28" font="Regular;24" halign="left" foregroundColor="white" backgroundColor="black" transparent="1">
@@ -35,7 +39,7 @@
 		<widget source="ServiceEvent" render="Progress" pixmap="mega32/bars/ch_progresscl.png" position="1025,369" size="150,15" zPosition="4"  backgroundColor="black" transparent="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1185,365" size="150,24" halign="left" font="Regular;20" foregroundColor="red" backgroundColor="black" borderColor="10000000" borderWidth="1" transparent="1" zPosition="1" >
+		<widget source="ServiceEvent" render="Label" position="1185,365" size="150,24" halign="left" font="Regular;20" foregroundColor="red" backgroundColor="black" borderColor="#10000000" borderWidth="1" transparent="1" zPosition="1" >
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
