@@ -48,52 +48,6 @@
 		<!-- eLabel name="DEBUG"  text="PANEL E003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 	
-	<!--  EGAMI MultiBoot OKK -->
-	<screen name="EGAMIBootInstallation" position="0,0" size="1280,720" title="EGAMI Multiboot Installation" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="2Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="label1" position="50,100" size="515,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="bluette" backgroundColor="#101010" transparent="1"/>
-		<widget name="label2" position="50,140" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#101010" transparent="1"/>
-		<widget name="config" position="60,250" size="515,500" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1"/>
-		<!-- eLabel name="DEBUG"  text="PANEL E004" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>
-	
-	<!--  EGAMI MultiBoot OKK -->
-	<screen name="EGAMIBootImageInstall" position="center,center" size="1280,720" title="EGAMIBoot - Image Installation" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplateW" />
-		<panel name="2Buttons" />
-		<widget name="config" position="60,100" size="730,440" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget name="HelpWindow" position="330,310" zPosition="5" size="1,1" transparent="1" alphatest="on" />      
-		<!-- eLabel name="DEBUG"  text="PANEL E004b" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>
-
-	<!--  EGAMI MultiBoot OKK -->
-	<screen name="EGAMIChooseOnLineImage" position="0,0" size="1280,720" title="EGAMIBoot - Download OnLine Images" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplateW" />
-		<widget source="list" render="Listbox" position="60,100" size="730,540" scrollbarMode="showOnDemand" transparent="1">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryText(pos = (0, 10), size = (730, 30), font=0, flags = RT_HALIGN_RIGHT, text = 0),
-					MultiContentEntryPixmapAlphaBlend(pos = (10, 0), size = (480, 60), png = 1),
-					MultiContentEntryText(pos = (0, 35), size = (730, 30), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_RIGHT, text = 3),
-					],
-					"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
-					"itemHeight": 60
-				}
-			</convert>
-		</widget>
-		<!-- eLabel name="DEBUG"  text="PANEL E004c" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>
-		  
-	<!--  EGAMI Download Images OKK -->
-	<screen name="DownloadOnLineImage" position="center,center" size="560,500" title="EGAMIBoot - Download Image">
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="2Buttons" />
-		<widget name="imageList" position="60,100" size="530,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-		<!-- eLabel name="DEBUG" text="PANEL E004d" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>	
-
 	<!--  EGAMI News About OKK -->
 	<screen name="EGAMIMainNews" position="fill" title="EGAMI News" >
 		<panel name="GenericLayoutFullTemplateW" />
@@ -513,31 +467,9 @@
 		<!-- eLabel name="DEBUG"  text="PANEL E026" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
    	</screen>
    	
-	<!--  EGAMI BootManager OKK -->
-	<screen name="EGAMIBootImageChoose" position="0,0" size="1280,720" title="EGAMI Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutMidTemplate" />
-		<panel name="SmallPigTemplate" />
-		<panel name="4Buttons" />
-		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label2" position="110,120" size="315,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label6" position="260,120" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
-		<widget name="device_icon" position="40,120" size="80,80" alphatest="on" />
-		<widget name="config" position="60,230" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget name="label3" position="645,435" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label4" position="645,460" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label5" position="645,485" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label7" position="920,435" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
-		<widget name="label8" position="920,460" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
-		<widget name="label9" position="920,485" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
-		<widget name="label10" position="645,510" size="440,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="label11" position="920,510" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
-		<widget name="free_space_progressbar" position="765,442" size="300,13" borderWidth="1" zPosition="3" />
-		<!-- eLabel name="DEBUG"  text="PANEL E028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>	
-	
 	<!--  EGAMI ListChannel OKK -->
 	<screen name="EGAMIFaq_ListChannel_ListScreen" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutMidTemplate" />
+		<panel name="GenericLayoutFullTemplate" />
 		<widget name="ContentTitle" position="60,80" size="515,25" backgroundColor="#00aaaaaa" zPosition="0" foregroundColor="#00000000" font="Regular;22" halign="center" />
 		<widget name="liste" position="60,120" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="720,90" size="410,300" transparent="1" alphatest="blend" borderWidth="2" borderColor="#00555556" />
@@ -558,9 +490,82 @@
 		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="description" position="820,410" size="420,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
 		<ePixmap position="410,80" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="list" position="60,80" size="360,550" scrollbarMode="showOnDemand" transparent="1" />
-		<ePixmap position="780,80" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<widget name="list" position="60,90" size="730,550" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap position="780,90" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<widget name="choosen" position="440,80" size="350,550" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
+
+	<!--  EGAMI BootManager OKK -->
+	<screen name="EGAMIBootImageChoose" position="0,0" size="1280,720" title="EGAMI Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplateW" />
+		<panel name="4Buttons" />
+		<widget name="label10" position="60,100"  size="730,36" font="Regular;28" foregroundColor="bluette" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label11" position="680,100" size="80,36"  font="Regular;28" foregroundColor="white"   backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label1"  position="60,160"  size="730,60" font="Regular;22" foregroundColor="white" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="device_icon" position="60,250" size="80,80" alphatest="blend" />
+		<widget name="label2" position="150,250" size="730,30" halign="left" font="Regular;24" backgroundColor="#101010" foregroundColor="white"   transparent="1" zPosition="1" />
+		<widget name="label6" position="150,280" size="730,30" halign="left" font="Regular;24" backgroundColor="#101010" foregroundColor="bluette" transparent="1" zPosition="1" />
+		<widget name="config" position="60,350" size="730,210" scrollbarMode="showOnDemand" transparent="1"/>
+		<eLabel position="830,390" size="410,2" backgroundColor="#20101010" zPosition="2"/>
+		<ePixmap pixmap="mega32/icons/info_on.png" position="830,410" size="50,50" zPosition="2" alphatest="blend" />
+		<widget name="label3" position="890,405"  size="140,30" font="Regular;22" foregroundColor="white" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label7" position="1000,405" size="80,30"  font="Regular;22" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label4" position="890,465"  size="220,30" font="Regular;22" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label8" position="1090,465" size="200,30" font="Regular;22" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="free_space_progressbar" position="890,435" size="350,10" borderColor="bluette" borderWidth="1" zPosition="3" />
+		<widget name="label4" position="890,450"  size="350,30" font="Regular;20" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label8" position="1010,450" size="270,30" font="Regular;20" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label5" position="890,520" size="350,60" font="Regular;20" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<widget name="label9" position="890,570" size="350,30" font="Regular;26" backgroundColor="#101010" transparent="1" zPosition="1" />
+		<!-- eLabel name="DEBUG"  text="PANEL E028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>	
+	
+
+	<!--  EGAMI MultiBoot OKK -->
+	<screen name="EGAMIBootInstallation" position="0,0" size="1280,720" title="EGAMI Multiboot Installation" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="2Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="label1" position="50,100" size="515,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="bluette" backgroundColor="#101010" transparent="1"/>
+		<widget name="label2" position="50,140" size="515,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#101010" transparent="1"/>
+		<widget name="config" position="60,250" size="515,500" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1"/>
+		<!-- eLabel name="DEBUG"  text="PANEL E004" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<!--  EGAMI MultiBoot OKK -->
+	<screen name="EGAMIBootImageInstall" position="center,center" size="1280,720" title="EGAMIBoot - Image Installation" flags="wfNoBorder" >
+		<panel name="GenericLayoutFullTemplateW" />
+		<panel name="2Buttons" />
+		<widget name="config" position="60,100" size="730,440" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="HelpWindow" position="330,310" zPosition="5" size="1,1" transparent="1" alphatest="on" />      
+		<!-- eLabel name="DEBUG"  text="PANEL E004b" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+
+	<!--  EGAMI MultiBoot OKK -->
+	<screen name="EGAMIChooseOnLineImage" position="0,0" size="1280,720" title="EGAMIBoot - Download OnLine Images" flags="wfNoBorder" >
+		<panel name="GenericLayoutFullTemplateW" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
+		<widget source="list" render="Listbox" position="60,90" size="730,540" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (105, 2), size = (620, 26), font=0, color=0x3589ff, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryPixmapAlphaBlend(pos = (2, 5), size = (90, 50), png = 1),
+					MultiContentEntryText(pos = (105, 30), size = (620, 26), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_LEFT, text = 3),
+					],
+					"fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+					"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<!-- eLabel name="DEBUG"  text="PANEL E004c" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+		  
+	<!--  EGAMI Download Images OKK -->
+	<screen name="DownloadOnLineImage" position="center,center" size="560,500" title="EGAMIBoot - Download Image">
+		<panel name="GenericLayoutFullTemplate" />
+		<panel name="2Buttons" />
+		<widget name="imageList" position="60,100" size="530,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<!-- eLabel name="DEBUG" text="PANEL E004d" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>	
 </skin>
