@@ -433,8 +433,7 @@
 		<widget name="statusicon" position="80,610" size="50,50" alphatest="blend" zPosition="5" 
 			pixmaps="mega32/icons/play.png,mega32/icons/pause.png,mega32/icons/stop.png,mega32/icons/forward.png,mega32/icons/backward.png,mega32/icons/slow.png" />
 			
-		<widget name="speed" position="100,635"  size="80,15"  font="Regular;17" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" />		
-
+		<widget name="state" position="850,638" size="720,25" font="Regular;26" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<widget name="eventname" position="60,49" size="0,20" font="Regular;18" halign="center" backgroundColor="background" zPosition="5" />
 		<widget name="speed" position="100,635"  size="80,15"  font="Regular;17" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" />
 		<widget position="340,868" size="210,21" name="key_green"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
