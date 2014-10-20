@@ -332,5 +332,13 @@
 		<widget source="session.CurrentService" render="Label" position="550,17" size="180,50" font="Regular; 18" halign="left" foregroundColor="yellow" backgroundColor="#10101010" transparent="1" noWrap="1">
 			<convert type="EGWeather">TextTomorrow</convert>
 		</widget>
+		<!-- Data -->
+		<widget source="global.CurrentTime" render="Label" position="730,13" size="320,50" zPosition="1" font="Regular;40" halign="right" backgroundColor="transpBlack" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<!-- Time -->
+		<widget source="global.CurrentTime" render="Label" position="905,13" size="290,50" zPosition="1" font="Regular;40"  halign="right" backgroundColor="black" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>			
 	</screen>	
 </skin>
