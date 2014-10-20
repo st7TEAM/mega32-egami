@@ -310,8 +310,7 @@
 
 	<screen name="weatPanel">
 		<!-- Weather -->
-		<ePixmap position="0,5" size="1280,62" pixmap="mega32/menu/wtpanel.png" zPosition="-1" transparent="1" /> 
-		<widget source="session.CurrentService" render="Pixmap" position="780,5" size="462,75" pixmap="mega32/weather_panel.png" alphatest="blend" zPosition="-1" >
+		<widget source="session.CurrentService" render="Pixmap" position="0,5" size="1280,62" pixmap="mega32/menu/wtpanel.png" zPosition="-1" transparent="1" >
 			<convert type="EGWeather">Enable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>    
