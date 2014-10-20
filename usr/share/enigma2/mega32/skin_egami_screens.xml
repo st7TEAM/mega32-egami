@@ -492,7 +492,7 @@
 		<ePixmap position="410,80" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<widget name="list" position="60,90" size="730,550" scrollbarMode="showOnDemand" transparent="1" />
 		<ePixmap position="780,90" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="choosen" position="440,80" size="350,550" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="choosen" position="440,90" size="350,550" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
 
