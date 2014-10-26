@@ -1231,9 +1231,9 @@
 		<panel name="4Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_mega.png" position="1010,490" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="target" position="70,130" size="730,27" valign="center" font="Regular;24" backgroundColor="#404040"/>
-		<widget name="filelist" position="65,170" zPosition="1" size="735,208" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
+		<widget name="filelist" position="65,170" zPosition="1" size="520,208" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
 		<widget name="textbook" position="70,420" size="730,27" valign="center" font="Regular;24" backgroundColor="#404040"/>
-		<widget name="booklist" position="65,455" zPosition="2" size="735,100" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="booklist" position="65,455" zPosition="2" size="520,100" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG" text="PANEL P090" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen> 
 
