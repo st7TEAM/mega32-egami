@@ -221,20 +221,34 @@
 		<widget source="session.CurrentService" render="Label" position="60,654" size="630,22" font="Regular;19" halign="left" noWrap="1" foregroundColor="#707070" backgroundColor="#10101010" transparent="1" zPosition="11">
 			<convert type="EGExtraInfo">NetInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="608,654"  size="610,22" halign="right" font="Regular;19" foregroundColor="#606060" backgroundColor="#10101010" transparent="1" zPosition="11" >
+		<widget source="session.CurrentService" render="Label" position="408,654"  size="610,22" halign="right" font="Regular;19" foregroundColor="#606060" backgroundColor="#10101010" transparent="1" zPosition="11" >
 			<convert type="PliExtraInfo">CryptoSpecial</convert>
 		</widget>
-		<!--
+		
 		<widget source="session.CurrentService" render="Label" position="830,655" size="610,22" font="Regular;19" halign="right" foregroundColor="yellow" backgroundColor="#10101010"  transparent="1" zPosition="11" >
 			<convert type="EGExtraInfo">EcmInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="605,670"  size="610,22" font="Regular;19" halign="right" backgroundColor="#10101010" foregroundColor="grey" transparent="1" zPosition="11" >
+		<!--<widget source="session.CurrentService" render="Label" position="605,670"  size="610,22" font="Regular;19" halign="right" backgroundColor="#10101010" foregroundColor="grey" transparent="1" zPosition="11" >
 			<convert type="EGExtraInfo">EcmInfo</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="630,639" size="350,30" halign="left" font="Regular;19" foregroundColor="white" transparent="1" backgroundColor="black" zPosition="12" >
 			<convert type="PliExtraInfo">CryptoBar</convert>
 		</widget>
 		-->
+		<!-- Data -->
+		<widget source="global.CurrentTime" render="Label" position="960,655" size="120,26" zPosition="2" font="Regular;20"  backgroundColor="transpBlack" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<!-- Time -->
+		<ePixmap position="1078,659" zPosition="2" size="22,22" pixmap="mega32/icons/clock.png" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" position="1105,655" size="90,26" zPosition="4" font="Regular;20"  backgroundColor="black" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>	
+		<!-- Blinking pixmap (recording in progress?) -->
+		<ePixmap position="1200,655" zPosition="2" size="27,27" pixmap="mega32/buttons/icon_norec_light.png" alphatest="blend" />
+		<widget source="session.RecordState" render="Pixmap" pixmap="mega32/buttons/icon_rec_light.png" position="1200,655" zPosition="3" size="19,19" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert> 
+		</widget>		
 		<panel name="SecondInfoBarNow"/>
 		<panel name="SecondInfoBarNext"/>
 		<!-- eLabel name="DEBUG"  text="PANEL I002" position="40,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
@@ -266,8 +280,23 @@
 		<widget source="session.CurrentService" render="Label" position="60,654" size="630,22" font="Regular;19" halign="left" noWrap="1" foregroundColor="#707070" backgroundColor="#10101010" transparent="1" zPosition="11">
 			<convert type="EGExtraInfo">NetInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="608,654"  size="610,22" halign="right" font="Regular;19" foregroundColor="#606060" backgroundColor="#10101010" transparent="1" zPosition="11" >
+		
+		<widget source="session.CurrentService" render="Label" position="308,654"  size="610,22" halign="right" font="Regular;19" foregroundColor="#606060" backgroundColor="#10101010" transparent="1" zPosition="11" >
 			<convert type="PliExtraInfo">CryptoSpecial</convert>
+		</widget>
+		<!-- Data -->
+		<widget source="global.CurrentTime" render="Label" position="960,655" size="120,26" zPosition="12" font="Regular;20"  backgroundColor="transpBlack" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<!-- Time -->
+		<ePixmap position="1078,659" zPosition="12" size="22,22" pixmap="mega32/icons/clock.png" alphatest="on" />
+		<widget source="global.CurrentTime" render="Label" position="1105,655" size="90,26" zPosition="14" font="Regular;20"  backgroundColor="black" foregroundColor="#808080" transparent="1" >
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>	
+		<!-- Blinking pixmap (recording in progress?) -->
+		<ePixmap position="1200,655" zPosition="12" size="27,27" pixmap="mega32/buttons/icon_norec_light.png" alphatest="blend" />
+		<widget source="session.RecordState" render="Pixmap" pixmap="mega32/buttons/icon_rec_light.png" position="1200,655" zPosition="13" size="19,19" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert> 
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL I003" position="40,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
