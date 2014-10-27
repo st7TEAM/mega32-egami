@@ -165,7 +165,7 @@
 			<convert type="EGExtraInfo">CryptoBar</convert>
 		</widget>
 
-		<!-- Internet connection Status -->
+		<!-- Internet connection Status
 		<widget source="session.CurrentService" render="Pixmap" position="890,658" size="20,16" pixmap="mega32/icons/ico_net.png" alphatest="blend" zPosition="8" >
 			<convert type="EGOnLineTest">NetConection</convert>
 			<convert type="ConditionalShowHide" />
@@ -173,7 +173,7 @@
 		<widget source="session.CurrentService" render="Pixmap" position="890,658" size="20,16" pixmap="mega32/icons/ico_inet.png" alphatest="blend" zPosition="9" >
 			<convert type="EGOnLineTest">InetConection</convert>
 			<convert type="ConditionalShowHide" />
-		</widget>
+		</widget> -->
 		<!-- OnLine updates
 		<ePixmap pixmap="mega32/icons/ico_line_off.png" position="928,655" size="20,20" zPosition="3" alphatest="blend" />
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="mega32/icons/ico_line_on.png" position="928,655" size="20,20" zPosition="4" alphatest="blend" >
