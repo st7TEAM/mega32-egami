@@ -36,7 +36,7 @@
 	<!--  EGAMI StartEmu OKK -->
 	<screen name="EGEmuManagerStarting" position="390,100" size="484,250" title="EGAMI" flags="wfNoBorder">
 		<widget name="starting" position="0,0" size="484,250" zPosition="-1" pixmaps="/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_1.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_2.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_3.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_4.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_5.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_6.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_7.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_8.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_9.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_10.png,/usr/lib/enigma2/python/EGAMI/icons/egami_icons/startcam_11.png" transparent="1" />
-		<widget name="text" position="10,180" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+		<widget name="text" position="10,180" halign="center" size="460,60" zPosition="1" font="Regular;18" valign="top" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -274,7 +274,7 @@
 	<!--  EGAMI Backup Panel Step 3 OKK -->
 	<screen name="EGAMIBackupPanel_Step3" position="center,center" size="484,240" title="EGAMI Backup in progress..." flags="wfNoBorder">
 		<widget name="status" position="0,0" size="484,240" zPosition="-1" 
-			pixmaps="mega32/egami/connection_1.png,mega32/egami/connection_2.png,mega32/egami/connection_3.png,mega32/egami/connection_4.png,mega32/egami/connection_5.png,mega32/egami/connection_6.png"  />
+		pixmaps="mega32/egami/connection_1.png,mega32/egami/connection_2.png,mega32/egami/connection_3.png,mega32/egami/connection_4.png,mega32/egami/connection_5.png,mega32/egami/connection_6.png"  />
 		<widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E024" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -282,8 +282,8 @@
 	<!--  EGAMI Backup Panel Step 3 OKK -->
 	<screen name="EGAMIRestorePanel_Step2" position="center,center" size="484,240" title="EGAMI Restore in progress..." flags="wfNoBorder">
 		<widget name="status" position="0,0" size="484,240" zPosition="-1" 
-			pixmaps="mega32/egami/connection_1.png,mega32/egami/connection_2.png,mega32/egami/connection_3.png,mega32/egami/connection_4.png,mega32/egami/connection_5.png,mega32/egami/connection_6.png"  />
-		    <widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
+		pixmaps="mega32/egami/connection_1.png,mega32/egami/connection_2.png,mega32/egami/connection_3.png,mega32/egami/connection_4.png,mega32/egami/connection_5.png,mega32/egami/connection_6.png"  />
+		<widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E025" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -303,7 +303,7 @@
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="menu" position="60,100" size="520,500" scrollbarMode="showOnDemand" transparent="1" />
  		<!-- eLabel name="DEBUG"  text="PANEL E027" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>'
+	</screen>
 
 	<!--  EGAMI EGS NetBrowser OKK -->
 	<screen name="EGNetBrowser" position="fill" title="Select Network Interface" backgroundColor="transparent" flags="wfNoBorder" >
@@ -378,51 +378,51 @@
 	<!--  EGAMI Weather Plugin OKK -->
 	<screen name="ForecaWeatherPlugin" position="0,0" size="1280,720" title="AccuWeather - foreca.com" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="4Buttons" />
-		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelwd.png" />
-		<widget name="statustext" position="60,43"  size="730,550" font="Regular;24" halign="center" valign="center" backgroundColor="#10000000" zPosition="2" />
-		<ePixmap position="60,43"  size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5" />
-		<widget name="ico_left"   position="60,43"  size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5" />
-		<widget name="lugar" position="90,41" size="350,30" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2" />
-		<widget name="ico_right"  position="450,43" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5" />
-		<ePixmap position="450,43"  size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5" />
-		<widget name="info_entradas" position="480,43" zPosition="3" size="300,23" font="Regular; 23" halign="right" foregroundColor="#404040" backgroundColor="#000000" transparent="1" />
-		<widget name="current_icon" position="60,90"  zPosition="1" size="74,74" alphatest="blend" />
-		<widget name="condicion"    position="250,100" size="370,500" font="Regular; 19" foregroundColor="white" backgroundColor="#000000" valign="top" transparent="1" zPosition="5" />
-		<widget name="ico_temp"     position="60,180"  zPosition="2" size="74,74" alphatest="blend" />
-		<widget name="temperatura"  position="115,210" zPosition="3" size="98,30" font="Regular; 26" transparent="1" noWrap="1" halign="left" backgroundColor="#000000" />
-		<widget name="barra" position="60,320" size="730,330" alphatest="blend" zPosition="2" />
-		<widget name="detallado" position="20,10" size="1260,700" scrollbarMode="showOnDemand" zPosition="8" backgroundColor="#10000000" />
-		<widget name="fondo_detalle" position="20,20" size="1230,720" alphatest="blend" zPosition="10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/fondolista-fs8.png"/>
-		<widget name="viento"       position="860,210" size="191,65" font="Regular;22" transparent="1" backgroundColor="#000000" valign="top" zPosition="5" />
-		<widget name="satelite" position="232,79" size="720,480" alphatest="blend" zPosition="10" transparent="1" />
-		<widget name="statustext2" position="100,23" size="970,627" font="Regular;20" halign="center" valign="center" transparent="0" zPosition="8" />
-		<widget name="info_barra" position="162,328" zPosition="1"  size="600,290" font="Regular;20" halign="center" valign="center" transparent="0" />
-		<widget name="le_barra"   position="232,562" zPosition="10" size="600,35" alphatest="blend" />
-		<widget name="ico_vie" position="60,150" zPosition="2" size="29,40" alphatest="blend" />
-		<widget name="barrapix_abj" position="60,20" zPosition="9" size="20,20"   alphatest="blend" transparent="1" />
-		<widget name="barrapix_arr" position="60,51" zPosition="9" size="730,500" alphatest="blend" transparent="1" />
-		<widget name="dia1"       position="901,380" zPosition="1" size="340,25" halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" />
-		<widget name="icono_dia1" position="819,380" zPosition="1" size="79,79" alphatest="blend" />
-		<widget name="info_dia1"  position="901,403" zPosition="1" size="340,55" halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" />
-		<widget name="dia2"       position="901,462" zPosition="1" size="340,25" halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" />
-		<widget name="icono_dia2" position="819,462" zPosition="1" size="79,79" alphatest="blend" />
-		<widget name="info_dia2"  position="901,486" zPosition="1" size="340,55" halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" />
-		<widget name="dia3"       position="901,544" zPosition="1" size="340,25" halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" />
-		<widget name="icono_dia3" position="819,544" zPosition="1" size="79,79" alphatest="blend" />
-		<widget name="info_dia3"  position="901,568" zPosition="1" size="340,55" halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" />
-		<ePixmap position="1100,668" size="40,40" zPosition="3" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend"/>
-		<widget position="1150,668"  size="210,21" name="key_menu"  font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
+		<ePixmap  position="0,0"     size="1280,720"    pixmap="mega32/menu/panelwd.png" zPosition="-1" />
+		<widget name="statustext"    position="60,43"   size="730,550" font="Regular;24" halign="center" valign="center" backgroundColor="#10000000" zPosition="2" />
+		<ePixmap position="60,43"    size="16,26"       pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5" />
+		<widget name="ico_left"      position="60,43"   size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5" />
+		<widget name="lugar"         position="90,41"   size="350,30" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2" />
+		<widget name="ico_right"     position="450,43"  size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5" />
+		<ePixmap position="450,43"   size="16,26"       pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5" />
+		<widget name="info_entradas" position="480,43"  size="300,23"   font="Regular; 23" halign="right" foregroundColor="#404040" backgroundColor="#000000" transparent="1" zPosition="3" />
+		<widget name="current_icon"  position="60,90"   size="74,74"    alphatest="blend"  zPosition="1" />
+		<widget name="condicion"     position="250,100" size="370,500"  font="Regular; 19" foregroundColor="white" backgroundColor="#000000" valign="top" transparent="1" zPosition="5" />
+		<widget name="ico_temp"      position="60,180"  size="74,74"    alphatest="blend" zPosition="2" />
+		<widget name="temperatura"   position="115,210" size="98,30"    font="Regular; 26" transparent="1" noWrap="1" halign="left" backgroundColor="#000000" zPosition="3" />
+		<widget name="barra"         position="60,290"  size="730,330"  alphatest="blend" zPosition="2" />
+		<widget name="detallado"     position="20,10"   size="1260,700" scrollbarMode="showOnDemand" zPosition="8" backgroundColor="#10000000" />
+		<widget name="fondo_detalle" position="20,20"   size="1230,720" alphatest="blend" zPosition="10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/fondolista-fs8.png"/>
+		<widget name="viento"        position="860,210" size="191,65"   font="Regular;22" transparent="1" backgroundColor="#000000" valign="top" zPosition="5" />
+		<widget name="satelite"      position="50,95"   size="750,540"  alphatest="blend" transparent="1" zPosition="10" />
+		<widget name="statustext2"   position="50,77"   size="750,540"  font="Regular;20" halign="center" valign="center" transparent="0" zPosition="8" />
+		<widget name="info_barra"    position="162,328" size="600,290"  font="Regular;20" halign="center" valign="center" transparent="0" zPosition="1" />
+		<widget name="le_barra"      position="232,562" size="600,35"   alphatest="blend" zPosition="10" />
+		<widget name="ico_vie"       position="60,150"  size="29,40"    alphatest="blend" zPosition="2" />
+		<widget name="barrapix_abj"  position="60,20"   size="20,20"    alphatest="blend" transparent="1" zPosition="9" />
+		<widget name="barrapix_arr"  position="60,51"   size="730,500"  alphatest="blend" transparent="1" zPosition="9" />
+		<widget name="dia1"          position="901,380" size="340,25"   halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="icono_dia1"    position="819,380" size="79,79"    alphatest="blend" zPosition="1" />
+		<widget name="info_dia1"     position="901,403" size="340,55"   halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="dia2"          position="901,462" size="340,25"   halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="icono_dia2"    position="819,462" size="79,79"    alphatest="blend" zPosition="1" />
+		<widget name="info_dia2"     position="901,486" size="340,55"   halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="dia3"          position="901,544" size="340,25"   halign="left" valign="center" font="Regular; 22" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<widget name="icono_dia3"    position="819,544" size="79,79"    alphatest="blend" zPosition="1" />
+		<widget name="info_dia3"     position="901,568" size="340,55"   halign="left" valign="top" font="Regular; 17" transparent="1" backgroundColor="#000000" zPosition="1" />
+		<ePixmap position="1020,666" size="40,40"       pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend" zPosition="3" />
+		<widget position="970,667"   name="key_menu"    size="210,21" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E036" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 	
 	<!--  EGAMI Weather Plugin Setup OKK -->
 	<screen name="WeatherPluginEntriesListConfigScreenfore" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" backgroundColor="transparent" flags="wfNoBorder" >
-		<widget name="city" position="60,90" size="150,50" font="Regular;20" halign="left"/>
-		<widget name="language" position="210,90" size="150,50" font="Regular;20" halign="left"/>
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="entrylist" position="60,140" size="770,550" scrollbarMode="showOnDemand" itemHeight="30" transparent="1" />
+		<widget name="city" position="60,90" size="150,50" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="#10101010" transparent="1" />
+		<widget name="language" position="210,90" size="150,50" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="#10101010" transparent="1" />
+		<widget name="entrylist" position="60,140" size="520,550" scrollbarMode="showOnDemand" itemHeight="30" transparent="1" />
+		<ePixmap pixmap="mega32/menu/ico_setup.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL E037" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 	
@@ -485,28 +485,34 @@
 	
 	<!-- EGAMI HotKey OKK -->
 	<screen name="HotkeySetup" position="0,0" size="1280,720" title="Hotkey Setup" backgroundColor="black"  flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplateW" />
+		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
-		<ePixmap position="410,80" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="list" position="60,90" size="730,550" scrollbarMode="showOnDemand" transparent="1" />
-		<ePixmap position="780,90" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="choosen" position="440,90" size="350,550" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="60,90" size="520,525" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap position="570,90" zPosition="14" size="15,525" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
+		<eLabel position="630,390" size="610,2" backgroundColor="#20101010" zPosition="2"/>
+		<ePixmap pixmap="mega32/icons/info_on.png" position="630,410" size="50,50" zPosition="2" alphatest="blend" />
+		<widget name="choosen" position="630,420" size="610,70" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
+	 
 	<!-- EGAMI HotkeySetupSelect OKK -->
 	<screen name="HotkeySetupSelect" position="0,0" size="1280,720" title="Hotkey Setup" backgroundColor="black"  flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplateW" />
+		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
+
 		<widget name="description" position="820,410" size="420,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
-		<ePixmap position="410,80" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="list" position="60,90" size="730,550" scrollbarMode="showOnDemand" transparent="1" />
-		<ePixmap position="780,90" zPosition="14" size="15,550" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<widget name="choosen" position="440,90" size="350,550" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="60,90" size="520,525" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap position="570,90" zPosition="14" size="15,525" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
+
+		<eLabel position="630,390" size="410,2" backgroundColor="#20101010" zPosition="2"/>
+		<ePixmap pixmap="mega32/icons/info_on.png" position="630,400" size="50,50" zPosition="2" alphatest="blend" />
+		<widget name="choosen" position="630,410" size="610,70" scrollbarMode="showOnDemand" transparent="1" />
+
 		<!-- eLabel name="DEBUG"  text="PANEL E031-2" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
-	 
+
 	<!--  EGAMI BootManager OKK -->
 	<screen name="EGAMIBootImageChoose" position="0,0" size="1280,720" title="EGAMI Multiboot Image Choose" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplateW" />
@@ -572,11 +578,12 @@
 		<!-- eLabel name="DEBUG"  text="PANEL E004c" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 		  
-	<!--  EGAMI Download Images OKK -->
-	<screen name="DownloadOnLineImage" position="center,center" size="560,500" title="EGAMIBoot - Download Image">
+	<!--  EGAMI MultiBoot Download Images OKK -->
+	<screen name="DownloadOnLineImage" position="center,center" size="1280,720" title="EGAMIBoot - Download Image" flags="wfNoBorder">
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
-		<widget name="imageList" position="60,100" size="530,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<widget name="imageList" position="60,100" size="520,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 		<!-- eLabel name="DEBUG" text="PANEL E004d" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>	
 </skin>

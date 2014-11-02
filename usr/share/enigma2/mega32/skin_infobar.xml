@@ -1,7 +1,6 @@
 <skin>
 	<!--INFOBAR --> 
 	<screen name="InfoBar" position="0,10" size="1280,720" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="weatPanel" />
 		<ePixmap position="0,500" size="1280,215" pixmap="mega32/menu/infobarb.png" zPosition="-1" transparent="1" /> 
 		<!-- Channel Number -->
 		<eLabel text="CH -" position="70,537" size="120,34" zPosition="3"  font="Regular;20" transparent="1" foregroundColor="#ec0005" backgroundColor="black" />

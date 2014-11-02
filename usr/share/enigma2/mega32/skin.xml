@@ -517,10 +517,8 @@
 		<widget name="waitingtext" position="60,450" size="520,100" zPosition="4" font="Regular;22" halign="left" valign="center" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<widget name="freeDiskSpace" position="850,260" size="410,24" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="1,1" zPosition="2" />
 		<widget name="TrashcanSize"  position="850,290" size="410,24" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="1,1" zPosition="2" />
-		
 		<eLabel position="830,390" size="410,2" backgroundColor="#20101010" zPosition="2"/>
 		<ePixmap pixmap="mega32/icons/info_on.png" position="830,400" size="50,50" zPosition="2" alphatest="blend" />
-		
 		<widget source="Service" render="Label" position="830,355" zPosition="4" size="410,30" font="Regular;28" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="1,1" > 
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
@@ -659,7 +657,7 @@
 
 	<!-- Device Info OKK -->	
 	<screen name="SystemDevicesInfo" position="0,0" size="1280,720" title="Devices Informations" backgroundColor="transparent" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplate" />
+		<panel name="GenericLayoutFullTemplateW" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
 		<widget source="TunerHeader"  render="Label" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
 		<widget source="nims"         render="Label" position="60,195" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
