@@ -483,8 +483,8 @@
 		<!-- eLabel name="DEBUG"  text="PANEL E030" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 	
-	<!-- EGAMI HotKey OKK -->
-	<screen name="HotkeySetup" position="0,0" size="1280,720" title="Hotkey Setup" backgroundColor="black"  flags="wfNoBorder">
+	<!-- EGAMI ButtonSetup OKK -->
+	<screen name="ButtonSetup" position="0,0" size="1280,720" title="EGAMI Quick Button Setup" backgroundColor="black"  flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
@@ -496,8 +496,8 @@
 		<!-- eLabel name="DEBUG"  text="PANEL E031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
 	 
-	<!-- EGAMI HotkeySetupSelect OKK -->
-	<screen name="HotkeySetupSelect" position="0,0" size="1280,720" title="Hotkey Setup" backgroundColor="black"  flags="wfNoBorder">
+	<!-- EGAMI ButtonSetupSelect OKK -->
+	<screen name="ButtonSetupSelect" position="0,0" size="1280,720" title="EGAMI Quick Button Select" backgroundColor="black"  flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
