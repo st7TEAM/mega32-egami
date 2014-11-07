@@ -488,11 +488,12 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
+		<widget name="description" position="630,480" size="550,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
 		<widget name="list" position="60,90" size="520,525" scrollbarMode="showOnDemand" transparent="1" />
 		<ePixmap position="570,90" zPosition="14" size="15,525" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<eLabel position="630,390" size="610,2" backgroundColor="#20101010" zPosition="2"/>
 		<ePixmap pixmap="mega32/icons/info_on.png" position="630,410" size="50,50" zPosition="2" alphatest="blend" />
-		<widget name="choosen" position="630,420" size="610,70" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="choosen" position="635,415" size="610,70" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
 	 
