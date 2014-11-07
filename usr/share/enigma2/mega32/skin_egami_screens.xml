@@ -526,7 +526,7 @@
 		<widget name="device_icon" position="60,250" size="80,80" alphatest="blend" />
 		<widget name="label2" position="150,250" size="730,30" halign="left" font="Regular;24" backgroundColor="#101010" foregroundColor="white"   transparent="1" zPosition="1" />
 		<widget name="label6" position="150,280" size="730,30" halign="left" font="Regular;24" backgroundColor="#101010" foregroundColor="bluette" transparent="1" zPosition="1" />
-		<widget name="config" position="60,350" size="730,210" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="60,350" size="730,250" scrollbarMode="showOnDemand" transparent="1"/>
 		<eLabel position="830,390" size="410,2" backgroundColor="#20101010" zPosition="2"/>
 		<ePixmap pixmap="mega32/icons/info_on.png" position="830,410" size="50,50" zPosition="2" alphatest="blend" />
 		<widget name="label3" position="890,405"  size="140,30" font="Regular;22" foregroundColor="white" backgroundColor="#101010" transparent="1" zPosition="1" />
@@ -539,7 +539,7 @@
 		<widget name="label5" position="890,520" size="350,60" font="Regular;20" backgroundColor="#101010" transparent="1" zPosition="1" />
 		<widget name="label9" position="890,570" size="350,30" font="Regular;26" backgroundColor="#101010" transparent="1" zPosition="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL E028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>	
+	</screen>		
 	
 
 	<!--  EGAMI MultiBoot OKK -->
