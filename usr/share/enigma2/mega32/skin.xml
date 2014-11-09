@@ -21,7 +21,7 @@
 		<color name="white"       value="#ffffff"/>
 		<color name="grey"        value="#9f9f9f"/>
 		<color name="grey2"       value="#d3d3d9"/>
-		<color name="dark"        value="#25102748" />	
+		<color name="dark"        value="#25102748" />
 		<color name="menu"        value="#20062748"/>
 		<color name="red"         value="#ff0d0d"/>
 		<color name="green"       value="#009a00"/>
@@ -43,8 +43,8 @@
 		<color name="LabelForeground"                    color="#ffffff"/>
 		<color name="ListboxBackground"                  color="#14000000"/>
 		<color name="ListboxForeground"                  color="#ffffff"/>
-		<color name="ListboxSelectedBackground"          color="#100045a6"/> 
-		<color name="ListboxSelectedForeground"          color="#ffffff"/> 
+		<color name="ListboxSelectedBackground"          color="#100045a6"/>
+		<color name="ListboxSelectedForeground"          color="#ffffff"/>
 		<color name="ListboxMarkedBackground"            color="#000000"/>
 		<color name="ListboxMarkedForeground"            color="#83d1ff"/>
 		<color name="ListboxMarkedAndSelectedBackground" color="#14000000"/>
@@ -121,7 +121,7 @@
 		<sub name="Subtitle_TTX"     font="Regular;30"     shadowColor="#40101010" shadowOffset="3,3" />
 		<!-- omitting foregroundColor attribute will enable auto-assignment of color -->
 	</subtitles>
-	
+
 	<!-- Input Box OKK -->
 	<screen name="InputBox" position="365,250" size="550,90" title="Input">
 		<widget name="text"  position="10,20" size="550,25" font="Regular;23" />
@@ -132,7 +132,7 @@
 	<screen name="Mute" position="1100,20" zPosition="10" size="90,60" title="Mute" flags="wfNoBorder">
 		<ePixmap position="0,0" size="90,60" pixmap="mega32/icons/mute.png" transparent="1" />
 	</screen>
-	
+
 	<!-- Picture in picture setup OKK -->
 	<screen name="PiPSetup" position="center,center" size="620,170" backgroundColor="transparent" flags="wfNoBorder" title="PiPSetup">
 		<widget name="text" position="10,10" size="600,150" font="Regular;23" />
@@ -151,7 +151,7 @@
 		<ePixmap position="0,0" size="500,30" pixmap="mega32/skin_default/volbg.png"/>
 		<widget name="Volume" position="34,10" size="432,10" zPosition="1" pixmap="mega32/skin_default/progress_small.png" transparent="1"/>
 	</screen>
-	
+
 	<!-- Pin input OKK -->
 	<screen name="PinInput" position="center,center" size="500,170" title="Pin code needed">
 		<widget name="service" position="10,10"  size="480,25" font="Regular;20" />
@@ -159,17 +159,17 @@
 		<widget name="tries"   position="10,70"  size="480,25" font="Regular;20" halign="center" />
 		<widget name="input"   position="10,110" size="480,40" font="Regular;50" halign="center" />
 	</screen>
-	
+
 	<!-- PVR state OKK -->
 	<screen name="PVRState" position="90,50" size="216,74" zPosition="2"  backgroundColor="transpBlack" flags="wfNoBorder">
-		<widget name="statusicon" position="20,15" size="20,20" zPosition="3" alphatest="on" 
+		<widget name="statusicon" position="20,15" size="20,20" zPosition="3" alphatest="on"
 			pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png" />
 		<widget name="speed" position="45,18" size="80,18" font="Regular;17" halign="left" backgroundColor="transpBlack" foregroundColor="white"  transparent="1" zPosition="4" />
 	</screen>
-	
+
 	<!-- Subtitle Display OKK -->
-	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent" />    
-	
+	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent" />
+
 	<!-- TextBox OKK -->
 	<screen name="TextBox" position="center,center" size="550,400" title="Message...">
 		<widget name="text" position="10,10" size="530,380" font="Regular;18" />
@@ -198,7 +198,7 @@
                 <widget name="text" position="center,600" size="720,100" font="Regular;22" halign="center" transparent="1" />
 		<!-- eLabel name="DEBUG" text="PANEL SP02" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
         </screen>
-	
+
 	<!-- Subservices Quickzap OKK -->
 	<screen name="SubservicesQuickzap" position="380,600" size="560,100" title="SubServices QuickZap" backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="session.RecordState" render="Pixmap" pixmap="mega32/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on" >
@@ -265,7 +265,7 @@
 		<widget name="text"   position="10,5" size="600,40" font="Regular;38" noWrap="1" halign="right" foregroundColor="#538eff" backgroundColor="#0e1016" />
 		<widget name="list"   position="10,55" size="600,223" selectionDisabled="1"  backgroundColor="#0e1016" />
 		<widget name="header" position="35,450" size="550,26" font="Regular;18" transparent="1" noWrap="1" foregroundColor="yellow" backgroundColor="black" />
-		<ePixmap pixmap="mega32/buttons/button_yellow.png" position="10,302" size="26,24" alphatest="blend" transparent="1" />		
+		<ePixmap pixmap="mega32/buttons/button_yellow.png" position="10,302" size="26,24" alphatest="blend" transparent="1" />
 		<widget name="country" position="40,295" zPosition="2" size="580,40" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG" text="PANEL SP08" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -287,12 +287,12 @@
 	</screen>
 
 	<!-- ***** PANELS ***** -->
-		
+
 	<!-- Channel Simple selection - TV OKK -->
 	<screen name="SlimChannelSelection" position="60,80" size="1160,610" title="Channel Selection"  >
 		<eLabel position="5,5" size="1150,555" backgroundColor="#10000000" zPosition="1"/>
-		<widget name="list" serviceItemHeight="32" position="20,20" size="1125,510" scrollbarMode="showOnDemand" zPosition="2"  
-			foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" colorServiceDescription="#69a7ff" 
+		<widget name="list" serviceItemHeight="32" position="20,20" size="1125,510" scrollbarMode="showOnDemand" zPosition="2"
+			foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" colorServiceDescription="#69a7ff"
 			picServiceEventProgressbar="mega32/bars/pl.png" transparent="1" />
 		<ePixmap position="1135,20" zPosition="4" size="10,496" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<ePixmap position="0,569" size="1220,50" pixmap="mega32/buttons/4ColorsN.png" alphatest="blend" zPosition="2" />
@@ -302,27 +302,27 @@
 		<widget position="770,578" size="210,21" name="key_blue"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
-	<!-- Channel selection - TV OKK --> 
+
+	<!-- Channel selection - TV OKK -->
 	<screen name="SimpleChannelSelection" position="fill" title="Channel Selection"  >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
-		<widget name="list" serviceItemHeight="32" position="60,90" size="730,513" zPosition="3" scrollbarMode="showOnDemand" 
-			foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" 
+		<widget name="list" serviceItemHeight="32" position="60,90" size="730,513" zPosition="3" scrollbarMode="showOnDemand"
+			foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24"
 			colorServiceDescription="grey" picServiceEventProgressbar="mega32/bars/pl.png" transparent="1" />
 		<ePixmap position="780,90" size="10,513" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="5" />
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL S003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
-	<!-- Channel selection - Radio OKK --> 
+
+	<!-- Channel selection - Radio OKK -->
 	<screen name="ChannelSelectionRadio" position="0,0" size="1280,720" title="Channel Selection"  backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
 		<panel name="menuInfo" />
-		<!-- Lista Canali -->  
+		<!-- Lista Canali -->
 		<widget name="list" position="60,90" size="730,513" scrollbarMode="showOnDemand" foregroundColorServiceNotAvail="#666666" zPosition="3" serviceItemHeight="30"
-		                    serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;19" colorServiceDescription="#a1daff" colorServiceDescriptionSelected="white" 
+		                    serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;19" colorServiceDescription="#a1daff" colorServiceDescriptionSelected="white"
 		                    picServiceEventProgressbar="mega32/bars/pl.png" transparent="1" />
 		<ePixmap position="780,90" size="10,513" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="5" />
 		<!-- eLabel name="DEBUG"  text="PANEL S004" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
@@ -380,7 +380,7 @@
 		<widget name="timerlist" position="60,90" size="520,500" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S009" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Event View OKK -->
 	<screen name="EventView" position="0,0"	size="1280,720" title=" EPG Channel Event View" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="4Buttons" />
@@ -483,14 +483,14 @@
 		<widget source="streams" render="Listbox" scrollbarMode="showOnDemand" position="60,300" size="515,200" zPosition="3" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"templates":
-					{"default": (25, [ 
+					{"default": (25, [
 						MultiContentEntryText(pos = (10, 0),  size = (0, 0),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
 						MultiContentEntryText(pos = (5, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
 						MultiContentEntryText(pos = (60, 0), size = (120, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
 						MultiContentEntryText(pos = (200, 0), size = (160, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
 						MultiContentEntryText(pos = (400, 0), size = (100, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 					], True, "showNever"),
-					"notselected": (25, [ 
+					"notselected": (25, [
 						MultiContentEntryText(pos = (10, 0),   size = (0, 0),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
 						MultiContentEntryText(pos = (5, 0),  size = (40, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2),  # number,
 						MultiContentEntryText(pos = (60, 0), size = (120, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
@@ -519,14 +519,14 @@
 		<widget name="TrashcanSize"  position="850,290" size="410,24" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="1,1" zPosition="2" />
 		<eLabel position="830,390" size="410,2" backgroundColor="#20101010" zPosition="2"/>
 		<ePixmap pixmap="mega32/icons/info_on.png" position="830,400" size="50,50" zPosition="2" alphatest="blend" />
-		<widget source="Service" render="Label" position="830,355" zPosition="4" size="410,30" font="Regular;28" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="1,1" > 
+		<widget source="Service" render="Label" position="830,355" zPosition="4" size="410,30" font="Regular;28" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="1,1" >
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="890,405" zPosition="6" size="120,26" font="Regular;24" halign="left" transparent="1" foregroundColor="yellow" backgroundColor="black"> 
+		<widget source="Service" render="Label" position="890,405" zPosition="6" size="120,26" font="Regular;24" halign="left" transparent="1" foregroundColor="yellow" backgroundColor="black">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="970,405" size="260,70" font="Regular;22" halign="left" foregroundColor="#808080" backgroundColor="black" transparent="1" zPosition="5" > 
+		<widget source="Service" render="Label" position="970,405" size="260,70" font="Regular;22" halign="left" foregroundColor="#808080" backgroundColor="black" transparent="1" zPosition="5" >
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
 		<widget source="Service" render="Label" position="810,460" zPosition="4" size="430,158" font="Regular;20" halign="center" transparent="1" backgroundColor="black" >
@@ -541,7 +541,7 @@
 		<widget name="movie_off"  position="1190,365" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png" zPosition="10" transparent="1" alphatest="on"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S013" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- PLUGIN DVD Player FileBrowser OKK -->
 	<screen name="FileBrowser" position="0,0" size="1280,720" title="DVD File Browser" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -552,7 +552,7 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL S13b" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen> 
+	</screen>
 
 	<!-- PLUGIN Movielist Context Menu OKK -->
 	<screen name="MovieContextMenu" position="0,0" size="1280,720"  title="Movielist Menu" flags="wfNoBorder">
@@ -571,7 +571,7 @@
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1130,18" size="200,26" zPosition="2" font="Regular;19" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1">
 			<convert type="ClockToText">Format %H:%M:%S</convert>
-		</widget>			
+		</widget>
 		<!-- Title DVD -->
 		<widget source="session.CurrentService" render="Label" position="220,13" size="900,25" zPosition="2" font="Regular;22" halign="center" noWrap="1" foregroundColor="white" transparent="1" backgroundColor="background">
 			<convert type="ServiceName">Name</convert>
@@ -606,9 +606,9 @@
 		<eLabel text="x" font="Regular;16" position="674,97" size="15,22" halign="center"  backgroundColor="black" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" font="Regular;20" position="695,95" size="55,22" halign="left"  foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="ServiceInfo">VideoHeight</convert>
-		</widget>		
+		</widget>
 		<!-- HD -->
-		<ePixmap position="760,97" size="100,24" pixmap="mega32/icons/dvd_hdoff.png" alphatest="blend" /> 
+		<ePixmap position="760,97" size="100,24" pixmap="mega32/icons/dvd_hdoff.png" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="mega32/icons/dvd_hd.png" position="760,97" size="50,24" zPosition="4" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
@@ -635,46 +635,46 @@
 		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL S014" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- About screen OKK -->
 	<screen name="AboutOE" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S015" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!--  System Memory Info OKK -->
 	<screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S016" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-	<!-- Device Info OKK -->	
+	<!-- Device Info OKK -->
 	<screen name="SystemDevicesInfo" position="0,0" size="1280,720" title="Devices Informations" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplateW" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget source="TunerHeader"  render="Label" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="nims"         render="Label" position="60,195" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="HDDHeader"    render="Label" position="60,325" size="620,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="hdd"          render="Label" position="60,350" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="MountsHeader" render="Label" position="60,500" size="620,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
-		<widget source="mounts"       render="Label" position="60,525" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget source="TunerHeader"  render="Label" position="60,170" size="520,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="nims"         render="Label" position="60,195" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="HDDHeader"    render="Label" position="60,325" size="620,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="hdd"          render="Label" position="60,350" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="MountsHeader" render="Label" position="60,500" size="620,438" font="Regular;21" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="mounts"       render="Label" position="60,525" size="620,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
 		<ePixmap position="920,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S017" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
-	<!-- System Network Info OKK -->	
+
+	<!-- System Network Info OKK -->
 	<screen name="SystemNetworkInfo" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1" position="60,90" zPosition="2" size="350,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,140" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,140" size="520,438" font="Regular;20" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
 		<widget source="LabelBSSID"   render="Label" position="60,340"  size="200,25" valign="center" font="Regular;20" transparent="1" zPosition="3" />
 		<widget source="LabelESSID"   render="Label" position="60,380"  size="200,25" valign="center" font="Regular;20" transparent="1" zPosition="3" />
 		<widget source="BSSID"        render="Label" position="248,340" size="310,25" valign="center" font="Regular;20" transparent="1" zPosition="3" />
@@ -720,7 +720,7 @@
 		<ePixmap pixmap="mega32/menu/ico_storage.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="hddlist" position="60,90" size="520,275" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S021" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen> 
+	</screen>
 
 	<!-- Harddisk Partitioner OKK -->
 	<screen name="ExtraMessageBox" position="0,0" size="1280,720" title="HDD Partitioner " flags="wfNoBorder" >
@@ -751,7 +751,7 @@
 		<widget name="HelpWindow" position="620,450" zPosition="5" size="1,1" transparent="1" alphatest="on" />
 		<!-- eLabel name="DEBUG"  text="PANEL S023" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Parental Control OKK -->
 	<screen name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental Control Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -760,14 +760,14 @@
 		<widget name="config" position="60,90" itemHeight="30" size="520,510" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S024" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Parental Control Editor OKK -->
 	<screen name="ParentalControlEditor" position="0,0" size="1280,720" title="Parental Control Services Editor" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="servicelist" position="60,90" size="520,480" itemHeight="28" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S025" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen> 
+	</screen>
 
 	<!-- Video Finetune OKK -->
 	<screen name="VideoFinetune" position="0,0" title="Video FineTune" size="1280,720" backgroundColor="transparent" flags="wfNoBorder"  >
@@ -787,8 +787,8 @@
 		<widget source="introduction" render="Label" position="63,622" font="Regular;20" size="520,25" halign="left" zPosition="10"  foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S027" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
-	<!-- VideoEnhancementPreview OKK -->	
+
+	<!-- VideoEnhancementPreview OKK -->
 	<screen name="VideoEnhancementPreview" position="0,0" size="1280,720" title="VideoEnhancement Preview" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2ButtonsW" />
@@ -798,7 +798,7 @@
 		<!-- eLabel name="DEBUG"  text="PANEL S028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-	<!-- LCD Skin Selector OKK -->	
+	<!-- LCD Skin Selector OKK -->
 	<screen name="LCDSkinSelector" position="0,0" size="1280,720" title="LCD Skin-Selector" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<widget name="lab1" position="60,90" size="250,26" zPosition="1"  font="Regular;22" halign="left" foregroundColor="bluette" transparent="1" />
@@ -824,7 +824,7 @@
 		<widget source="description" render="Label" position="670,415" size="560,160" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S030" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
  	<!-- Network Config OKK -->
 	<screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Network Mounts" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -834,7 +834,7 @@
 		<widget source="introduction" render="Label" position="670,415" size="560,160" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Network Adapter Setup OKK -->
 	<screen name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
@@ -855,7 +855,7 @@
 		<widget source="DNS2text"    render="Label" position="670,560" size="120,26" zPosition="10" font="Regular;22" halign="left"  foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget source="DNS2"        render="Label" position="800,560" size="230,26" zPosition="10" font="Regular;22" halign="right" foregroundColor="#538eff" backgroundColor="black" transparent="1" />
 		<widget source="introduction2" render="Label" position="60,580" size="560,160" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
-		<widget name="HelpWindow" position="620,500" zPosition="5" size="1,1" transparent="1" alphatest="on" />	
+		<widget name="HelpWindow" position="620,500" zPosition="5" size="1,1" transparent="1" alphatest="on" />
 		<widget name="VKeyIcon" pixmap="mega32/buttons/key_text.png" position="630,400" zPosition="10" size="35,25" transparent="1" alphatest="on" />
 		<ePixmap  pixmap="mega32/buttons/3colorsRGB.png" position="50,659" size="1200,50" zPosition="4" alphatest="blend" transparent="1" />
 		<widget source="key_red"    render="Label"  position="100,667" zPosition="4" size="210,21" font="Regular;19" halign="left" backgroundColor="black" transparent="1" />
@@ -896,7 +896,7 @@
 		</widget>
 		<widget source="infotext" render="Label" position="670,415" size="560,120" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S034" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>	
+	</screen>
 
 	<!-- AutoMount Manager OKK -->
 	<screen name="AutoMountManager" position="0,0" size="1280,720" title="Mount Manager" backgroundColor="transparent" flags="wfNoBorder" >
@@ -914,7 +914,7 @@
 				"itemHeight": 70
 				}
 			</convert>
-		</widget>  
+		</widget>
 		<widget source="introduction" render="Label" position="1670,415" size="520,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="#25062748" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S035" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -929,19 +929,19 @@
 		<ePixmap position="70,210" zPosition="1" size="40,40" pixmap="mega32/buttons/greypanel.png" alphatest="blend" transparent="1" />
 		<ePixmap position="70,260" zPosition="1" size="40,40" pixmap="mega32/buttons/greypanel.png" alphatest="blend" transparent="1" />
 		<ePixmap position="70,310" zPosition="1" size="40,40" pixmap="mega32/buttons/greypanel.png" alphatest="blend" transparent="1" />
-		<widget name="Adaptertext" 		position="120,110" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />			
+		<widget name="Adaptertext" 		position="120,110" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget name="Adapter" 			position="355,110" size="710,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#538eff" backgroundColor="black" transparent="1" />
 		<widget name="AdapterInfo_OK" 		position="70,110" size="38,31"  zPosition="2" pixmap="mega32/buttons/greenpanel.png" alphatest="blend" />
-		<widget name="Networktext"		position="120,160" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />		
+		<widget name="Networktext"		position="120,160" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget name="Network" 			position="355,160" size="710,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#538eff" backgroundColor="black" transparent="1" />
 		<widget name="NetworkInfo_Check"	position="70,160" size="38,31"  zPosition="2" pixmaps="mega32/buttons/greenpanel.png,mega32/buttons/redpanel.png" alphatest="blend" />
-		<widget name="Dhcptext" 		position="120,210" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />			
+		<widget name="Dhcptext" 		position="120,210" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget name="Dhcp" 			position="355,210" size="710,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#538eff" backgroundColor="black" transparent="1" />
 		<widget name="DhcpInfo_Check" 		position="70,210" size="38,31"  zPosition="2" pixmaps="mega32/buttons/greenpanel.png,mega32/buttons/redpanel.png" alphatest="blend" />
-		<widget name="IPtext" 			position="120,260" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />			
+		<widget name="IPtext" 			position="120,260" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget name="IP" 			position="355,260" size="710,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#538eff" backgroundColor="black" transparent="1" />
 		<widget name="IPInfo_Check" 		position="70,260" size="38,31"  zPosition="2" pixmaps="mega32/buttons/greenpanel.png,mega32/buttons/redpanel.png" alphatest="blend" />
-		<widget name="DNStext" 			position="120,310" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />		
+		<widget name="DNStext" 			position="120,310" size="710,25" zPosition="1" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<widget name="DNS" 			position="355,310" size="710,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#538eff" backgroundColor="black" transparent="1" />
 		<widget name="DNSInfo_Check" 		position="70,310" size="38,31"  zPosition="2" pixmaps="mega32/buttons/greenpanel.png,mega32/buttons/redpanel.png" alphatest="blend" />
 		<widget name="AdapterInfo" 		position="680,110" size="318,50" zPosition="1"   />
@@ -976,7 +976,7 @@
 	<!-- AutoMountView OKK -->
 	<screen name="AutoMountView" position="0,0" size="1280,720" title="MountView" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
-		<panel name="1ButtonsW" />
+		<panel name="3ButtonsW" />
 		<ePixmap pixmap="mega32/menu/ico_net.png" position="920,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="legend1" render="Label" position="60,90"  zPosition="1" size="130,60" font="Regular;20" halign="center" valign="center" backgroundColor="black" foregroundColor="bluette" transparent="1"/>
 		<widget source="legend2" render="Label" position="250,90" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" backgroundColor="black" foregroundColor="bluette" transparent="1"/>
@@ -1002,7 +1002,7 @@
 		<!-- eLabel name="DEBUG"  text="PANEL S038" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-    	<!-- UserManager OKK -->          
+    	<!-- UserManager OKK -->
 	<screen name="UserManager" position="0,0" size="1280,720" title="UserManager" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="1ButtonsW" />
@@ -1021,8 +1021,8 @@
 		<widget source="introduction" render="Label" position="60,620" size="720,40" zPosition="10" font="Regular;22" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S039" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
-	<!-- User Dialog Network Hosts OKK -->          
+
+	<!-- User Dialog Network Hosts OKK -->
 	<screen name="UserDialog" position="0,0" size="1280,720" title="UserDialog" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="1ButtonsW" />
@@ -1032,7 +1032,7 @@
 		<widget source="introduction" render="Label" position="60,620" size="520,40" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S040" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Network Selection OKK -->
 	<screen name="NetworkAdapterSelection" position="0,0" size="1280,720" title="Select Network Adapter" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -1067,7 +1067,7 @@
 		<!-- eLabel name="DEBUG"  text="PANEL S042" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-	<!-- WlanScan OKK -->	
+	<!-- WlanScan OKK -->
 	<screen name="WlanScan" position="0,0" size="1280,720" title="Choose a Wireless Network" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="2ButtonsW" />
@@ -1091,7 +1091,7 @@
 		<!-- eLabel name="DEBUG"  text="PANEL S043" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-	<!-- WlanStatus OKK -->	
+	<!-- WlanStatus OKK -->
 	<screen name="WlanStatus" position="0,0" size="1280,720" title="Wireless Network State" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="1ButtonsW" />
@@ -1132,14 +1132,14 @@
 					],
 					"fonts": [gFont("Regular", 22),gFont("Regular", 20)],
 					"itemHeight": 50
-				}	
+				}
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="60,620"  size="520,80" zPosition="10" font="Regular;20" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S045" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-	<!-- Input Device Setup OKK -->	
+	<!-- Input Device Setup OKK -->
 	<screen name="InputDeviceSetup" position="0,0" size="1280,720" title="Input Device Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2ButtonsW" />
@@ -1186,7 +1186,7 @@
 		<panel name="descTemplate" />
 		<widget name="SkinList" position="60,90" itemHeight="30" size="520,210" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
 		<eLabel position="60,360" size="516,279" backgroundColor="#10303030" zPosition="2"/>
-		<widget name="Preview" position="62,362" size="512,275" alphatest="blend" transparent="1" zPosition="3" />	
+		<widget name="Preview" position="62,362" size="512,275" alphatest="blend" transparent="1" zPosition="3" />
 		<widget source="introduction" render="Label" position="670,415" size="560,160" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S049" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -1209,7 +1209,7 @@
 		<widget name="current_status" position="60,360" zPosition="4" size="520,25" font="Regular;22" foregroundColor="white" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S050" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- TUNER ZONE -->
 
 	<!-- Tuner Selection OKK -->
@@ -1229,7 +1229,7 @@
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL S051" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- TUNER NimSetup OKK -->
 	<screen name="NimSetup" position="0,0" size="1280,720" title="Reception Settings" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplateW" />
@@ -1270,7 +1270,7 @@
 		<widget source="FrontendInfo" render="Pixmap" pixmap="mega32/screens/scandvb.png" position="710,550" size="64,64" zPosition="2" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
-			<convert type="ConditionalShowHide" /> 
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget name="network" position="60,100" size="720,25" font="Regular;26" foregroundColor="yellow" backgroundColor="background" transparent="1" />
 		<widget name="transponder" position="60,170" size="720,25" font="Regular;22" zPosition="0" foregroundColor="#538eff" backgroundColor="background" transparent="1" />
@@ -1280,7 +1280,7 @@
 		<widget name="pass" position="60,260" size="560,25" font="Regular;24" foregroundColor="#538eff" backgroundColor="background" transparent="1" />
 		<ePixmap position="60,290" zPosition="2" size="570,21" pixmap="mega32/bars/br_scanbw.png" alphatest="blend" transparent="1" />
 		<widget name="scan_progress" position="60,290"  zPosition="3" size="570,21" pixmap="mega32/bars/br_scancl.png" transparent="1" />
-		<widget name="servicelist" position="60,320" size="720,300" selectionDisabled="1" transparent="1" alphatest="on" /> 
+		<widget name="servicelist" position="60,320" size="720,300" selectionDisabled="1" transparent="1" alphatest="on" />
 		<eLabel text="Press Exit to terminate Scan" position="870,270" size="340,30" zPosition="3" halign="left" font="Regular;24" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<panel name="2ButtonsW" />
 		<!-- eLabel name="DEBUG"  text="PANEL S054" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
@@ -1407,7 +1407,7 @@
 		<widget name="posGoto" position="57,180" size="70,20" zPosition="1" font="Regular;20" halign="left" foregroundColor="white" borderWidth="1" borderColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S061" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- FastScan Screen OKK -->
 	<screen name="FastScanScreen" position="0,0" size="1280,720" title="Fast Scan" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
@@ -1419,7 +1419,7 @@
 		<eLabel text="Start Scan" position="340,667" size="200,22" font="Regular;20" halign="left" backgroundColor="black" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S062" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- FastScan Status OKK -->
 	<screen name="FastScanStatus" position="0,0" size="1280,720" title="Fast Scan" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
@@ -1430,12 +1430,12 @@
 	</screen>
 
 	<!-- COMMON INTERFACE/EMU ZONE -->
- 
+
  	<!-- Common Interface OKK -->
   	<screen name="CiSelection"  position="0,0" size="1280,720" title="Common Interface" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<ePixmap pixmap="mega32/menu/ico_ci.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
-  		<widget name="text" position="60,90" size="520,32" font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />  
+  		<widget name="text" position="60,90" size="520,32" font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />
  		<eLabel text="-" position="60,130" size="517,1" zPosition="0" backgroundColor="#404040"/>
  		<eLabel text="-" position="60,132" size="517,1" zPosition="0" backgroundColor="#303030"/>
   		<widget name="entries"  position="60,145" size="515,350" zPosition="3" scrollbarMode="showOnDemand" transparent="1"  />
@@ -1460,7 +1460,7 @@
 		<widget name="bottom" position="60,350" size="520,25" halign="center" font="Regular;20" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S066" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
- 
+
 	<!-- Common Interface CAidSelect OKK -->
 	<screen name="CAidSelect" position="0,0" size="1280,720" title="CI CAId Select" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -1510,20 +1510,20 @@
 		<widget name="list" position="60,100" size="515,500" zPosition="3" scrollbarMode="showOnDemand" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S071" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- EPG Selection Multi OKK -->
 	<screen name="EPGSelectionMulti" position="0,0"	size="1280,720" title="EPG Selection Multi"  flags="wfNoBorder">
 		<panel name="4Buttons" />
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelw.png" alphatest="on" transparent="1" />
 		<ePixmap position="1215,90" zPosition="3" size="15,525" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
-		<!-- Date/Time Sec -->	
+		<!-- Date/Time Sec -->
 		<widget name="date" position="60,45" size="300,26" font="Regular;24" halign="left" foregroundColor="#538eff" backgroundColor="black" transparent="1"/>
 		<widget source="global.CurrentTime" render="Label" position="1100,45" size="120,24" zPosition="2" font="Regular;24" halign="left" backgroundColor="black" transparent="1">
 			<convert type="ClockToText">Format %H:%M:%S </convert>
 		</widget>
 		<!-- Lista Canali -->
 		<widget name="list" position="60,90" size="1165,525" zPosition="2" scrollbarMode="showOnDemand" transparent="1" />
-		<!-- Eventi -->	
+		<!-- Eventi -->
 		<widget name="now_button_sel"  pixmap="mega32/skin_default/epg_now.png"  position="400,40" zPosition="3" size="750,40" alphatest="on" />
 		<widget name="next_button_sel" pixmap="mega32/skin_default/epg_next.png" position="545,40" zPosition="3" size="750,40" alphatest="on" />
 		<widget name="more_button_sel" pixmap="mega32/skin_default/epg_more.png" position="800,40" zPosition="3" size="750,40" alphatest="on" />
@@ -1558,7 +1558,7 @@
 	</screen>
 
 	<!-- Console - Backup/Restore System Setting OKK -->
-	<screen name="Console" position="0,0" size="1280,720" title="Command Execution" flags="wfNoBorder" >	
+	<screen name="Console" position="0,0" size="1280,720" title="Command Execution" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<ePixmap pixmap="mega32/menu/ico_script.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="text" position="60,90" size="730,500" font="Console;16" transparent="1" foregroundColor="white" backgroundColor="black" />
@@ -1622,7 +1622,7 @@
 		<widget name="list" position="60,90" size="520,360" transparent="1"/>
 		<widget source="introduction" render="Label" position="60,620" font="Regular;22" size="700,25" halign="left" foregroundColor="yellow" zPosition="10"  transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S080" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>   
+	</screen>
 
         <!-- IPKGSource OKK -->
 	<screen name="IPKGSource" position="0,0" size="1280,720" title="Edit IPKG Source" flags="wfNoBorder" >
@@ -1659,7 +1659,7 @@
 	</screen>
 
 	<!-- W=WIZARDS -->
-	
+
 	<!-- Language Wizard OKK -->
 	<screen name="LanguageWizard" position="0,0" size="1280,720" title="Select Language..." backgroundColor="black"  flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplateW" />
@@ -1689,9 +1689,9 @@
 		<!-- eLabel name="DEBUG"  text="PANEL S085" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	 </screen>
 
-	<!-- Network Wizard WIZARD OKK -->  
+	<!-- Network Wizard WIZARD OKK -->
 	<screen name="NetworkWizard" position="0,0" size="1280,720" title="Network Wizard.." backgroundColor="black" flags="wfNoBorder">
-		<panel name="GenericLayoutFullTemplateW" /> 
+		<panel name="GenericLayoutFullTemplateW" />
 		<ePixmap position="60,100" size="140,140" pixmap="mega32/skin_default/wizard.png" alphatest="blend" />
 		<eLabel text="Network Wizard..." position="230,125" size="500,60" font="Regular;34"  foregroundColor="white" backgroundColor="#10202020" transparent="1" zPosition="2" />
 		<widget name="text" position="230,175" size="500,300" font="Regular;22" foregroundColor="#6dccff" backgroundColor="black"  transparent="1" />
@@ -1709,7 +1709,7 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap position="60,660" size="30,30" pixmap="mega32/buttons/key_red.png" alphatest="blend" />
-		<widget name="languagetext" position="110,661" size="750,26" font="Regular;22"  backgroundColor="black" foregroundColor="#ffffff" transparent="1" /> 
+		<widget name="languagetext" position="110,661" size="750,26" font="Regular;22"  backgroundColor="black" foregroundColor="#ffffff" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S086" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -1733,7 +1733,7 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="60,650" size="30,30" />
-		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
+		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S087" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -1757,7 +1757,7 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="60,650" size="30,30" />
-		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
+		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S088" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -1781,7 +1781,7 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="60,650" size="30,30" />
-		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
+		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S089" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -1805,7 +1805,7 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="60,650" size="30,30" />
-		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="white" transparent="1" /> 
+		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="white" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S090" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -1829,10 +1829,10 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="60,650" size="30,30" />
-		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
+		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S091" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Dream Package Wizard OKK -->
 	<screen name="DreamPackageWizard" position="0,0" size="1280,720" title="Dream-Package Wizard.." backgroundColor="black" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplateW" />
@@ -1853,10 +1853,10 @@
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on" />
 		<ePixmap alphatest="blend" pixmap="mega32/buttons/key_red.png" position="60,650" size="30,30" />
-		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" /> 
+		<widget font="Regular;22" name="languagetext" position="110,651" size="750,26" backgroundColor="black" foregroundColor="#538eff" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S092" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Tutorial Wizard OKK -->
  	<screen name="TutorialWizard" position="0,0" size="1280,720" title="Tutorial Wizard..." backgroundColor="black"  flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplateW" />
@@ -1931,7 +1931,7 @@
 		<widget source="package" render="Label" position="10,190" size="590,40"  font="Regular;20" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S096" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Update Plugin Menu OKK -->
 	<screen name="UpdatePluginMenu" position="0,0" size="1280,720" title="Software Management" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -1957,7 +1957,7 @@
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL S97" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Plugin Manager Info OKK -->
 	<screen name="PluginManagerInfo" position="0,0" size="1280,720" title="Plugin manager activity information" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -1978,7 +1978,7 @@
 		<widget source="status" render="Label" position="60,622" zPosition="2" size="520,22" halign="left" font="Regular;20" foregroundColor="yellow" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S098" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-		
+
 	<!-- Plugin Manager Help OKK -->
 	<screen name="PluginManagerHelp" position="0,0" size="1280,720" title="Plugin manager help" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -2055,7 +2055,7 @@
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL S101" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- RASS OKK -->
 	<screen name="RassInteractive" position="50,180" size="100,275" backgroundColor="transpWhite" flags="wfNoBorder">
 		<ePixmap pixmap="skin_default/icons/rass_logo.png" position="25,0" size="50,21" alphatest="on" />
@@ -2082,7 +2082,7 @@
 		<widget name="subpages_9" position="35,250" size="36,20" alphatest="on" />
 		<!-- eLabel name="DEBUG"  text="PANEL S102" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- GET Ipk List OKK -->
 	<screen name="Getipklist" position="0,0" size="1280,720" title="Available for install" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
@@ -2118,7 +2118,7 @@
 		<widget name="list" position="60,90" size="520,500" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
 		<!-- eLabel name="DEBUG" text="PANEL S105" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Zap History Selector OKK -->
 	<screen name="HistoryZapSelector" position="center,center" size="1000,320" >
 		<widget source="menu" render="Listbox" position="0,10" size="1000,300" scrollbarMode="showOnDemand" >
@@ -2138,13 +2138,13 @@
 		</widget>
 		<!-- eLabel name="DEBUG"  text="PANEL S106" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- About screen OKK -->
 	<screen name="About" position="0,0" size="1280,720" title="About" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<ePixmap position="940,490" zPosition="3" size="271,183" pixmap="mega32/oealliance.png" alphatest="blend" transparent="1" />
 		<widget name="lab1" position="60,100" zPosition="2" size="520,46" font="RegularAA;38" halign="left" foregroundColor="#004c74" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<widget name="AboutScrollLabel" position="60,170" size="650,438" font="Regular;21" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S107" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -2177,7 +2177,7 @@
 		<widget name="logentry" position="60,620" size="1160,120" font="Regular;19" foregroundColor="yellow" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S031" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Timer sanity conflict OKK -->
 	<screen name="TimerSanityConflict" position="center,120" size="950,520" title="Timer sanity error" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutWideTemplate" />
@@ -2190,7 +2190,7 @@
 		<widget name="list" position="60,270" size="1000,225" scrollbarMode="showOnDemand" />
 		<!-- eLabel name="DEBUG"  text="PANEL S032" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Timeshift state OKK -->
 	<screen name="TimeshiftState" position="center,40"  backgroundColor="background" size="420,70" >
 		<widget source="session.CurrentService" render="Label" position="95,5" size="200,27" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="background">
@@ -2205,11 +2205,11 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget name="statusicon" position="12,5" size="20,20" pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png" zPosition="5" alphatest="on" />
-		<widget name="speed" position="35,7" size="80,15" font="Regular;17" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" />		
+		<widget name="speed" position="35,7" size="80,15" font="Regular;17" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" />
 		<widget name="eventname" position="60,49" zPosition="4" size="320,20" font="Regular;18" halign="center" backgroundColor="background"/>
 		<!-- eLabel name="DEBUG"  text="PANEL S034" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- *** HDD Panels *** -->
 
 	<!-- Hdd Setup OKK -->
@@ -2356,7 +2356,7 @@
 		<widget name="timeline_now" position="80,277" zPosition="3" size="19,360" pixmap="skin_default/epg/timeline-now-pig.png" alphatest="on" />
 		<!-- eLabel name="DEBUG"  text="PANEL S019" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-	
+
 	<!-- Graphical EPG PIG OKK -->
 	<screen name="GraphicalEPGPIG" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutWideTemplate" />
@@ -2442,7 +2442,7 @@
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 	</screen>
-	
+
 	<!-- LCD screen (main) -->
 	<screen name="InfoBarSummary" position="0,0" size="132,64" id="1">
 		<widget source="session.CurrentService" render="Label" position="6,0" size="120,32" font="Display;16" halign="center" valign="center">
@@ -2479,7 +2479,7 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
-	
+
 	<!-- LCD screen (menus) -->
 	<screen name="MenuSummary" position="0,0" size="132,64" id="1">
 		<widget source="parent.title" render="Label" position="6,0" size="120,30" font="Display;14" halign="center" valign="center"/>
@@ -2487,12 +2487,12 @@
 			<convert type="StringListSelection" />
 		</widget>
 	</screen>
-	
+
 	<!-- LCD screen (misc) -->
 	<screen name="SimpleSummary" position="0,0" size="132,64" id="1">
 		<widget source="parent.Title" render="Label" position="6,0" size="120,64" font="Display;16" halign="center" valign="center" />
 	</screen>
-	
+
 	<!-- LCD screen (standby) -->
 	<screen name="StandbySummary" position="0,0" size="132,64" id="1">
 		<widget source="global.CurrentTime" render="Label" position="6,0" size="120,64" font="Display;40" halign="center" valign="center">
@@ -2503,7 +2503,7 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
-	
+
 	<!-- LCD screen (JobView) -->
 	<screen name="JobView_summary" position="0,0" size="132,64" id="1">
 		<widget source="parent.summary_job_name" render="Label" position="6,4" size="120,42" font="Display;16" />
@@ -2513,7 +2513,7 @@
 			<convert type="ProgressToText" />
 		</widget>
 	</screen>
-	
+
 	<!-- LCD screen (Wizard) -->
 	<screen name="WizardSummary" position="0,0" size="132,64" id="1">
 		<widget source="text" render="Label" position="6,0" size="120,16" font="Display;16" transparent="1" />
@@ -2524,7 +2524,7 @@
 
 
 	<!-- ***** InputBox/MsgBox ***** -->
-	
+
 	<!-- Input Box -->
 	<screen name="ChoiceBox" position="0,0" size="740,650" title="Input Box" >
 		<widget name="text" position="20,20" size="810,25" font="Regular;24" foregroundColor="#538eff" transparent="1" />
@@ -2596,7 +2596,7 @@ newwidth = wsize[0]
 self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
 	</screen>
-	
+
 <!-- Load External Screens -->
 <include filename="mega32/skin_templates.xml"/>
 <include filename="mega32/skin_egami_screens.xml"/>
