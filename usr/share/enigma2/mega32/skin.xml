@@ -2322,7 +2322,7 @@
 	<!-- Harddisk setup OKK -->
 	<screen name="HarddiskSetup" position="0,0" size="1280,720" title="Harddisk Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
-		<panel name="1Buttons" />
+		<panel name="1ButtonsW" />
 		<panel name="descTemplate" />
 		<widget name="model"    position="60,100" size="520,25" font="Regular;22" transparent="1" />
 		<widget name="capacity" position="60,140" size="520,25" font="Regular;22" transparent="1" />
