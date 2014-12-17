@@ -694,33 +694,6 @@
 		<widget name="ConnStatus" position="60,420" size="730,150" font="Regular;20" halign="center" valign="center" foregroundColor="bluette" backgroundColor="#101010" transparent="1" zPosition="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL P052" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
-
-	<!--  File Comander Setup OKK --> 
-	<screen name="FileCommanderConfigScreen" position="0,0" size="1280,720" title="File Commander - Settings" flags="wfNoBorder" >
-		<panel name="GenericLayoutFullTemplate" />
-		<panel name="2ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
-		<widget name="config" position="60,100" itemHeight="30" size="515,510" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-		<widget name="help" position="60,340" size="515,330" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1" />
-		<!-- eLabel name="DEBUG"  text="PANEL P053" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>
-	
-	<!--  File Comander OKK -->
-	<screen name="FileCommanderScreen" position="0,0" size="1280,720" title=" " flags="wfNoBorder" >
-		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelmusic.png" />
-		<panel name="4Buttons" />
-		<widget source="Title" render="Label" zPosition="1" position="40,46" size="1200,30" halign="center" font="Head;24" foregroundColor="bluette" transparent="1" backgroundColor="transpBlack" />
-		<widget name="list_left" position="62,110" size="570,325" zPosition="1" transparent="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background"/>
-		<ePixmap position="622,110" size="10,325" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
-		<widget name="list_left_head"  position="60,480" size="570,120" font="Regular;20" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" zPosition="1" />
-		<widget name="list_right"      position="665,110" size="550,400" transparent="1" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="background" zPosition="1" />
-		<ePixmap position="1205,110"   size="10,400" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="4" />
-		<eLabel position="660,555" size="565,60" backgroundColor="#101010" zPosition="1" />
-		<widget name="list_right_head" position="670,560" size="565,50" font="Regular;18" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" zPosition="2" />
-		<ePixmap position="1020,667" size="250,40" zPosition="3" pixmap="skin_default/buttons/key_menu.png" transparent="1" alphatest="blend"/>
-		<widget position="1160,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
-		<!-- eLabel name="DEBUG"  text="PANEL P054" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>
 	
 	<!--  File Transcoding Setup OKK -->
 	<screen name="TranscodingSetup" position="fill" title="Transcoding Setup" backgroundColor="transparent" flags="wfNoBorder" >
