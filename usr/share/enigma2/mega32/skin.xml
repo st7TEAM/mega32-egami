@@ -406,12 +406,12 @@
 		<eLabel text="-" position="60,515" size="728,1" zPosition="0" backgroundColor="#505050"/>
 		<eLabel text="-" position="60,517" size="728,1" zPosition="0" backgroundColor="#303030"/>
 		<!-- Next Event -->
-		<eLabel text="Next Event" position="60,540" size="120,24" font="Regular;22" zPosition="2" foregroundColor="bluette" backgroundColor="black" transparent="1" />
+		<eLabel text="Next Event" position="60,540" size="125,24" font="Regular;22" zPosition="2" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<widget source="session.Event_Next" render="Label" position="190,540" size="80,30" zPosition="2" halign="left"  font="Regular;22" foregroundColor="white" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="250,540" size="100,30" zPosition="2" halign="right"  font="Regular;22" foregroundColor="red" backgroundColor="background" transparent="1" >
+		<widget source="session.Event_Next" render="Label" position="250,540" size="120,30" zPosition="2" halign="right"  font="Regular;22" foregroundColor="red" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
