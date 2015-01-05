@@ -4,7 +4,7 @@
 	<screen name="ScreenMenuTemplate">
 		<panel name="GenericLayoutFullTemplate" />
 		<!-- panel name="SmallPigTemplate" /-->
-		<ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="-1" alphatest="blend" />
+			<!-- <ePixmap pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" zPosition="1" alphatest="blend" /> -->
 		<!-- menu list -->
  		<widget source="menu" render="Listbox" position="50,100" zPosition="2" size="535,520" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" >
  			<convert type="TemplatedMultiContent">
@@ -22,51 +22,67 @@
  
  	<!-- (OK) Menu Icons Template -->
 	<screen name="MenuIconsTemplate">
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_mediaplayer.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_mediaplayer.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">media_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
-			<convert type="MenuEntryCompare">timer_edit</convert>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
+			<convert type="MenuEntryCompare">timer_menu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_emulator.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_panegami.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
+			<convert type="MenuEntryCompare">egami_selection</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_multiboot.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
+			<convert type="MenuEntryCompare">egami_boot</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_news.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
+			<convert type="MenuEntryCompare">EGAMINews</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_emulator.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">emu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_emulator.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_emulator.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">cs</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_plugin.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_plugin.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">plugin_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_script.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_script.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">scripts</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">setup_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_shutdown.png" position="940,455" size="256,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_shutdown.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">standby_restart_list</convert>
 			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+		</widget> 		
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">dmc_mainmenu</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_dvd_player.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_pictures.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
+			<convert type="MenuEntryCompare">picture_player</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>		
+ 		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_dvd_player.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">dvd_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="380,256" alphatest="blend" transparent="1" >
+ 		<widget source="menu" render="Pixmap" pixmap="mega32/menu/ico_setup.png" position="940,455" size="256,256" alphatest="blend" transparent="1" zPosition="1" >
 			<convert type="MenuEntryCompare">scart_switch</convert>
 			<convert type="ConditionalShowHide" /> 
 		</widget>
@@ -224,7 +240,16 @@
 		<widget position="580,668" size="210,21" name="yellow" font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
 		<widget position="820,668" size="210,21" name="blue"   font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
 	</screen>
-	
+
+	<screen name="4Buttons3">
+		<!-- BoxSet ButtonColors -->
+		<ePixmap position="50,659" size="1200,50" pixmap="mega32/buttons/4colors.png" zPosition="2" alphatest="blend" />
+		<widget position="100,668" size="210,21" source="red" render="Label" font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="340,668" size="210,21" source="green" render="Label"  font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="580,668" size="210,21" source="yellow" render="Label" font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+		<widget position="820,668" size="210,21" source="blue" render="Label"   font="Regular;19" halign="left" backgroundColor="black" transparent="1" zPosition="1" />
+	</screen>
+
 	<screen name="3Buttons">
 		<ePixmap position="50,659" size="900,50" pixmap="mega32/buttons/3colors.png" zPosition="2" alphatest="blend" />
 		<widget position="100,668" size="210,21" name="key_red"    font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
