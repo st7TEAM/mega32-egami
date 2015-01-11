@@ -636,6 +636,7 @@
 	</screen>	
 	<!-- EgamiBootLogo OKK -->
 	<screen name="EgamiBootLogoSelector" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 	  <panel name="GenericLayoutFullTemplate" />
 	  <panel name="2ButtonsW" />
 	  <widget name="config" position="60,90" itemHeight="30" size="520,210" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />

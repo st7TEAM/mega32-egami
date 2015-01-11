@@ -7,6 +7,7 @@
 	EGAMI MOD and additions v1.4 14.08.2013
 	mmark MOD Rev.1              01/10/2014
 	mimi74 MOD Rev.2             04/01/2015
+	mimi74 MOD Rev.3             11/01/2015
 	#
 	##################################################################
 	-->
@@ -312,7 +313,7 @@
 			foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24"
 			colorServiceDescription="grey" picServiceEventProgressbar="mega32/bars/pl.png" transparent="1" />
 		<ePixmap position="780,90" size="10,513" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="5" />
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,455" size="256,256" zPosition="2" /> alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL S003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -390,7 +391,7 @@
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelwd.png" />
 		<eLabel text="EPG Guide" position="40,41" size="770,30" font="Regular;26" halign="center" foregroundColor="bluette" backgroundColor="#202020" transparent="1" zPosition="1" />
 		<!-- Channel/Provider Name -->
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="channel" position="60,100" size="400,50" font="Regular;26" halign="left" zPosition="3" foregroundColor="yellow" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
 		<widget source="session.CurrentService" render="Label" position="390,100" size="400,50" zPosition="2" font="Regular;26" foregroundColor="#808080" backgroundColor="black" halign="right" transparent="1"  >
 			<convert type="ServiceName">Provider</convert>
@@ -509,6 +510,7 @@
 
 	<!-- Movie Selection OKK -->
 	<screen name="MovieSelection" position="0,0" size="1280,720" title="Movie Selection Recorded Files" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="menuInfo" />
 		<panel name="4Buttons" />
@@ -699,7 +701,7 @@
 	<screen name="ServiceInfo" position="0,0" size="1280,720" title="Service info" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="infolist" position="60,90" size="730,400" font="Regular;19" selectionDisabled="1" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S019" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -1625,7 +1627,7 @@
 		<!-- eLabel name="DEBUG"  text="PANEL S080" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
-        <!-- IPKGSource OKK -->
+  <!-- IPKGSource OKK -->
 	<screen name="IPKGSource" position="0,0" size="1280,720" title="Edit IPKG Source" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2ButtonsW" />
