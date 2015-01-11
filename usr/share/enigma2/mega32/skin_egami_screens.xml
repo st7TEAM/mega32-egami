@@ -53,7 +53,7 @@
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4ButtonsW" />
 		<widget name="header" position="820,440" size="420,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<ePixmap position="780,100" zPosition="4" size="10,495" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="60,100" size="730,495" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent" transparent="0">
@@ -73,7 +73,7 @@
 	<screen name="EGAMIUpdateInfo" position="fill" title="EGAMI News" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<ePixmap position="780,100" zPosition="4" size="10,500" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<widget name="update" position="60,100" size="730,500" font="Regular;20" halign="left" backgroundColor="#101010" transparent="1" />
 		<widget name="header" position="820,440" size="420,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
@@ -94,7 +94,7 @@
 	<screen name="EGGreenPanel" position="0,0" size="1280,720"  title="EGAMI Green Panel" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="990,490" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="60,100" size="730,500" scrollbarMode="showOnDemand" transparent="1">
 			  <convert type="TemplatedMultiContent">
 			      {"template": [
@@ -126,7 +126,7 @@
 		<panel name="4Buttons" />
 		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="bluette" backgroundColor="black" transparent="1" />      
 		<widget name="menu" position="55,130" size="525,500" scrollbarMode="showOnDemand" transparent="1"/>
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="990,490" size="280,280" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="280,280" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL E010" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>	
 
@@ -191,7 +191,7 @@
 	<screen name="EGDeviceManager" position="0,0" size="1280,720"  title="EGAMI Devices Panel" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_storage.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget source="list" render="Listbox" position="55,90" size="740,500" scrollbarMode="showOnDemand" zPosition="1" transparent="1" >
 				      <convert type="TemplatedMultiContent">
 				      {"template": [
@@ -224,7 +224,7 @@
 		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" transparent="1">
 		      <convert type="StringList" />
 		</widget>
-		<ePixmap pixmap="mega32/menu/ico_net.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL E019" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 	
@@ -312,6 +312,7 @@
 		<widget source="list" render="Listbox" position="60,100" size="730,460" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1" >
 			<convert type="StringList" />
 		</widget>
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
  		<!-- eLabel name="DEBUG"  text="PANEL E028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -487,7 +488,7 @@
 	<screen name="ButtonSetup" position="0,0" size="1280,720" title="EGAMI Quick Button Setup" backgroundColor="black"  flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="description" position="630,480" size="550,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
 		<widget name="list" position="60,90" size="520,525" scrollbarMode="showOnDemand" transparent="1" />
 		<ePixmap position="570,90" zPosition="14" size="15,525" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
@@ -501,7 +502,7 @@
 	<screen name="ButtonSetupSelect" position="0,0" size="1280,720" title="EGAMI Quick Button Select" backgroundColor="black"  flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1020,490" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 
 		<widget name="description" position="670,410" size="550,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1" />
 		<widget name="list" position="60,90" size="520,525" scrollbarMode="showOnDemand" transparent="1" />
@@ -541,7 +542,6 @@
 		<!-- eLabel name="DEBUG"  text="PANEL E028" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>		
 	
-
 	<!--  EGAMI MultiBoot OKK -->
 	<screen name="EGAMIBootInstallation" position="0,0" size="1280,720" title="EGAMI Multiboot Installation" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="GenericLayoutFullTemplate" />
@@ -633,7 +633,7 @@
 		<widget name="list_right_head" position="670,560" size="565,50" font="Regular;18" foregroundColor="bluette" backgroundColor="transpBlack" transparent="1" zPosition="2" />
 		<widget position="1160,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL P054" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>	
+	</screen>
 	<!-- EgamiBootLogo OKK -->
 	<screen name="EgamiBootLogoSelector" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />

@@ -5,7 +5,7 @@
 	<screen name="AutoTimerHelp" position="0,0" size="1280,720" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="detailtext" position="60,100"  size="520,514" zPosition="10" font="Regular;20" halign="left" valign="center" foregroundColor="bluette" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL P001" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -14,7 +14,7 @@
 	<screen name="AutoTimerOverview" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="entries" position="80,100" size="520,514" scrollbarMode="showOnDemand" transparent="1" />
 		<ePixmap position="1126,20" zPosition="4" size="74,36" pixmap="skin_default/buttons/key_menu1.png" transparent="1" alphatest="on" />
 		<!-- eLabel name="DEBUG"  text="PANEL P002" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
@@ -34,7 +34,7 @@
 	<screen name="AutoTimerSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
 		<widget source="help" render="Label" position="60,590"  size="520,80" zPosition="10" font="Regular;20" halign="left" backgroundColor="#101010" foregroundColor="bluette" transparent="1"/>
 		<!-- eLabel name="DEBUG"  text="PANEL P004" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
@@ -44,7 +44,7 @@
 	<screen name="AutoTimerImporter" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="list" position="60,100" size="515,514" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL P005" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -53,7 +53,7 @@
 	<screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="520,414" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL P006" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -62,7 +62,7 @@
 	<screen name="AutoTimerServiceEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,100" size="515,414" scrollbarMode="showOnDemand" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL P007" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
@@ -71,7 +71,7 @@
 	<screen name="IMDB" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,435" size="256,256" zPosition="2" alphatest="blend" />		
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />		
 		<widget name="statusbar" position="60,40" size="503,34"  font="Regular;26" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<widget name="titellabel"   position="60,90" size="0,60"  font="Regular;24" foregroundColor="bluette" backgroundColor="black" transparent="1" />
 		<widget name="detailslabel" position="60,90" size="730,120"  font="Regular;24" foregroundColor="bluette" backgroundColor="black" transparent="1" />
@@ -89,7 +89,7 @@
 	<screen name="CronTimers" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="lab1"        position="60,95"   size="200,26" font="Regular;22" valign="center" foregroundColor="bluette" backgroundColor="#000000" transparent="1" />
 		<widget name="labdisabled" position="240,95"  size="250,26" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1" />
 		<widget name="labactive"   position="240,95"  size="250,26" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="1" />
@@ -1189,7 +1189,7 @@
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="3ButtonsW" />
 		<panel name="tMenu" />
-		<ePixmap pixmap="mega32/menu/ico_pictures.png" position="1010,490" size="256,256" zPosition="-1" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="filelist" position="60,100" size="515,500" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
 		<ePixmap position="565,100" zPosition="10" size="10,500" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" />
 		<widget name="thn" position="870,440" size="350,280" alphatest="blend" zPosition="5" />
@@ -1201,7 +1201,7 @@
 	<screen name="LocationBox" position="0,0" size="1280,720" title="Location Media" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_mega.png" position="1010,490" size="256,256" zPosition="-1" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_mega.png" position="940,455" size="256,256" zPosition="-1" alphatest="blend" />
 		<widget name="target" position="70,130" size="730,27" valign="center" font="Regular;24" backgroundColor="#404040"/>
 		<widget name="filelist" position="65,170" zPosition="1" size="520,208" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
 		<widget name="textbook" position="70,420" size="730,27" valign="center" font="Regular;24" backgroundColor="#404040"/>
@@ -1269,7 +1269,7 @@
 			<widget source="PixRPM" render="Progress" position="265,510" size="345,5" borderWidth="1" />
 			<widget source="PixVLT" render="Progress" position="265,530" size="345,5" borderWidth="1" />
 			<widget source="PixPWM" render="Progress" position="265,550" size="345,5" borderWidth="1" />
-		<ePixmap pixmap="mega32/menu/ico_fan.png" position="1010,490" size="256,256" zPosition="-1" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		</screen>		
 			
  <!-- Fan Control 2 Test -->

@@ -312,7 +312,7 @@
 			foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24"
 			colorServiceDescription="grey" picServiceEventProgressbar="mega32/bars/pl.png" transparent="1" />
 		<ePixmap position="780,90" size="10,513" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="5" />
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,435" size="256,256" zPosition="2" />
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="920,455" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL S003" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -333,7 +333,7 @@
 	<screen name="ChannelContextMenu" position="0,0"  size="1280,720"  title="Channel List Menu" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<widget name="menu" position="60,90" size="520,500" scrollbarMode="showOnDemand" transparent="1" />
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,435" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- eLabel name="DEBUG"  text="PANEL S005" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>
 
@@ -341,7 +341,7 @@
 	<screen name="EPGSelection" position="fill" title="E2 EPG Search" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
-		<ePixmap pixmap="mega32/menu/ico_timer.png" position="940,435" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<!-- Lista -->
 		<widget name="list" position="60,90" size="730,513" scrollbarMode="showOnDemand" transparent="1" />
 		<ePixmap position="780,90" size="10,513" pixmap="mega32/bars/maxbar.png" alphatest="blend" transparent="1" zPosition="5" />
@@ -353,6 +353,7 @@
 	<screen name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor List" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="4Buttons" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="timerlist" position="60,90" size="735,450" scrollbarMode="showOnDemand" itemHeight="50" transparent="1" zPosition="2" />
 		<eLabel text="Info" position="730,45" size="500,24" font="Regular;22"  halign="left" foregroundColor="#606060" backgroundColor="black" transparent="1"  zPosition="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S007" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
@@ -362,7 +363,6 @@
 	<screen name="TimerEntry" position="0,0" size="1280,720" title="Timer entry" backgroundColor="black" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplateW" />
 		<panel name="descTemplateLite" />
-		<!-- ePixmap pixmap="mega32/menu/ico_timer.png" position="940,435" size="256,256" zPosition="2" alphatest="blend" /-->
 		<widget name="config" position="60,90" size="735,390" scrollbarMode="showOnDemand" itemHeight="30" transparent="1" />
 		<ePixmap position="50,659" size="1200,50" pixmap="mega32/buttons/3colors.png" zPosition="2" alphatest="blend" />
 		<widget name="canceltext" position="100,667" size="210,20" font="Regular;20" halign="left" foregroundColor="white" zPosition="2" transparent="1" />
@@ -388,9 +388,10 @@
 		<panel name="4Buttons2" />
 		<panel name="menuInfo" />
 		<ePixmap  position="0,0" zPosition="-1" size="1280,720" pixmap="mega32/menu/panelwd.png" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<eLabel text="EPG Guide" position="40,41" size="770,30" font="Regular;26" halign="center" foregroundColor="bluette" backgroundColor="#202020" transparent="1" zPosition="1" />
 		<!-- Channel/Provider Name -->
-		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,435" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_info.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="channel" position="60,100" size="400,50" font="Regular;26" halign="left" zPosition="3" foregroundColor="yellow" backgroundColor="black" transparent="1" shadowColor="black" shadowOffset="-2,-2" />
 		<widget source="session.CurrentService" render="Label" position="390,100" size="400,50" zPosition="2" font="Regular;26" foregroundColor="#808080" backgroundColor="black" halign="right" transparent="1"  >
 			<convert type="ServiceName">Provider</convert>
@@ -1195,7 +1196,7 @@
 	<!-- Sleeptimer edit OKK -->
 	<screen name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
-		<ePixmap position="940,455" zPosition="0" size="380,256" pixmap="mega32/menu/ico_timer.png" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="red"    pixmap="mega32/buttons/key_red.png"    position="60,110" size="35,25" alphatest="on" />
 		<widget name="green"  pixmap="mega32/buttons/key_green.png"  position="60,150" size="35,25" alphatest="on" />
 		<widget name="yellow" pixmap="mega32/buttons/key_yellow.png" position="60,190" size="35,25" alphatest="on" />
