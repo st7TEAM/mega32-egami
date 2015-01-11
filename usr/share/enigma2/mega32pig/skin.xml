@@ -757,7 +757,7 @@
 	<screen name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental Control Setup" flags="wfNoBorder" >
 		<panel name="GenericLayoutFullTemplate" />
 		<panel name="2ButtonsW" />
-		<ePixmap pixmap="mega32/menu/ico_parental.png" position="940,455" size="256,256" zPosition="2" alphatest="blend" />
+		<ePixmap pixmap="mega32/menu/ico_egami.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend" />
 		<widget name="config" position="60,90" itemHeight="30" size="520,510" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL S024" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>

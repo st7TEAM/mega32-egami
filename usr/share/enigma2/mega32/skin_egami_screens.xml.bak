@@ -634,13 +634,4 @@
 		<widget position="1160,667" size="210,21" name="key_menu"   font="Regular;19" halign="left" foregroundColor="white" backgroundColor="black" zPosition="1" transparent="1" />
 		<!-- eLabel name="DEBUG"  text="PANEL P054" position="20,20" size="300,60" font="Regular;40"  foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
 	</screen>	
-	<!-- EgamiBootLogo OKK -->
-	<screen name="EgamiBootLogoSelector" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
-	  <panel name="GenericLayoutFullTemplate" />
-	  <panel name="2ButtonsW" />
-	  <widget name="config" position="60,90" itemHeight="30" size="520,210" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-	  <eLabel position="60,360" size="516,279" backgroundColor="#10303030" zPosition="2" />
-	  <widget name="Preview" position="62,362" size="512,275" alphatest="blend" transparent="1" zPosition="3" />
-	 <!-- eLabel name="DEBUG" text="PANEL P055" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
-	</screen>
 </skin>
